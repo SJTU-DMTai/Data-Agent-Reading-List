@@ -30,7 +30,7 @@
 | DataBench      | Reasoning     | 2024 | [Link](https://aclanthology.org/2024.lrec-main.1179.pdf)  [Repo](https://huggingface.co/datasets/cardiffnlp/databench)|
 | TableBench     | Reasoning     | 2024 | [Link](https://arxiv.org/abs/2408.09174)  [Repo](https://github.com/TableBench/TableBench)|
 | TQA-Bench      | Reasoning     | 2024 | [Link](https://arxiv.org/pdf/2411.19504)  [Repo](https://github.com/Relaxed-System-Lab/TQA-Bench)|
-| SpreadsheetBench | Reasoning     | 2024 | [Link](https://arxiv.org/pdf/2406.14991)  [Repo](https://github.com/RUCKBReasoning/SpreadsheetBench/tree/main/data)|
+| SpreadsheetBench | Reasoning   | 2024 | [Link](https://arxiv.org/pdf/2406.14991)  [Repo](https://github.com/RUCKBReasoning/SpreadsheetBench/tree/main/data)|
 
 ### Selected Classical Reasoning Benchmarks for Tabular Data
 | Benchmark Name | Task Type     | Year | Source                                                                                  | TLDR |
@@ -57,6 +57,7 @@
 | ICML'25     | Are Large Language Models Ready for Multi-Turn Tabular Data Analysis? | Reynold Cheng | [paper](https://openreview.net/attachment?id=flKhxGTBj2&name=pdf) |
 | ICML'25     | Agent Workflow Memory | Graham Neubig |  [paper](https://arxiv.org/pdf/2409.07429)   |
 | ICLR'25     | SeCom: On Memory Construction and Retrieval for Personalized Conversational Agents | Qianhui Wu | [paper](https://openreview.net/pdf?id=xKDZAW0He39) |
+| ICLR'25     | InsightBench: Evaluating Business Analytics Agents Through Multi-Step Insight Generation | Issam Hadj Laradji | [paper](https://arxiv.org/pdf/2407.06423) |
 | ICLR'25     | Agent-Oriented Planning in Multi-Agent Systems | Yaliang Li | [paper](https://arxiv.org/pdf/2410.02189) |
 | ICLR'25 Oral | AFlow: Automating Agentic Workflow Generation | Chenglin Wu | [paper](https://openreview.net/pdf?id=z5uVAKwmjf) |
 | NAACL'25    | H-STAR: LLM-driven Hybrid SQL-Text Adaptive Reasoning on Tables | Chandan K. Reddy | [paper](https://arxiv.org/pdf/2407.05952) |
@@ -115,3 +116,4 @@
 [Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions](https://arxiv.org/pdf/2505.11270)
 [A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
+
