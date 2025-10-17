@@ -12,6 +12,10 @@
 | DA-Bench | Yunjun Gao | 2025 | [Link](https://arxiv.org/pdf/2503.13269) [Repo](https://github.com/ZJU-LLMs/DAgent)| Input: Realistic analyst tasks against a live data stack/tools. Output: Final answers or produced charts/tables. Metrics: Per-task 0–5 rubric with penalties for extra user interaction, corrections, or hallucinations; summarize overall score and hallucination rate.
 | DSBench | Dong Yu | 2025 | [Link](https://arxiv.org/pdf/2503.13269) [Repo](https://github.com/ZJU-LLMs/DAgent)| Benchmark from ICLR'25 Paper. Input: Realistic analyst tasks against a live data stack/tools. Output: Final answers or produced charts/tables. Metrics: Per-task 0–5 rubric with penalties for extra user interaction, corrections, or hallucinations; summarize overall score and hallucination rate.
 | DABStep | Thomas Wolf | 2025 | [Link](https://arxiv.org/pdf/2506.23719) [Repo](https://huggingface.co/spaces/adyen/DABstep)| Input: Multi-step data-analysis tasks requiring iterative code execution over structured tables (CSV/JSON) and cross-referencing unstructured domain manuals and documentation; Output: single factoid answers (string or numeric) formatted per task spec; Metrics: objective binary correctness with normalized string matching and numeric tolerance, reported as accuracy overall and by difficulty on a public leaderboard; Tasks: descriptive statistics and filtering, multi-table joins across metadata, fraud and risk analytics, fee computation and optimization, counterfactual policy simulations (MCC or fee-rule changes), ID lookups and mappings, time-sliced aggregations, and cases requiring reference to the unstructured manual.
+| DataSciBench | Yisong Yue | 2025 | [Link](https://arxiv.org/pdf/2502.13897) [Repo](https://github.com/THUDM/DataSciBench/)| 
+| DSEval | Kan Ren | 2024 | [Link](https://arxiv.org/pdf/2402.17168) [Repo](https://github.com/MetaCopilot/dseval)| 
+| WebDS | Christopher D. Manning | 2025 | [Link](https://arxiv.org/pdf/2508.01222)| 
+| PredictiQ | Xiaojun Ma | 2025 |[Link](https://arxiv.org/pdf/2505.17149) [Repo](https://github.com/Cqkkkkkk/PredictiQ)| 
 
 ### Latest Benchmarks for Tabular Data (Since 2024)
 
@@ -47,17 +51,21 @@
 | VLDB'25     | AutoPrep: Natural Language Question-Aware Data Preparation with a Multi-Agent Framework | Qi Liu | [paper](https://www.vldb.org/pvldb/vol18/p5086-zhu.pdf)   |
 | VLDB'25     | DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing | Eugene Wu | [paper](https://arxiv.org/pdf/2410.12189)   |
 | VLDB'25     | Semantic Operators and Their Optimization: Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS | Matei Zaharia | [paper](https://www.vldb.org/pvldb/vol18/p4171-patel.pdf)   |
+| ICDE'25     | DataLab: A Unified Platform for LLM-Powered Business Intelligence | Wei Chen | [paper](https://arxiv.org/pdf/2412.02205)   |
+| ICML'25     | AutoML-Agent: A Multi-Agent LLM Framework for Full-Pipeline AutoML | Sung Ju Hwang | [paper](https://arxiv.org/pdf/2410.02958)   |
 | ICML'25     | Compositional Condition Question Answering in Tabular Understanding | Han-Jia Ye | [paper](https://openreview.net/attachment?id=aXU48nrA2v&name=pdf)   |
 | ICML'25     | Are Large Language Models Ready for Multi-Turn Tabular Data Analysis? | Reynold Cheng | [paper](https://openreview.net/attachment?id=flKhxGTBj2&name=pdf) |
 | ICML'25     | Agent Workflow Memory | Graham Neubig |  [paper](https://arxiv.org/pdf/2409.07429)   |
 | ICLR'25     | SeCom: On Memory Construction and Retrieval for Personalized Conversational Agents | Qianhui Wu | [paper](https://openreview.net/pdf?id=xKDZAW0He39) |
 | ICLR'25     | Agent-Oriented Planning in Multi-Agent Systems | Yaliang Li | [paper](https://arxiv.org/pdf/2410.02189) |
+| ICLR'25 Oral | AFlow: Automating Agentic Workflow Generation | Chenglin Wu | [paper](https://openreview.net/pdf?id=z5uVAKwmjf) |
 | NAACL'25    | H-STAR: LLM-driven Hybrid SQL-Text Adaptive Reasoning on Tables | Chandan K. Reddy | [paper](https://arxiv.org/pdf/2407.05952) |
-| ACL'25      | Data Interpreter: An LLM Agent For Data Science | Bang Liu & Chenglin Wu | [paper](https://arxiv.org/pdf/2402.18679) |
+| ACL'25 Findings | Data Interpreter: An LLM Agent For Data Science | Bang Liu & Chenglin Wu | [paper](https://arxiv.org/pdf/2402.18679) |
 | Neurips'25  | Table as a Modality for Large Language Models | Junbo Zhao | [paper](https://neurips.cc/virtual/2025/poster/116332)  |
-| Arxiv/2510 | Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks | Jitao Sang | [paper](https://arxiv.org/abs/2510.12635) |
-| Arxiv/2510 | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models | QizhengZhang & ChangranHu | [paper](https://www.arxiv.org/abs/2510.04618) |
-| Arxiv/2509 | ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory | Siru Ouyang | [paper](https://arxiv.org/abs/2509.25140) |
+| Arxiv/2510  | Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks | Jitao Sang | [paper](https://arxiv.org/abs/2510.12635) |
+| Arxiv/2510  | LLM-based Multi-Agent Blackboard System for Information Discovery in Data Science | Tomas Pfister | [paper](https://arxiv.org/pdf/2510.01285) |
+| Arxiv/2510  | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models | QizhengZhang & ChangranHu | [paper](https://www.arxiv.org/abs/2510.04618) |
+| Arxiv/2509  | ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory | Siru Ouyang | [paper](https://arxiv.org/abs/2509.25140) |
 | Arxiv/2509  | SGMem: Sentence Graph Memory for Long-Term Conversational Agents | Yaxiong Wu |  [paper](https://arxiv.org/pdf/2509.21212v1)   |
 | Arxiv/2509  | TableMind: An Autonomous Programmatic Agent for Tool-Augmented Table Reasoning | Qi Liu |  [paper](https://arxiv.org/pdf/2509.06278)   |
 | Arxiv/2509  | MemGen: Weaving Generative Latent Memory for Self-Evolving Agents | Shuicheng Yan |  [paper](https://arxiv.org/pdf/2509.24704)   |
@@ -74,26 +82,36 @@
 | Arxiv/2506  | MAPLE: Multi-Agent Adaptive Planning with Long-Term Memory for Table Reasoning | Thuy-Trang Vu |  [paper](https://arxiv.org/pdf/2503.13269)   |
 | Arxiv/2506  | Memory OS of AIAgent | Ting Bai |  [paper](https://arxiv.org/pdf/2506.06326)   |
 | Arxiv/2506  | G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems | Shuicheng Yan |  [paper](https://arxiv.org/pdf/2506.07398)   |
-| Arxiv/2505  | Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions | Jeff Z Pan |  [paper](https://arxiv.org/pdf/2505.11270)   |
+| Arxiv/2506  | AutoMind: Adaptive Knowledgeable Agent for Automated Data Science | Ningyu Zhang |  [paper](https://arxiv.org/pdf/2506.10974)   |
+| Arxiv/2505  | DSMentor: Enhancing Data Science Agents with Curriculum Learning and Online Knowledge Accumulation | Patrick Ng |  [paper](https://arxiv.org/pdf/2505.14163)   |
 | Arxiv/2505  | TAIJI: MCP-based Multi-Modal Data Analytics on Data Lakes | Ju Fan |  [paper](https://arxiv.org/pdf/2505.11270)   |
+| Arxiv/2505  | How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior | Zidi Xiong |  [paper](https://arxiv.org/pdf/2505.16067)   |
 | Arxiv'2505  | Weaver: Interweaving SQL and LLM for Table Reasoning | Vivek Gupta |  [paper](https://arxiv.org/pdf/2505.18961)    |
+| Arxiv/2504  | AgentAda: Skill-Adaptive Data Analytics for Tailored Insight Discovery | Issam H. Laradji |  [paper](https://arxiv.org/pdf/2504.07421v3)   |
 | Arxiv/2504  | Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory | Deshraj Yadav |  [paper](https://arxiv.org/pdf/2504.19413)   |
 | Arxiv/2503  | R3Mem: Bridging Memory Retention and Retrieval via Reversible Compression | Yun Zhu |  [paper](https://arxiv.org/pdf/2502.15957v1)   |
 | Arxiv/2503  | DatawiseAgent: A Notebook-Centric LLM Agent Framework for Automated Data Science | Yu Huang |  [paper](https://arxiv.org/pdf/2503.07044)   |
 | Arxiv/2503  | DAgent: A Relational Database-Driven Data Analysis Report Generation Agent | Yunjun Gao |  [paper](https://arxiv.org/pdf/2503.13269)   |
 | Arxiv/2502  | A-MEM: Agentic Memory for LLM Agents | Yongfeng Zhang |  [paper](https://arxiv.org/pdf/2502.12110)   |
 | Arxiv'2501  | TableMaster: A Recipe to Advance Table Understanding with Language Models | Hanbing Liu |  [paper](https://arxiv.org/pdf/2501.19378)    |
-| Arxiv'2410 | AutoKaggle: A Multi-Agent Framework for Autonomous Data Science Competition | Wenhao Huang & Ge Zhang | [paper](https://arxiv.org/abs/2410.20424) |
-| Arxiv'2407 | LAMBDA: A Large Model Based Data Agent | Yancheng Yuan & Jian Huang | [paper](https://arxiv.org/abs/2407.17535) |
-| ICML'24 | DS-Agent: Automated Data Science by Empowering Large Language Models with Case-Based Reasoning | Hechang Chen | [paper](https://arxiv.org/abs/2402.17453) |
+| Arxiv'2410  | AutoKaggle: A Multi-Agent Framework for Autonomous Data Science Competition | Wenhao Huang & Ge Zhang | [paper](https://arxiv.org/abs/2410.20424) |
+| Arxiv'2407  | LAMBDA: A Large Model Based Data Agent | Yancheng Yuan & Jian Huang | [paper](https://arxiv.org/abs/2407.17535) |
+| ICML'24     | DS-Agent: Automated Data Science by Empowering Large Language Models with Case-Based Reasoning | Hechang Chen | [paper](https://arxiv.org/abs/2402.17453) |
 | ICLR'24     | OpenTab: Advancing Large Language Models as Open-domain Table Reasoners | Jiani Zhang  |  [paper](https://arxiv.org/pdf/2402.14361)    |
 | ICLR'24     | CABINET: Content Relevance based Noise Reduction for Table Question Answering |  Balaji Krishnamurthy |  [paper](https://arxiv.org/pdf/2402.01155)    |
 | ICLR'24     | Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection | Hannaneh Hajishirzi  |  [paper](https://arxiv.org/pdf/2401.04398)    |
 | ICLR'24     | Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding | Tomas Pfister  |  [paper](https://arxiv.org/pdf/2401.04398)    |
+| ICLR'24     | MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework | Chenglin Wu  |  [paper](https://arxiv.org/pdf/2308.00352)    |
 | AAAI'24     | ExpeL: LLM Agents Are Experiential Learners | Gao Huang |  [paper](https://arxiv.org/pdf/2308.10144)    |
 | VLDB'24     | ReAcTable: Enhancing ReAct for Table Question Answering |  Jignesh M. Patel |  [paper](https://arxiv.org/pdf/2310.00815)    |
 | VLDB'24     | AutoTQA: Towards Autonomous Tabular Question Answering through Multi-Agent Large Language Models | Qi Liu |  [paper](https://www.vldb.org/pvldb/vol17/p3920-zhu.pdf)    |
 | VLDB'24     | D-Bot: Database Diagnosis System using Large Language Models | Guoliang Li |  [paper](https://arxiv.org/pdf/2312.01454)    |
 | NIPS'23     | Augmenting language models with long-term memory | Furu Wei |  [paper](https://arxiv.org/pdf/2306.07174)    |
 | NIPS'23     | Reflexion: Language Agents with Verbal Reinforcement Learning | Shunyu Yao |  [paper](https://arxiv.org/pdf/2303.11366)    |
+| SIGIR'23    | Large Language Models are Versatile Decomposers: Decompose Evidence and Questions for Table-based Reasoning (Dater) | Yongbin Li |  [paper](https://arxiv.org/pdf/2301.13808)    |
 | Arxiv'2310  | MemGPT: Towards LLMs as Operating Systems | Charles Packer |  [paper](https://arxiv.org/pdf/2310.08560)    |
+
+## Survey Paper
+[Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions](https://arxiv.org/pdf/2505.11270)
+[A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
+[Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
