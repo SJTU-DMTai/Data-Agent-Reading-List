@@ -49,7 +49,7 @@
 | CIDR'25     | Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing | Gerardo Vitagliano |  [paper](https://www.vldb.org/cidrdb/papers/2025/p12-liu.pdf)   |
 | IEEE Data Eng. Bull.  | iDataLake: An LLM-Powered Analytics System on Data Lakes | Guoliang Li |  [paper](http://sites.computer.org/debull/A25mar/p57.pdf#:~:text=In%20this%20paper%20we%20highlight%20challenges%20for%20supporting,query%20and%20outputs%20the%20results%20for%20the%20query.)   |
 | VLDB'25     | Towards Automated Cross-domain Exploratory Data Analysis through Large Language Models  | Qi Liu | [paper](https://www.vldb.org/pvldb/vol18/p5086-zhu.pdf)   |
-| VLDB'25     | AutoPrep: Natural Language Question-Aware Data Preparation with a Multi-Agent Framework | Qi Liu | [paper](https://www.vldb.org/pvldb/vol18/p5086-zhu.pdf)   |
+| VLDB'25     | AutoPrep: Natural Language Question-Aware Data Preparation with a Multi-Agent Framework | Ju Fan | [paper](https://www.vldb.org/pvldb/vol18/p5086-zhu.pdf)   |
 | VLDB'25     | DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing | Eugene Wu | [paper](https://arxiv.org/pdf/2410.12189)   |
 | VLDB'25     | Semantic Operators and Their Optimization: Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS | Matei Zaharia | [paper](https://www.vldb.org/pvldb/vol18/p4171-patel.pdf)   |
 | ICDE'25     | DataLab: A Unified Platform for LLM-Powered Business Intelligence | Wei Chen | [paper](https://arxiv.org/pdf/2412.02205)   |
@@ -124,6 +124,7 @@
 [A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
