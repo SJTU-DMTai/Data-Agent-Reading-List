@@ -68,7 +68,7 @@
 | Arxiv/2510  | TOOLMEM: Enhancing Multimodal Agents with Learnable Tool Capability Memory | Zora Zhiruo Wang | [paper](https://arxiv.org/pdf/2510.06664) |
 | Arxiv/2510  | Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks | Jitao Sang | [paper](https://arxiv.org/abs/2510.12635) |
 | Arxiv/2510  | LLM-based Multi-Agent Blackboard System for Information Discovery in Data Science | Tomas Pfister | [paper](https://arxiv.org/pdf/2510.01285) |
-| Arxiv/2510  | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models | QizhengZhang & ChangranHu | [paper](https://www.arxiv.org/abs/2510.04618) |
+| Arxiv/2510  | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models | Qizheng Zhang & Changran Hu | [paper](https://www.arxiv.org/abs/2510.04618) |
 | Arxiv/2509  | Latent learning: episodic memory complements parametric learning by enabling flexible reuse of experiences | Andrew Kyle Lampinen | [paper](https://arxiv.org/pdf/2509.16189) |
 | Arxiv/2509  | H2R: Hierarchical Hindsight Reflection for Multi-Task LLM Agents | Chengdong Xu | [paper](https://arxiv.org/pdf/2509.12810) |
 | Arxiv/2509  | Mem-α: Learning Memory Construction via Reinforcement Learning | Yu Wang | [paper](https://arxiv.org/pdf/2509.25911) |
@@ -124,6 +124,7 @@
 [A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
