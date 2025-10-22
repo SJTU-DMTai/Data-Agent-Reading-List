@@ -76,7 +76,7 @@
 | Arxiv/2509  | SGMem: Sentence Graph Memory for Long-Term Conversational Agents | Yaxiong Wu |  [paper](https://arxiv.org/pdf/2509.21212v1)   |
 | Arxiv/2509  | TableMind: An Autonomous Programmatic Agent for Tool-Augmented Table Reasoning | Qi Liu |  [paper](https://arxiv.org/pdf/2509.06278)   |
 | Arxiv/2509  | MemGen: Weaving Generative Latent Memory for Self-Evolving Agents | Shuicheng Yan |  [paper](https://arxiv.org/pdf/2509.24704)   |
-| Arxiv/2508  | Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models | Yunpu Ma |  [paper](https://arxiv.org/pdf/2508.09874)   |
+| Arxiv/2508  | Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models | Zhouhan Lin |  [paper](https://arxiv.org/pdf/2508.09874)   |
 | Arxiv/2508  | Memory-R1: Enhancing Large Language Model Agents to Actively Manage and Utilize External Memory | Yunpu Ma |  [paper](https://arxiv.org/pdf/2508.19828)   |
 | Arxiv/2508  | Data Agent: A Holistic Architecture for Orchestrating Data+AI Ecosystems | Guoliang Li |  [paper](https://arxiv.org/pdf/2507.01599)   |
 | Arxiv/2508  | Memp: Exploring Agent Procedural Memory | Ningyu Zhang |  [paper](https://arxiv.org/pdf/2508.06433)   |
@@ -124,6 +124,7 @@
 [A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
