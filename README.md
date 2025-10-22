@@ -11,11 +11,12 @@
 | FDABench | Gao Cong | 2025 | [Link](https://arxiv.org/pdf/2509.02473) [Repo](https://github.com/fdabench/FDAbench)| Input: Cross-source analytical queries spanning structured tables and unstructured sources. Output: Multiple-choice selections or a short analysis/report when required. Metrics: Exact-match for MC/checkbox tasks; text tasks by overlap metrics (e.g., ROUGE) plus tool-use success/recall; also reports efficiency (latency, model/tool calls, token/cost).
 | DA-Bench | Yunjun Gao | 2025 | [Link](https://arxiv.org/pdf/2503.13269) [Repo](https://github.com/ZJU-LLMs/DAgent)| Input: Realistic analyst tasks against a live data stack/tools. Output: Final answers or produced charts/tables. Metrics: Per-task 0–5 rubric with penalties for extra user interaction, corrections, or hallucinations; summarize overall score and hallucination rate.
 | DSBench | Dong Yu | 2025 | [Link](https://arxiv.org/pdf/2409.07703) [Repo](https://github.com/LiqiangJing/DSBench)| Benchmark from ICLR'25 Paper. Input: Realistic analyst tasks against a live data stack/tools. Output: Final answers or produced charts/tables. Metrics: Per-task 0–5 rubric with penalties for extra user interaction, corrections, or hallucinations; summarize overall score and hallucination rate.
-| DABStep | Thomas Wolf | 2025 | [Link](https://arxiv.org/pdf/2506.23719) [Repo](https://huggingface.co/spaces/adyen/DABstep)| Input: Multi-step data-analysis tasks requiring iterative code execution over structured tables (CSV/JSON) and cross-referencing unstructured domain manuals and documentation; Output: single factoid answers (string or numeric) formatted per task spec; Metrics: objective binary correctness with normalized string matching and numeric tolerance, reported as accuracy overall and by difficulty on a public leaderboard; Tasks: descriptive statistics and filtering, multi-table joins across metadata, fraud and risk analytics, fee computation and optimization, counterfactual policy simulations (MCC or fee-rule changes), ID lookups and mappings, time-sliced aggregations, and cases requiring reference to the unstructured manual.
+| DABStep | Thomas Wolf | 2025 | [Link](https://arxiv.org/pdf/2506.23719) [Repo](https://huggingface.co/spaces/adyen/DABstep)| Input: Multi-step data-analysis tasks requiring iterative code execution over structured tables (CSV/JSON) and cross-referencing unstructured domain manuals and documentation; Output: single factoid answers (string or numeric) formatted per task spec; 
 | DataSciBench | Yisong Yue | 2025 | [Link](https://arxiv.org/pdf/2502.13897) [Repo](https://github.com/THUDM/DataSciBench/)| 
 | DSEval | Kan Ren | 2024 | [Link](https://arxiv.org/pdf/2402.17168) [Repo](https://github.com/MetaCopilot/dseval)| 
 | WebDS | Christopher D. Manning | 2025 | [Link](https://arxiv.org/pdf/2508.01222)| 
 | PredictiQ | Xiaojun Ma | 2025 |[Link](https://arxiv.org/pdf/2505.17149) [Repo](https://github.com/Cqkkkkkk/PredictiQ)| 
+| InsightBench | Issam Hadj Laradji | 2025 | [Paper](https://arxiv.org/pdf/2407.06423) [Repo](https://github.com/ServiceNow/insight-bench)|
 
 ### Latest Benchmarks for Tabular Data (Since 2024)
 
@@ -116,5 +117,6 @@
 [Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions](https://arxiv.org/pdf/2505.11270)
 [A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
+
 
 
