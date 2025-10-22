@@ -64,9 +64,14 @@
 | NAACL'25    | H-STAR: LLM-driven Hybrid SQL-Text Adaptive Reasoning on Tables | Chandan K. Reddy | [paper](https://arxiv.org/pdf/2407.05952) |
 | ACL'25 Findings | Data Interpreter: An LLM Agent For Data Science | Bang Liu & Chenglin Wu | [paper](https://arxiv.org/pdf/2402.18679) |
 | Neurips'25  | Table as a Modality for Large Language Models | Junbo Zhao | [paper](https://neurips.cc/virtual/2025/poster/116332)  |
+| Arxiv/2510  | LEGOMem: Modular Procedural Memory for Multi-agent LLM Systems for Workflow Automation | Dongge Han | [paper](https://arxiv.org/pdf/2510.04851) |
+| Arxiv/2510  | TOOLMEM: Enhancing Multimodal Agents with Learnable Tool Capability Memory | Zora Zhiruo Wang | [paper](https://arxiv.org/pdf/2510.06664) |
 | Arxiv/2510  | Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks | Jitao Sang | [paper](https://arxiv.org/abs/2510.12635) |
 | Arxiv/2510  | LLM-based Multi-Agent Blackboard System for Information Discovery in Data Science | Tomas Pfister | [paper](https://arxiv.org/pdf/2510.01285) |
 | Arxiv/2510  | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models | QizhengZhang & ChangranHu | [paper](https://www.arxiv.org/abs/2510.04618) |
+| Arxiv/2509  | Latent learning: episodic memory complements parametric learning by enabling flexible reuse of experiences | Andrew Kyle Lampinen | [paper](https://arxiv.org/pdf/2509.16189) |
+| Arxiv/2509  | H2R: Hierarchical Hindsight Reflection for Multi-Task LLM Agents | Chengdong Xu | [paper](https://arxiv.org/pdf/2509.12810) |
+| Arxiv/2509  | Mem-α: Learning Memory Construction via Reinforcement Learning | Yu Wang | [paper](https://arxiv.org/pdf/2509.25911) |
 | Arxiv/2509  | ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory | Siru Ouyang | [paper](https://arxiv.org/abs/2509.25140) |
 | Arxiv/2509  | SGMem: Sentence Graph Memory for Long-Term Conversational Agents | Yaxiong Wu |  [paper](https://arxiv.org/pdf/2509.21212v1)   |
 | Arxiv/2509  | TableMind: An Autonomous Programmatic Agent for Tool-Augmented Table Reasoning | Qi Liu |  [paper](https://arxiv.org/pdf/2509.06278)   |
@@ -78,6 +83,7 @@
 | Arxiv/2508  | Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory | Wei Li |  [paper](https://arxiv.org/pdf/2508.09736)   |
 | Arxiv/2508  | AgenticData: An Agentic Data Analytics System for Heterogeneous Data | Yuan Li |  [paper](https://arxiv.org/pdf/2508.50002)   |
 | Arxiv/2508  | Multiple Memory Systems for Enhancing the Long-term Memory of Agent | Bo Wang |  [paper](https://arxiv.org/pdf/2508.15294)   |
+| Arxiv/2507  | H-MEM: Hierarchical Memory for High-Efficiency Long-Term Reasoning in LLM Agents | Shaoning Zeng |  [paper](https://arxiv.org/pdf/2507.22925v1)   |
 | Arxiv/2507  | MemOS: A Memory OS for AI System | Siheng Chen, Wentao Zhang, Zhi-Qin John Xu, Feiyu Xiong |  [paper](https://arxiv.org/pdf/2507.07957)   |
 | Arxiv/2507  | MIRIX: Multi-Agent Memory System for LLM-Based Agents | Xi Chen |  [paper](https://arxiv.org/pdf/2507.07957)   |
 | Arxiv/2507  | MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent | Hao Zhou |  [paper](https://arxiv.org/pdf/2507.02259)   |
@@ -117,6 +123,7 @@
 [Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions](https://arxiv.org/pdf/2505.11270)
 [A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
+
 
 
 
