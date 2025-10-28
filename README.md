@@ -120,10 +120,17 @@
 | Arxiv'2310  | MemGPT: Towards LLMs as Operating Systems | Charles Packer |  [paper](https://arxiv.org/pdf/2310.08560)    |
 
 ## Survey Paper
+
 [Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions](https://arxiv.org/pdf/2505.11270)
+
 [A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
+
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
+
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
+[A Survey of Data Agents: Emerging Paradigm or Overstated Hype?](https://arxiv.org/pdf/2510.23587)
+
 
 
 
