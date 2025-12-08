@@ -64,6 +64,8 @@
 | NAACL'25    | H-STAR: LLM-driven Hybrid SQL-Text Adaptive Reasoning on Tables | Chandan K. Reddy | [paper](https://arxiv.org/pdf/2407.05952) |
 | ACL'25 Findings | Data Interpreter: An LLM Agent For Data Science | Bang Liu & Chenglin Wu | [paper](https://arxiv.org/pdf/2402.18679) |
 | Neurips'25  | Table as a Modality for Large Language Models | Junbo Zhao | [paper](https://neurips.cc/virtual/2025/poster/116332)  |
+| Arxiv/2510  | AgentFold: Long-Horizon Web Agents with Proactive Context Management | Rui Ye, Siheng Chen | [paper](https://arxiv.org/pdf/2510.24699) |
+| Arxiv/2510  | Scaling Long-Horizon LLM Agent via Context-Folding | Weiwei Sun | [paper](https://arxiv.org/pdf/2510.11967) |
 | Arxiv/2510  | LEGOMem: Modular Procedural Memory for Multi-agent LLM Systems for Workflow Automation | Dongge Han | [paper](https://arxiv.org/pdf/2510.04851) |
 | Arxiv/2510  | TOOLMEM: Enhancing Multimodal Agents with Learnable Tool Capability Memory | Zora Zhiruo Wang | [paper](https://arxiv.org/pdf/2510.06664) |
 | Arxiv/2510  | Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks | Jitao Sang | [paper](https://arxiv.org/abs/2510.12635) |
@@ -121,6 +123,8 @@
 
 ## Survey Paper
 
+[A Survey of Data Agents: Emerging Paradigm or Overstated Hype?](https://arxiv.org/pdf/2510.23587)
+
 [Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions](https://arxiv.org/pdf/2505.11270)
 
 [A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
@@ -128,8 +132,6 @@
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
-
-[A Survey of Data Agents: Emerging Paradigm or Overstated Hype?](https://arxiv.org/pdf/2510.23587)
 
 
 
