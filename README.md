@@ -26,11 +26,11 @@
 | ToRR           | Reasoning     | 2025 | [Link](https://arxiv.org/pdf/2502.19412)  [Repo](https://github.com/IBM/unitxt/blob/main/prepare/benchmarks/torr.py)| ToRR is a benchmark assessing LLMs' table reasoning and robustness across 10 datasets with diverse table serializations and perturbations, revealing models' brittleness to format variations.
 | MMTU           | Comprehensive | 2025 | [Link](https://arxiv.org/pdf/2506.05587)  [Repo](https://github.com/MMTU-Benchmark/MMTU)| MMTU is a massive multi-task table understanding and reasoning benchmark with over 30K questions across 25 real-world table tasks, designed to evaluate models' ability to understand, reason, and manipulate tables.
 | RADAR          | Reasoning     | 2025 | [Link](https://kenqgu.com/assets/pdf/RADAR_ARXIV.pdf)  [Repo](https://huggingface.co/datasets/kenqgu/RADAR)| RADAR is a benchmark for evaluating language models' data-aware reasoning on imperfect tabular data with 5 common data artifact types like outlier value or inconsistent format, which ensures that direct calculation on the perturbed table will yield an incorrect answer, forcing the model to handle the artifacts to obtain the correct result.
-| Spider2        | Text2SQL      | 2025 | [Link](https://arxiv.org/abs/2411.07763)  [Repo](https://github.com/xlang-ai/Spider2)|
-| DataBench      | Reasoning     | 2024 | [Link](https://aclanthology.org/2024.lrec-main.1179.pdf)  [Repo](https://huggingface.co/datasets/cardiffnlp/databench)|
-| TableBench     | Reasoning     | 2024 | [Link](https://arxiv.org/abs/2408.09174)  [Repo](https://github.com/TableBench/TableBench)|
-| TQA-Bench      | Reasoning     | 2024 | [Link](https://arxiv.org/pdf/2411.19504)  [Repo](https://github.com/Relaxed-System-Lab/TQA-Bench)|
-| SpreadsheetBench | Reasoning   | 2024 | [Link](https://arxiv.org/pdf/2406.14991)  [Repo](https://github.com/RUCKBReasoning/SpreadsheetBench/tree/main/data)|
+| Spider2        | Text2SQL      | 2025 | [Link](https://arxiv.org/abs/2411.07763)  [Repo](https://github.com/xlang-ai/Spider2)| Evaluation framework for real-world enterprise text-to-SQL workflows. Sub-tasks: Interacting with complex SQL environments (BigQuery, Snowflake), handling diverse operations, and processing long contexts. Input: Natural language questions with enterprise-level database schemas. Output: Complex SQL queries (often >100 lines) to solve the workflow.
+| DataBench      | Reasoning     | 2024 | [Link](https://aclanthology.org/2024.lrec-main.1179.pdf)  [Repo](https://huggingface.co/datasets/cardiffnlp/databench)| Benchmark for Question Answering over Tabular Data assessing semantic reasoning. Sub-tasks: Answering questions requiring numerical, boolean, or categorical reasoning over diverse datasets. Input: Natural language questions paired with 65 real-world tabular datasets (CSV/Parquet). Output: Exact answer values (Boolean, Number, Category, or List) derived from the table.
+| TableBench     | Reasoning     | 2024 | [Link](https://arxiv.org/abs/2408.09174)  [Repo](https://github.com/TableBench/TableBench)| Comprehensive benchmark for Table QA covering 18 fields and 4 complexity categories. Sub-tasks: Fact-checking, numerical reasoning, data analysis, and visualization. Input: Natural language questions paired with tables emphasizing numerical data. Output: Final answers derived through complex reasoning steps (e.g., Chain-of-Thought).
+| TQA-Bench      | Reasoning     | 2024 | [Link](https://arxiv.org/pdf/2411.19504)  [Repo](https://github.com/Relaxed-System-Lab/TQA-Bench)| Benchmark for evaluating LLMs on multi-table question answering with scalable context. Sub-tasks: Reasoning across multiple interconnected tables and handling long-context serialization (up to 64k tokens). Input: Natural language questions paired with multi-table relational databases. Output: Answers or SQL queries derived from joining and analyzing multiple tables.
+| SpreadsheetBench | Reasoning   | 2024 | [Link](https://arxiv.org/pdf/2406.14991)  [Repo](https://github.com/RUCKBReasoning/SpreadsheetBench/tree/main/data)| Benchmark for spreadsheet manipulation derived exclusively from real-world scenarios. Sub-tasks: Find, extract, sum, highlight, remove, modify, count, delete, calculate, and display. Input: Real-world user instructions from Excel forums paired with complex spreadsheet files. Output: Modified spreadsheet files or specific values matching the instruction.
 
 ### Selected Classical Reasoning Benchmarks for Tabular Data
 | Benchmark Name | Task Type     | Year | Source                                                                                  | TLDR |
@@ -131,6 +131,7 @@
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
