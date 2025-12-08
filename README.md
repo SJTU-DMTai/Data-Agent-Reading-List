@@ -33,8 +33,8 @@
 | SpreadsheetBench | Reasoning   | 2024 | [Link](https://arxiv.org/pdf/2406.14991)  [Repo](https://github.com/RUCKBReasoning/SpreadsheetBench/tree/main/data)| Benchmark for spreadsheet manipulation derived exclusively from real-world scenarios. Sub-tasks: Find, extract, sum, highlight, remove, modify, count, delete, calculate, and display. Input: Real-world user instructions from Excel forums paired with complex spreadsheet files. Output: Modified spreadsheet files or specific values matching the instruction.
 
 ### Selected Classical Reasoning Benchmarks for Tabular Data
-| Benchmark Name | Task Type     | Year | Source                                                                                  | TLDR |
-|:--------------:|:-------------:|:----:|:---------------------------------------------------------------------------------------:|:-----|
+| Benchmark Name | Task Type     | Year | Source                                                                                  | 
+|:--------------:|:-------------:|:----:|:---------------------------------------------------------------------------------------:|
 | FinQA          | Reasoning     | 2021 | [Link](https://arxiv.org/pdf/2109.00122)  [Repo](https://github.com/czyssrs/FinQA)|
 | FeTaQA         | Reasoning     | 2021 | [Link](https://arxiv.org/pdf/2104.00369)  [Repo](https://github.com/Yale-LILY/FeTaQA)|
 | HiTab          | Reasoning     | 2022 | [Link](https://aclanthology.org/2022.acl-long.78.pdf) [Repo](https://github.com/microsoft/HiTab)
@@ -131,6 +131,7 @@
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
