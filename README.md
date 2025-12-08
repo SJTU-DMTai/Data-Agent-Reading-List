@@ -9,14 +9,13 @@
 | InfiAgent-DABench | Jingjing Xu | 2024 | [Link](https://arxiv.org/pdf/2401.05507) [Repo](https://github.com/InfiAgent/InfiAgent)| Benchmark from ICML'24 Paper. Input: NL data-analysis queries plus linked CSVs (executed in a constrained Python sandbox). Output: Closed-form answers in a fixed format (e.g., @answer_name[answer]). Metrics: Exact-match scoring on the canonicalized answers; aggregate accuracy over sub-tasks.
 | CRAG | Xiao Yang | 2024 | [Link](https://arxiv.org/pdf/2406.04744) [Repo](https://github.com/facebookresearch/CRAG/)| Benchmark from NIPS'24 D&B track. Input: Factoid questions with access to provided corpora and mock retrieval/APIs. Output: Final textual answer (optionally with cited evidence). Metrics: Automatic correctness categories mapped to a score (correct/acceptable vs. missing/incorrect); report overall accuracy.
 | FDABench | Gao Cong | 2025 | [Link](https://arxiv.org/pdf/2509.02473) [Repo](https://github.com/fdabench/FDAbench)| Input: Cross-source analytical queries spanning structured tables and unstructured sources. Output: Multiple-choice selections or a short analysis/report when required. Metrics: Exact-match for MC/checkbox tasks; text tasks by overlap metrics (e.g., ROUGE) plus tool-use success/recall; also reports efficiency (latency, model/tool calls, token/cost).
-| DA-Bench | Yunjun Gao | 2025 | [Link](https://arxiv.org/pdf/2503.13269) [Repo](https://github.com/ZJU-LLMs/DAgent)| Input: Realistic analyst tasks against a live data stack/tools. Output: Final answers or produced charts/tables. Metrics: Per-task 0–5 rubric with penalties for extra user interaction, corrections, or hallucinations; summarize overall score and hallucination rate.
 | DSBench | Dong Yu | 2025 | [Link](https://arxiv.org/pdf/2409.07703) [Repo](https://github.com/LiqiangJing/DSBench)| Benchmark from ICLR'25 Paper. Input: Realistic analyst tasks against a live data stack/tools. Output: Final answers or produced charts/tables. Metrics: Per-task 0–5 rubric with penalties for extra user interaction, corrections, or hallucinations; summarize overall score and hallucination rate.
 | DABStep | Thomas Wolf | 2025 | [Link](https://arxiv.org/pdf/2506.23719) [Repo](https://huggingface.co/spaces/adyen/DABstep)| Input: Multi-step data-analysis tasks requiring iterative code execution over structured tables (CSV/JSON) and cross-referencing unstructured domain manuals and documentation; Output: single factoid answers (string or numeric) formatted per task spec; 
-| DataSciBench | Yisong Yue | 2025 | [Link](https://arxiv.org/pdf/2502.13897) [Repo](https://github.com/THUDM/DataSciBench/)| 
-| DSEval | Kan Ren | 2024 | [Link](https://arxiv.org/pdf/2402.17168) [Repo](https://github.com/MetaCopilot/dseval)| 
-| WebDS | Christopher D. Manning | 2025 | [Link](https://arxiv.org/pdf/2508.01222)| 
-| PredictiQ | Xiaojun Ma | 2025 |[Link](https://arxiv.org/pdf/2505.17149) [Repo](https://github.com/Cqkkkkkk/PredictiQ)| 
-| InsightBench | Issam Hadj Laradji | 2025 | [Paper](https://arxiv.org/pdf/2407.06423) [Repo](https://github.com/ServiceNow/insight-bench)|
+| DataSciBench | Yisong Yue | 2025 | [Link](https://arxiv.org/pdf/2502.13897) [Repo](https://github.com/THUDM/DataSciBench/)| Comprehensive benchmark evaluating uncertain ground truth using the Task-Function-Code framework. Sub-tasks: Data cleaning, exploration, visualization, predictive modeling, and report generation. Input: Natural language prompts accompanied by datasets. Output: Executable code and valid final answers derived from the data.
+| DSEval | Kan Ren | 2024 | [Link](https://arxiv.org/pdf/2402.17168) [Repo](https://github.com/MetaCopilot/dseval)| Evaluation paradigm covering the full data science lifecycle via bootstrapped annotation. Sub-tasks: Problem definition, data processing, and modeling across datasets like Kaggle or LeetCode. Input: Sequences of interdependent data science problems. Output: Code solutions and execution results for each iteration.
+| WebDS | Christopher D. Manning | 2025 | [Link](https://arxiv.org/pdf/2508.01222)| End-to-end web-based benchmark reflecting real-world analytics workflows. Sub-tasks: Autonomous web browsing, data acquisition, cleaning, analysis, and visualization. Input: High-level analytical goals with access to 29 diverse websites. Output: Summarized analyses and insights.
+| PredictiQ | Xiaojun Ma | 2025 |[Link](https://arxiv.org/pdf/2505.17149) [Repo](https://github.com/Cqkkkkkk/PredictiQ)| Benchmark specialized in predictive analysis capabilities across diverse fields. Sub-tasks: Text analysis and code generation for prediction tasks. Input: Sophisticated predictive queries paired with real-world datasets. Output: Prediction results with verified text-code alignment.
+| InsightBench | Issam Hadj Laradji | 2025 | [Paper](https://arxiv.org/pdf/2407.06423) [Repo](https://github.com/ServiceNow/insight-bench)| Benchmark for end-to-end business analytics and insight discovery. Sub-tasks: Formulating questions, interpreting answers, and summarizing findings. Input: Business datasets with high-level analytic goals. Output: Summary of discovered insights and actionable steps.
 
 ### Latest Benchmarks for Tabular Data (Since 2024)
 
@@ -132,6 +131,7 @@
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
