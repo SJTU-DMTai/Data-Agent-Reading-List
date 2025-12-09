@@ -60,6 +60,7 @@
 | ICLR'25     | InsightBench: Evaluating Business Analytics Agents Through Multi-Step Insight Generation | Issam Hadj Laradji | [paper](https://arxiv.org/pdf/2407.06423) |
 | ICLR'25     | Agent-Oriented Planning in Multi-Agent Systems | Yaliang Li | [paper](https://arxiv.org/pdf/2410.02189) |
 | ICLR'25 Oral | AFlow: Automating Agentic Workflow Generation | Chenglin Wu | [paper](https://openreview.net/pdf?id=z5uVAKwmjf) |
+| COLM'25     | Inducing Programmatic Skills for Agentic Tasks | Zora Zhiruo Wang, Apurva Gandhi, Graham Neubig, Daniel Fried | [paper](https://arxiv.org/pdf/2504.06821) |
 | NAACL'25    | H-STAR: LLM-driven Hybrid SQL-Text Adaptive Reasoning on Tables | Chandan K. Reddy | [paper](https://arxiv.org/pdf/2407.05952) |
 | ACL'25 Findings | Data Interpreter: An LLM Agent For Data Science | Bang Liu & Chenglin Wu | [paper](https://arxiv.org/pdf/2402.18679) |
 | Neurips'25  | Table as a Modality for Large Language Models | Junbo Zhao | [paper](https://neurips.cc/virtual/2025/poster/116332)  |
@@ -132,6 +133,7 @@
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
