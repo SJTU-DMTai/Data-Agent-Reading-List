@@ -106,6 +106,7 @@
 | Arxiv'2410  | AutoKaggle: A Multi-Agent Framework for Autonomous Data Science Competition | Wenhao Huang & Ge Zhang | [paper](https://arxiv.org/abs/2410.20424) |
 | Arxiv'2407  | LAMBDA: A Large Model Based Data Agent | Yancheng Yuan & Jian Huang | [paper](https://arxiv.org/abs/2407.17535) |
 | ICML'24     | DS-Agent: Automated Data Science by Empowering Large Language Models with Case-Based Reasoning | Hechang Chen | [paper](https://arxiv.org/abs/2402.17453) |
+| ICLR'24     | Synapse: Trajectory-as-exemplar prompting with memory for computer control | Bo An | [paper](https://arxiv.org/pdf/2306.07863) |
 | ICLR'24     | OpenTab: Advancing Large Language Models as Open-domain Table Reasoners | Jiani Zhang  |  [paper](https://arxiv.org/pdf/2402.14361)    |
 | ICLR'24     | CABINET: Content Relevance based Noise Reduction for Table Question Answering |  Balaji Krishnamurthy |  [paper](https://arxiv.org/pdf/2402.01155)    |
 | ICLR'24     | Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection | Hannaneh Hajishirzi  |  [paper](https://arxiv.org/pdf/2401.04398)    |
@@ -131,6 +132,7 @@
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
