@@ -68,6 +68,7 @@
 | Arxiv/2512  | Beyond Sliding Windows: Learning to Manage Memory in Non-Markovian Environments | Tim Klinger | [paper](https://arxiv.org/pdf/2512.19154) |
 | Arxiv/2512  | MemR3: Memory Retrieval via Reflective Reasoning for LLM Agents | Song Le | [paper](https://arxiv.org/pdf/2512.20237) |
 | Arxiv/2512  | Learning Hierarchical Procedural Memory for LLM Agents through Bayesian Selection and Contrastive Refinement | Mahdi Jalili | [paper](https://arxiv.org/pdf/2512.18950) |
+| Arxiv/2512  | Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution ｜ Zouying Cao, Zhaoyang Liu, Bolin Ding, Hai Zhao ｜ [paper]https://arxiv.org/pdf/2512.10696v1 |
 | Arxiv/2510  | AgentFold: Long-Horizon Web Agents with Proactive Context Management | Rui Ye, Siheng Chen | [paper](https://arxiv.org/pdf/2510.24699) |
 | Arxiv/2510  | Scaling Long-Horizon LLM Agent via Context-Folding | Weiwei Sun | [paper](https://arxiv.org/pdf/2510.11967) |
 | Arxiv/2510  | LEGOMem: Modular Procedural Memory for Multi-agent LLM Systems for Workflow Automation | Dongge Han | [paper](https://arxiv.org/pdf/2510.04851) |
@@ -139,6 +140,7 @@
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
