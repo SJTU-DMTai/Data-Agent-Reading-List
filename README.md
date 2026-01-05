@@ -62,8 +62,10 @@
 | ICLR'25 Oral | AFlow: Automating Agentic Workflow Generation | Chenglin Wu | [paper](https://openreview.net/pdf?id=z5uVAKwmjf) |
 | COLM'25     | Inducing Programmatic Skills for Agentic Tasks | Zora Zhiruo Wang, Apurva Gandhi, Graham Neubig, Daniel Fried | [paper](https://arxiv.org/pdf/2504.06821) |
 | NAACL'25    | H-STAR: LLM-driven Hybrid SQL-Text Adaptive Reasoning on Tables | Chandan K. Reddy | [paper](https://arxiv.org/pdf/2407.05952) |
+| ACL'25      | Table-Critic: A Multi-Agent Framework for Collaborative Criticism and Refinement in Table Reasoning | Peiying Yu, Jingjing Wang | [paper](https://arxiv.org/pdf/2502.11799) |
 | ACL'25 Findings | Data Interpreter: An LLM Agent For Data Science | Bang Liu & Chenglin Wu | [paper](https://arxiv.org/pdf/2402.18679) |
 | Neurips'25  | Table as a Modality for Large Language Models | Junbo Zhao | [paper](https://neurips.cc/virtual/2025/poster/116332)  |
+| Arxiv/2512  | MemR3: Memory Retrieval via Reflective Reasoning for LLM Agents | Song Le | [paper](https://arxiv.org/pdf/2510.23587) |
 | Arxiv/2510  | AgentFold: Long-Horizon Web Agents with Proactive Context Management | Rui Ye, Siheng Chen | [paper](https://arxiv.org/pdf/2510.24699) |
 | Arxiv/2510  | Scaling Long-Horizon LLM Agent via Context-Folding | Weiwei Sun | [paper](https://arxiv.org/pdf/2510.11967) |
 | Arxiv/2510  | LEGOMem: Modular Procedural Memory for Multi-agent LLM Systems for Workflow Automation | Dongge Han | [paper](https://arxiv.org/pdf/2510.04851) |
@@ -104,6 +106,7 @@
 | Arxiv/2503  | DAgent: A Relational Database-Driven Data Analysis Report Generation Agent | Yunjun Gao |  [paper](https://arxiv.org/pdf/2503.13269)   |
 | Arxiv/2502  | A-MEM: Agentic Memory for LLM Agents | Yongfeng Zhang |  [paper](https://arxiv.org/pdf/2502.12110)   |
 | Arxiv'2501  | TableMaster: A Recipe to Advance Table Understanding with Language Models | Hanbing Liu |  [paper](https://arxiv.org/pdf/2501.19378)    |
+| Arxiv'2501  | ChartInsighter: An Approach for Mitigating Hallucination in Time-series Chart Summary Generation with A Benchmark Dataset | Fen Wang, Siming Chen |  [paper](https://arxiv.org/pdf/2501.09349)    |
 | Arxiv'2410  | AutoKaggle: A Multi-Agent Framework for Autonomous Data Science Competition | Wenhao Huang & Ge Zhang | [paper](https://arxiv.org/abs/2410.20424) |
 | Arxiv'2407  | LAMBDA: A Large Model Based Data Agent | Yancheng Yuan & Jian Huang | [paper](https://arxiv.org/abs/2407.17535) |
 | ICML'24     | DS-Agent: Automated Data Science by Empowering Large Language Models with Case-Based Reasoning | Hechang Chen | [paper](https://arxiv.org/abs/2402.17453) |
@@ -134,6 +137,7 @@
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
