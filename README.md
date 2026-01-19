@@ -44,6 +44,7 @@
 | Venue       | Paper                                                        | Authors |                           Links                             |
 | :---------- | :----------------------------------------------------------- | :-------------: |:----------------------------------------------------------: |
 | SIGMOD'26   | ST-Raptor: LLM-Powered Semi-Structured Table Question Answering | Xuanhe Zhou |  [paper](https://arxiv.org/pdf/2508.18190)   |
+| Arxiv/2601  | Can We Predict Before Executing Machine Learning Agents? | Ningyu Zhang | [paper](https://arxiv.org/pdf/2601.05930) |
 | CIDR'25     | AOP: Automated and Interactive LLM Pipeline Orchestration for Answering Complex Queries | Guoliang Li |  [paper](https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf)   |
 | CIDR'25     | Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing | Gerardo Vitagliano |  [paper](https://www.vldb.org/cidrdb/papers/2025/p12-liu.pdf)   |
 | IEEE Data Eng. Bull.  | iDataLake: An LLM-Powered Analytics System on Data Lakes | Guoliang Li |  [paper](http://sites.computer.org/debull/A25mar/p57.pdf#:~:text=In%20this%20paper%20we%20highlight%20challenges%20for%20supporting,query%20and%20outputs%20the%20results%20for%20the%20query.)   |
@@ -79,6 +80,7 @@
 | Arxiv/2510  | TOOLMEM: Enhancing Multimodal Agents with Learnable Tool Capability Memory | Zora Zhiruo Wang | [paper](https://arxiv.org/pdf/2510.06664) |
 | Arxiv/2510  | Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks | Jitao Sang | [paper](https://arxiv.org/abs/2510.12635) |
 | Arxiv/2510  | LLM-based Multi-Agent Blackboard System for Information Discovery in Data Science | Tomas Pfister | [paper](https://arxiv.org/pdf/2510.01285) |
+| Arxiv/2510  | DeepAnalyze: Agentic Large Language Models for Autonomous Data Science | Ju Fan | [paper](https://arxiv.org/pdf/2510.16872?) |
 | Arxiv/2510  | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models | Qizheng Zhang & Changran Hu | [paper](https://www.arxiv.org/abs/2510.04618) |
 | Arxiv/2509  | Latent learning: episodic memory complements parametric learning by enabling flexible reuse of experiences | Andrew Kyle Lampinen | [paper](https://arxiv.org/pdf/2509.16189) |
 | Arxiv/2509  | H2R: Hierarchical Hindsight Reflection for Multi-Task LLM Agents | Chengdong Xu | [paper](https://arxiv.org/pdf/2509.12810) |
@@ -144,6 +146,7 @@
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
