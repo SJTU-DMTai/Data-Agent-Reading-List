@@ -1,4 +1,4 @@
-# Awesome Data Agent and Table Reasoning Paper
+# Awesome Data Agent and Agent Memory Paper
 
 ## Benchmark
 
@@ -146,6 +146,7 @@
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
