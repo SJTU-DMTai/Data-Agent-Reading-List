@@ -41,7 +41,7 @@
 
 
 ## Conference Paper (including arxiv)
-| Venue       | Paper                                                        | Corresp. Author |                           Links                             |
+| Venue       | Paper                                                        | Authors |                           Links                             |
 | :---------- | :----------------------------------------------------------- | :-------------: |:----------------------------------------------------------: |
 | SIGMOD'26   | ST-Raptor: LLM-Powered Semi-Structured Table Question Answering | Xuanhe Zhou |  [paper](https://arxiv.org/pdf/2508.18190)   |
 | CIDR'25     | AOP: Automated and Interactive LLM Pipeline Orchestration for Answering Complex Queries | Guoliang Li |  [paper](https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf)   |
@@ -50,7 +50,11 @@
 | VLDB'25     | Towards Automated Cross-domain Exploratory Data Analysis through Large Language Models  | Qi Liu | [paper](https://www.vldb.org/pvldb/vol18/p5086-zhu.pdf)   |
 | VLDB'25     | AutoPrep: Natural Language Question-Aware Data Preparation with a Multi-Agent Framework | Ju Fan | [paper](https://www.vldb.org/pvldb/vol18/p5086-zhu.pdf)   |
 | VLDB'25     | DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing | Eugene Wu | [paper](https://arxiv.org/pdf/2410.12189)   |
+| VLDB'25     | Data Imputation with Limited Data Redundancy Using Data Lakes | Yuyu Luo | [paper](https://www.vldb.org/pvldb/vol18/p3354-tang.pdf)  
 | VLDB'25     | Semantic Operators and Their Optimization: Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS | Matei Zaharia | [paper](https://www.vldb.org/pvldb/vol18/p4171-patel.pdf)   |
+| VLDB'25     | Weak-to-Strong Prompts with Lightweight-to-Powerful LLMs for High-Accuracy, Low-Cost, and Explainable Data Transformation | Yuyu Luo, Ju Fan, and Nan Tang et al | [paper](https://www.vldb.org/pvldb/vol18/p2371-tang.pdf)   |
+| SIGMOD'25     | Automatic Database Configuration Debugging using Retrieval-Augmented Language Models | Nan Tang, Ju Fan, et al | [paper](https://dl.acm.org/doi/10.1145/3709663)   |
+| SIGMOD'25     | Andromeda: Debugging Database Performance Issues with Retrieval-Augmented Large Language Models | Nan Tang, Ju Fan, Xiaoyong Du, et al | [paper](https://dl.acm.org/doi/10.1145/3722212.3725080)   |
 | ICDE'25     | DataLab: A Unified Platform for LLM-Powered Business Intelligence | Wei Chen | [paper](https://arxiv.org/pdf/2412.02205)   |
 | ICML'25     | AutoML-Agent: A Multi-Agent LLM Framework for Full-Pipeline AutoML | Sung Ju Hwang | [paper](https://arxiv.org/pdf/2410.02958)   |
 | ICML'25     | Compositional Condition Question Answering in Tabular Understanding | Han-Jia Ye | [paper](https://openreview.net/attachment?id=aXU48nrA2v&name=pdf)   |
@@ -140,6 +144,7 @@
 [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
 
 [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+
 
 
 
