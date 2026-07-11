@@ -1,0 +1,35 @@
+# Surveys & vision/position papers.
+# Fields: title (required), venue, year, paper (required), corresponding (optional), note (optional)
+
+- title: "A Survey of Data Agents: Emerging Paradigm or Overstated Hype?"
+  venue: "arXiv'25.10"
+  year: 2025
+  paper: https://arxiv.org/pdf/2510.23587
+
+- title: "LLM/Agent-as-Data-Analyst: A Survey"
+  venue: "arXiv'25.09"
+  year: 2025
+  paper: https://arxiv.org/pdf/2509.23988
+
+- title: "Large Language Model-based Data Science Agent: A Survey"
+  venue: "arXiv'25.08"
+  year: 2025
+  paper: https://arxiv.org/pdf/2508.02744
+
+- title: "Data Agent: A Holistic Architecture for Orchestrating Data+AI Ecosystems"
+  venue: "arXiv'25.07"
+  year: 2025
+  corresponding: Guoliang Li
+  paper: https://arxiv.org/pdf/2507.01599
+  note: vision paper
+
+- title: "Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions"
+  venue: "arXiv'25.05"
+  year: 2025
+  paper: https://arxiv.org/pdf/2505.00675
+  note: agent memory survey
+
+- title: "A Survey on Large Language Model-based Agents for Statistics and Data Science"
+  venue: "arXiv'24.12"
+  year: 2024
+  paper: https://arxiv.org/abs/2412.14222
