@@ -16,6 +16,15 @@ auto-generated from the YAML files in [`data/`](data/).
    python scripts/add_paper.py https://arxiv.org/abs/2510.16872 --category data-science
    ```
 
+   **Only know the title?** This resolves the paper (Semantic Scholar / arXiv), auto-picks a
+   category via the LLM, adds it, and regenerates the README — all in one step:
+
+   ```bash
+   export DEEPSEEK_API_KEY=sk-...   # for auto-classify; or pass -c to set the category
+   python scripts/add_by_title.py "APEX-SQL: Talking to the data via Agentic Exploration"
+   python scripts/add_by_title.py "Title A" "Title B" -c nl2sql   # several, fixed category
+   ```
+
    Please verify the **corresponding author** (arXiv does not expose it) and prefer the
    author list from the paper's PDF.
 
