@@ -311,3 +311,15 @@ or see [CONTRIBUTING.md](CONTRIBUTING.md) — PRs are welcome!
 | ICLR'25 Oral | AFlow: Automating Agentic Workflow Generation `workflow` | Chenglin Wu | [paper](https://openreview.net/pdf?id=z5uVAKwmjf) |
 | ICLR'24 | Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection `rag` | Hannaneh Hajishirzi | [paper](https://arxiv.org/pdf/2310.11511) |
 | ICLR'24 | MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework `multi-agent` | Chenglin Wu | [paper](https://arxiv.org/pdf/2308.00352) |
+
+## 🤝 Contributing
+
+Contributions are welcome! Add the paper's metadata to [`data/papers.yaml`](data/papers.yaml)
+(or [`data/benchmarks.yaml`](data/benchmarks.yaml) / [`data/surveys.yaml`](data/surveys.yaml)),
+run `python scripts/generate_readme.py`, and open a PR. You can also simply
+[open an issue](https://github.com/SJTU-DMTai/Data-Agent-Reading-List/issues/new/choose)
+with the paper link. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=SJTU-DMTai/Data-Agent-Reading-List&type=Date)](https://star-history.com/#SJTU-DMTai/Data-Agent-Reading-List&Date)
