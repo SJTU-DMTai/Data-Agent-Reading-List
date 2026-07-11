@@ -1,177 +1,245 @@
-# Awesome Data Agent and Agent Memory Paper
+# Awesome Data Agents
 
-## Benchmark
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Last Commit](https://img.shields.io/github/last-commit/SJTU-DMTai/Data-Agent-Reading-List)](https://github.com/SJTU-DMTai/Data-Agent-Reading-List/commits/main)
+[![GitHub stars](https://img.shields.io/github/stars/SJTU-DMTai/Data-Agent-Reading-List?style=social)](https://github.com/SJTU-DMTai/Data-Agent-Reading-List/stargazers)
 
-### Data Agent Benchmark
+> A curated reading list on **LLM-based data agents** — autonomous agents that prepare,
+> query, analyze, and learn from data. Covers data preparation, NL2SQL & table reasoning,
+> data analysis & business intelligence, data science & AutoML agents, database operations,
+> and **agent memory** (a key capability for long-horizon data agents), plus the benchmarks
+> to evaluate them. Maintained by [SJTU-DMTai](https://github.com/SJTU-DMTai).
 
-| Benchmark Name | Corresp. Author     | Year | Source                                                                                  | TLDR |
-|:--------------:|:-------------:|:----:|:---------------------------------------------------------------------------------------:|:-----|
-| DSGym | James Zou | 2026 | [Link](https://arxiv.org/pdf/2601.16344) [Repo](https://github.com/fannie1208/DSGym) | Benchmark and training framework for standardized end-to-end evaluation of data science agents in self-contained execution environments. Sub-tasks: Planning, implementing, and validating data analyses across standardized benchmark tasks, plus expert-derived bioinformatics and prediction tasks. Input: Task instructions grounded in real datasets and executable environments. Output: Executable analyses and validated results. Metrics: Standardized execution-based performance across integrated task suites; also supports agent training through execution-verified data synthesis. |
-| DAB | Shreya Shankar | 2026 | [Link](https://arxiv.org/pdf/2603.20576) [Repo](https://github.com/ucbepic/DataAgentBench) | Benchmark for enterprise data agents on end-to-end natural-language data question answering over heterogeneous database systems. Sub-tasks: Multi-database querying, data integration across inconsistent references, unstructured text extraction/transformation, and downstream analytical reasoning. Input: Natural language enterprise-style queries over 12 datasets spanning 9 domains and 4 DBMSs. Output: Final answers generated through tool use, including database querying and Python-based analysis. Metrics: Pass@1 accuracy, with additional failure-mode and cost-efficiency analysis. |
-| DSAEval | Jian Huang | 2026 | [Link](https://arxiv.org/pdf/2601.13591) [Repo](https://anonymous.4open.science/r/DSAEval-B39C/) | Benchmark for evaluating data science agents on open-ended real-world problems across structured and unstructured data. Sub-tasks: Multimodal environment perception, iterative multi-query project workflows, and end-to-end reasoning, coding, and result generation. Input: 641 real-world data science problems grounded in 285 datasets spanning tables, text, and vision data. Output: Data science solutions consisting of code and final results for diverse tasks. Metrics: Multi-dimensional evaluation over reasoning, code, and result quality. |
-| DAComp | Kang Liu | 2025 | [Link](https://arxiv.org/pdf/2512.04324) [Repo](https://github.com/ByteDance-Seed/DAComp) | Benchmark for data agents across the full enterprise data intelligence lifecycle. Sub-tasks: Data engineering tasks such as repository-level multi-stage SQL pipeline construction and evolution under changing requirements, and data analysis tasks such as strategic planning, iterative exploratory coding, interpretation, and recommendation synthesis. Input: Industrial schemas for engineering tasks and open-ended business problems for analysis tasks. Output: Multi-stage SQL pipelines, analysis code, and decision-oriented insights or recommendations. Metrics: Execution-based multi-metric scoring for data engineering tasks and LLM-judge evaluation guided by hierarchical rubrics for data analysis tasks. |
-| WebDS | Christopher D. Manning | 2025 | [Link](https://arxiv.org/pdf/2508.01222)| End-to-end web-based benchmark reflecting real-world analytics workflows. Sub-tasks: Autonomous web browsing, data acquisition, cleaning, analysis, and visualization. Input: High-level analytical goals with access to 29 diverse websites. Output: Summarized analyses and insights.
-| PredictiQ | Xiaojun Ma | 2025 |[Link](https://arxiv.org/pdf/2505.17149) [Repo](https://github.com/Cqkkkkkk/PredictiQ)| Benchmark specialized in predictive analysis capabilities across diverse fields. Sub-tasks: Text analysis and code generation for prediction tasks. Input: Sophisticated predictive queries paired with real-world datasets. Output: Prediction results with verified text-code alignment.
-| InsightBench | Issam Hadj Laradji | 2025 | [Paper](https://arxiv.org/pdf/2407.06423) [Repo](https://github.com/ServiceNow/insight-bench)| Benchmark for end-to-end business analytics and insight discovery. Sub-tasks: Formulating questions, interpreting answers, and summarizing findings. Input: Business datasets with high-level analytic goals. Output: Summary of discovered insights and actionable steps.
-| FDABench | Gao Cong | 2025 | [Link](https://arxiv.org/pdf/2509.02473) [Repo](https://github.com/fdabench/FDAbench)| Benchmark for agents in multi-source analytical scenarios. Sub-tasks: Single-source structured analysis, unstructured data retrieval, and cross-source heterogeneous data fusion. Input: Analytical queries spanning structured (DB) and unstructured (PDF/Audio) sources. Output: SQL queries, precise values, or comprehensive analytical reports. Metrics: Exact-match for MC/checkbox tasks; text tasks by overlap metrics (e.g., ROUGE) plus tool-use success/recall; also reports efficiency (latency, model/tool calls, token/cost).
-| DSBench | Dong Yu | 2025 | [Link](https://arxiv.org/pdf/2409.07703) [Repo](https://github.com/LiqiangJing/DSBench)| Benchmark from ICLR'25 Paper. Realistic benchmark evaluating data science agents on complex tasks. Sub-tasks: Data cleaning, transformation, visualization, and modeling using libraries like Pandas/Scikit-learn. Input: Long-horizon problem descriptions with access to live data stacks. Output: Executable code and final artifacts (charts, tables, or answers). Metrics: Per-task 0–5 rubric with penalties for extra user interaction, corrections, or hallucinations; summarize overall score and hallucination rate.
-| DABStep | Thomas Wolf | 2025 | [Link](https://arxiv.org/pdf/2506.23719) [Repo](https://huggingface.co/spaces/adyen/DABstep)| Benchmark focusing on iterative multi-step reasoning in financial analytics. Sub-tasks: Code-based data manipulation and cross-referencing structured tables with unstructured documentation. Input: Complex queries requiring multi-step navigation of heterogeneous data. Output: Factoid-style answers (string/numeric) verifiable by automatic scoring.
-| DataSciBench | Yisong Yue | 2025 | [Link](https://arxiv.org/pdf/2502.13897) [Repo](https://github.com/THUDM/DataSciBench/)| Comprehensive benchmark evaluating uncertain ground truth using the Task-Function-Code framework. Sub-tasks: Data cleaning, exploration, visualization, predictive modeling, and report generation. Input: Natural language prompts accompanied by datasets. Output: Executable code and valid final answers derived from the data. 
-| InfiAgent-DABench | Jingjing Xu | 2024 | [Link](https://arxiv.org/pdf/2401.05507) [Repo](https://github.com/InfiAgent/InfiAgent)| Benchmark from ICML'24 Paper. Benchmark for evaluating agents on closed-form data analysis tasks. Sub-tasks: Data querying, processing, and reasoning over CSV files using Python. Input: Natural language questions paired with CSV files. Output: Closed-form answers (e.g., specific values or strings) matched against canonical labels.
-| DA-Code | Kang Liu | 2024 | [Link](https://arxiv.org/pdf/2410.07331) [Repo](https://da-code-bench.github.io/)| Challenging benchmark for agentic code generation in data science. Sub-tasks: Complex data wrangling, analytics via code generation. Input: Natural language descriptions of domain-specific problems within input data.
-| DSEval | Kan Ren | 2024 | [Link](https://arxiv.org/pdf/2402.17168) [Repo](https://github.com/MetaCopilot/dseval)| Evaluation paradigm covering the full data science lifecycle via bootstrapped annotation. Sub-tasks: Problem definition, data processing, and modeling across datasets like Kaggle or LeetCode. Input: Sequences of interdependent data science problems. Output: Code solutions and execution results for each iteration.
+**How this list is maintained:** every paper lives as structured metadata in
+[`data/`](data/), the README is auto-generated, links are checked in CI, and a weekly
+GitHub Action scans arXiv for new candidate papers. Found a missing paper?
+[Open an issue](https://github.com/SJTU-DMTai/Data-Agent-Reading-List/issues/new/choose)
+or see [CONTRIBUTING.md](CONTRIBUTING.md) — PRs are welcome!
 
+**124 papers** and counting. Last generated from [`data/`](data/) — do not edit this file by hand.
+
+## Contents
+
+- [📚 Surveys & Vision](#-surveys--vision)
+- [🏆 Benchmarks](#-benchmarks)
+- [🧹 Data Preparation & Integration](#-data-preparation--integration)
+- [💬 NL2SQL (Text-to-SQL)](#-nl2sql-text-to-sql)
+- [📋 Table Understanding & Reasoning](#-table-understanding--reasoning)
+- [📊 Data Analysis & Insight Discovery](#-data-analysis--insight-discovery)
+- [🔬 Data Science & Machine Learning Agents](#-data-science--machine-learning-agents)
+- [🛠️ Database Operations & Diagnosis](#-database-operations--diagnosis)
+- [🧠 Agent Memory & Context Engineering](#-agent-memory--context-engineering)
+- [🧩 General Agent Techniques](#-general-agent-techniques)
+
+## 📚 Surveys & Vision
+
+- **arXiv'25.10** — [A Survey of Data Agents: Emerging Paradigm or Overstated Hype?](https://arxiv.org/pdf/2510.23587)
+- **arXiv'25.09** — [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+- **arXiv'25.08** — [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
+- **arXiv'25.07** — [Data Agent: A Holistic Architecture for Orchestrating Data+AI Ecosystems](https://arxiv.org/pdf/2507.01599) — Guoliang Li (vision paper)
+- **arXiv'25.05** — [Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions](https://arxiv.org/pdf/2505.00675) (agent memory survey)
+- **arXiv'24.12** — [A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
+
+## 🏆 Benchmarks
+
+### Data Agent Benchmarks
+
+| Benchmark | Corresp. Author | Year | Links | TLDR |
+|:---:|:---:|:---:|:---:|:---|
+| DSGym | James Zou | 2026 | [paper](https://arxiv.org/pdf/2601.16344) [code](https://github.com/fannie1208/DSGym) | Benchmark and training framework for standardized end-to-end evaluation of data science agents in self-contained execution environments. Sub-tasks: Planning, implementing, and validating data analyses across standardized benchmark tasks, plus expert-derived bioinformatics and prediction tasks. Input: Task instructions grounded in real datasets and executable environments. Output: Executable analyses and validated results. Metrics: Standardized execution-based performance across integrated task suites; also supports agent training through execution-verified data synthesis. |
+| DAB | Shreya Shankar | 2026 | [paper](https://arxiv.org/pdf/2603.20576) [code](https://github.com/ucbepic/DataAgentBench) | Benchmark for enterprise data agents on end-to-end natural-language data question answering over heterogeneous database systems. Sub-tasks: Multi-database querying, data integration across inconsistent references, unstructured text extraction/transformation, and downstream analytical reasoning. Input: Natural language enterprise-style queries over 12 datasets spanning 9 domains and 4 DBMSs. Output: Final answers generated through tool use, including database querying and Python-based analysis. Metrics: Pass@1 accuracy, with additional failure-mode and cost-efficiency analysis. |
+| DSAEval | Jian Huang | 2026 | [paper](https://arxiv.org/pdf/2601.13591) [code](https://anonymous.4open.science/r/DSAEval-B39C/) | Benchmark for evaluating data science agents on open-ended real-world problems across structured and unstructured data. Sub-tasks: Multimodal environment perception, iterative multi-query project workflows, and end-to-end reasoning, coding, and result generation. Input: 641 real-world data science problems grounded in 285 datasets spanning tables, text, and vision data. Output: Data science solutions consisting of code and final results for diverse tasks. Metrics: Multi-dimensional evaluation over reasoning, code, and result quality. |
+| DAComp | Kang Liu | 2025 | [paper](https://arxiv.org/pdf/2512.04324) [code](https://github.com/ByteDance-Seed/DAComp) | Benchmark for data agents across the full enterprise data intelligence lifecycle. Sub-tasks: Data engineering tasks such as repository-level multi-stage SQL pipeline construction and evolution under changing requirements, and data analysis tasks such as strategic planning, iterative exploratory coding, interpretation, and recommendation synthesis. Input: Industrial schemas for engineering tasks and open-ended business problems for analysis tasks. Output: Multi-stage SQL pipelines, analysis code, and decision-oriented insights or recommendations. Metrics: Execution-based multi-metric scoring for data engineering tasks and LLM-judge evaluation guided by hierarchical rubrics for data analysis tasks. |
+| WebDS | Christopher D. Manning | 2025 | [paper](https://arxiv.org/pdf/2508.01222) | End-to-end web-based benchmark reflecting real-world analytics workflows. Sub-tasks: Autonomous web browsing, data acquisition, cleaning, analysis, and visualization. Input: High-level analytical goals with access to 29 diverse websites. Output: Summarized analyses and insights. |
+| PredictiQ | Xiaojun Ma | 2025 | [paper](https://arxiv.org/pdf/2505.17149) [code](https://github.com/Cqkkkkkk/PredictiQ) | Benchmark specialized in predictive analysis capabilities across diverse fields. Sub-tasks: Text analysis and code generation for prediction tasks. Input: Sophisticated predictive queries paired with real-world datasets. Output: Prediction results with verified text-code alignment. |
+| InsightBench | Issam Hadj Laradji | 2025 | [paper](https://arxiv.org/pdf/2407.06423) [code](https://github.com/ServiceNow/insight-bench) | Benchmark from ICLR'25 paper. Benchmark for end-to-end business analytics and insight discovery. Sub-tasks: Formulating questions, interpreting answers, and summarizing findings. Input: Business datasets with high-level analytic goals. Output: Summary of discovered insights and actionable steps. |
+| FDABench | Gao Cong | 2025 | [paper](https://arxiv.org/pdf/2509.02473) [code](https://github.com/fdabench/FDAbench) | Benchmark for agents in multi-source analytical scenarios. Sub-tasks: Single-source structured analysis, unstructured data retrieval, and cross-source heterogeneous data fusion. Input: Analytical queries spanning structured (DB) and unstructured (PDF/Audio) sources. Output: SQL queries, precise values, or comprehensive analytical reports. Metrics: Exact-match for MC/checkbox tasks; text tasks by overlap metrics (e.g., ROUGE) plus tool-use success/recall; also reports efficiency (latency, model/tool calls, token/cost). |
+| DSBench | Dong Yu | 2025 | [paper](https://arxiv.org/pdf/2409.07703) [code](https://github.com/LiqiangJing/DSBench) | Benchmark from ICLR'25 paper. Realistic benchmark evaluating data science agents on complex tasks. Sub-tasks: Data cleaning, transformation, visualization, and modeling using libraries like Pandas/Scikit-learn. Input: Long-horizon problem descriptions with access to live data stacks. Output: Executable code and final artifacts (charts, tables, or answers). Metrics: Per-task 0-5 rubric with penalties for extra user interaction, corrections, or hallucinations; summarize overall score and hallucination rate. |
+| DABStep | Thomas Wolf | 2025 | [paper](https://arxiv.org/pdf/2506.23719) [code](https://huggingface.co/spaces/adyen/DABstep) | Benchmark focusing on iterative multi-step reasoning in financial analytics. Sub-tasks: Code-based data manipulation and cross-referencing structured tables with unstructured documentation. Input: Complex queries requiring multi-step navigation of heterogeneous data. Output: Factoid-style answers (string/numeric) verifiable by automatic scoring. |
+| DataSciBench | Yisong Yue | 2025 | [paper](https://arxiv.org/pdf/2502.13897) [code](https://github.com/THUDM/DataSciBench/) | Comprehensive benchmark evaluating uncertain ground truth using the Task-Function-Code framework. Sub-tasks: Data cleaning, exploration, visualization, predictive modeling, and report generation. Input: Natural language prompts accompanied by datasets. Output: Executable code and valid final answers derived from the data. |
+| InfiAgent-DABench | Jingjing Xu | 2024 | [paper](https://arxiv.org/pdf/2401.05507) [code](https://github.com/InfiAgent/InfiAgent) | Benchmark from ICML'24 paper. Benchmark for evaluating agents on closed-form data analysis tasks. Sub-tasks: Data querying, processing, and reasoning over CSV files using Python. Input: Natural language questions paired with CSV files. Output: Closed-form answers (e.g., specific values or strings) matched against canonical labels. |
+| DA-Code | Kang Liu | 2024 | [paper](https://arxiv.org/pdf/2410.07331) [code](https://da-code-bench.github.io/) | Challenging benchmark for agentic code generation in data science. Sub-tasks: Complex data wrangling, analytics via code generation. Input: Natural language descriptions of domain-specific problems within input data. |
+| DSEval | Kan Ren | 2024 | [paper](https://arxiv.org/pdf/2402.17168) [code](https://github.com/MetaCopilot/dseval) | Evaluation paradigm covering the full data science lifecycle via bootstrapped annotation. Sub-tasks: Problem definition, data processing, and modeling across datasets like Kaggle or LeetCode. Input: Sequences of interdependent data science problems. Output: Code solutions and execution results for each iteration. |
 
 ### Latest Benchmarks for Tabular Data (Since 2024)
 
-| Benchmark Name | Task Type     | Year | Source                                                                                  | TLDR |
-|:--------------:|:-------------:|:----:|:---------------------------------------------------------------------------------------:|:-----|
-| MDBench        | Reasoning     | 2025 | [Link](https://github.com/jpeper/MDBench) | MDBench introduces a new multi-document reasoning benchmark synthetically generated through knowledge-guided prompting. |
-| MMQA           | Reasoning     | 2025 | [Link](https://openreview.net/pdf?id=GGlpykXDCa)  [Repo](https://github.com/WuJian1995/MMQA/issues/2)| MMQA is a multi-table multi-hop question answering dataset with 3,312 tables across 138 domains, evaluating LLMs' capabilities in multi-table retrieval, Text-to-SQL, Table QA, and primary/foreign key selection.
-| ToRR           | Reasoning     | 2025 | [Link](https://arxiv.org/pdf/2502.19412)  [Repo](https://github.com/IBM/unitxt/blob/main/prepare/benchmarks/torr.py)| ToRR is a benchmark assessing LLMs' table reasoning and robustness across 10 datasets with diverse table serializations and perturbations, revealing models' brittleness to format variations.
-| MMTU           | Comprehensive | 2025 | [Link](https://arxiv.org/pdf/2506.05587)  [Repo](https://github.com/MMTU-Benchmark/MMTU)| MMTU is a massive multi-task table understanding and reasoning benchmark with over 30K questions across 25 real-world table tasks, designed to evaluate models' ability to understand, reason, and manipulate tables.
-| RADAR          | Reasoning     | 2025 | [Link](https://kenqgu.com/assets/pdf/RADAR_ARXIV.pdf)  [Repo](https://huggingface.co/datasets/kenqgu/RADAR)| RADAR is a benchmark for evaluating language models' data-aware reasoning on imperfect tabular data with 5 common data artifact types like outlier value or inconsistent format, which ensures that direct calculation on the perturbed table will yield an incorrect answer, forcing the model to handle the artifacts to obtain the correct result.
-| Spider2        | Text2SQL      | 2025 | [Link](https://arxiv.org/abs/2411.07763)  [Repo](https://github.com/xlang-ai/Spider2)| Evaluation framework for real-world enterprise text-to-SQL workflows. Sub-tasks: Interacting with complex SQL environments (BigQuery, Snowflake), handling diverse operations, and processing long contexts. Input: Natural language questions with enterprise-level database schemas. Output: Complex SQL queries (often >100 lines) to solve the workflow.
-| DataBench      | Reasoning     | 2024 | [Link](https://aclanthology.org/2024.lrec-main.1179.pdf)  [Repo](https://huggingface.co/datasets/cardiffnlp/databench)| Benchmark for Question Answering over Tabular Data assessing semantic reasoning. Sub-tasks: Answering questions requiring numerical, boolean, or categorical reasoning over diverse datasets. Input: Natural language questions paired with 65 real-world tabular datasets (CSV/Parquet). Output: Exact answer values (Boolean, Number, Category, or List) derived from the table.
-| TableBench     | Reasoning     | 2024 | [Link](https://arxiv.org/abs/2408.09174)  [Repo](https://github.com/TableBench/TableBench)| Comprehensive benchmark for Table QA covering 18 fields and 4 complexity categories. Sub-tasks: Fact-checking, numerical reasoning, data analysis, and visualization. Input: Natural language questions paired with tables emphasizing numerical data. Output: Final answers derived through complex reasoning steps (e.g., Chain-of-Thought).
-| TQA-Bench      | Reasoning     | 2024 | [Link](https://arxiv.org/pdf/2411.19504)  [Repo](https://github.com/Relaxed-System-Lab/TQA-Bench)| Benchmark for evaluating LLMs on multi-table question answering with scalable context. Sub-tasks: Reasoning across multiple interconnected tables and handling long-context serialization (up to 64k tokens). Input: Natural language questions paired with multi-table relational databases. Output: Answers or SQL queries derived from joining and analyzing multiple tables.
-| SpreadsheetBench | Reasoning   | 2024 | [Link](https://arxiv.org/pdf/2406.14991)  [Repo](https://github.com/RUCKBReasoning/SpreadsheetBench/tree/main/data)| Benchmark for spreadsheet manipulation derived exclusively from real-world scenarios. Sub-tasks: Find, extract, sum, highlight, remove, modify, count, delete, calculate, and display. Input: Real-world user instructions from Excel forums paired with complex spreadsheet files. Output: Modified spreadsheet files or specific values matching the instruction.
+| Benchmark | Task Type | Year | Links | TLDR |
+|:---:|:---:|:---:|:---:|:---|
+| MDBench | Reasoning | 2025 | [paper](https://github.com/jpeper/MDBench) | MDBench introduces a new multi-document reasoning benchmark synthetically generated through knowledge-guided prompting. |
+| MMQA | Reasoning | 2025 | [paper](https://openreview.net/pdf?id=GGlpykXDCa) [code](https://github.com/WuJian1995/MMQA/issues/2) | MMQA is a multi-table multi-hop question answering dataset with 3,312 tables across 138 domains, evaluating LLMs' capabilities in multi-table retrieval, Text-to-SQL, Table QA, and primary/foreign key selection. |
+| ToRR | Reasoning | 2025 | [paper](https://arxiv.org/pdf/2502.19412) [code](https://github.com/IBM/unitxt/blob/main/prepare/benchmarks/torr.py) | ToRR is a benchmark assessing LLMs' table reasoning and robustness across 10 datasets with diverse table serializations and perturbations, revealing models' brittleness to format variations. |
+| MMTU | Comprehensive | 2025 | [paper](https://arxiv.org/pdf/2506.05587) [code](https://github.com/MMTU-Benchmark/MMTU) | MMTU is a massive multi-task table understanding and reasoning benchmark with over 30K questions across 25 real-world table tasks, designed to evaluate models' ability to understand, reason, and manipulate tables. |
+| RADAR | Reasoning | 2025 | [paper](https://kenqgu.com/assets/pdf/RADAR_ARXIV.pdf) [code](https://huggingface.co/datasets/kenqgu/RADAR) | RADAR is a benchmark for evaluating language models' data-aware reasoning on imperfect tabular data with 5 common data artifact types like outlier value or inconsistent format, which ensures that direct calculation on the perturbed table will yield an incorrect answer, forcing the model to handle the artifacts to obtain the correct result. |
+| Spider2 | Text2SQL | 2025 | [paper](https://arxiv.org/abs/2411.07763) [code](https://github.com/xlang-ai/Spider2) | Evaluation framework for real-world enterprise text-to-SQL workflows. Sub-tasks: Interacting with complex SQL environments (BigQuery, Snowflake), handling diverse operations, and processing long contexts. Input: Natural language questions with enterprise-level database schemas. Output: Complex SQL queries (often >100 lines) to solve the workflow. |
+| DataBench | Reasoning | 2024 | [paper](https://aclanthology.org/2024.lrec-main.1179.pdf) [code](https://huggingface.co/datasets/cardiffnlp/databench) | Benchmark for Question Answering over Tabular Data assessing semantic reasoning. Sub-tasks: Answering questions requiring numerical, boolean, or categorical reasoning over diverse datasets. Input: Natural language questions paired with 65 real-world tabular datasets (CSV/Parquet). Output: Exact answer values (Boolean, Number, Category, or List) derived from the table. |
+| TableBench | Reasoning | 2024 | [paper](https://arxiv.org/abs/2408.09174) [code](https://github.com/TableBench/TableBench) | Comprehensive benchmark for Table QA covering 18 fields and 4 complexity categories. Sub-tasks: Fact-checking, numerical reasoning, data analysis, and visualization. Input: Natural language questions paired with tables emphasizing numerical data. Output: Final answers derived through complex reasoning steps (e.g., Chain-of-Thought). |
+| TQA-Bench | Reasoning | 2024 | [paper](https://arxiv.org/pdf/2411.19504) [code](https://github.com/Relaxed-System-Lab/TQA-Bench) | Benchmark for evaluating LLMs on multi-table question answering with scalable context. Sub-tasks: Reasoning across multiple interconnected tables and handling long-context serialization (up to 64k tokens). Input: Natural language questions paired with multi-table relational databases. Output: Answers or SQL queries derived from joining and analyzing multiple tables. |
+| SpreadsheetBench | Reasoning | 2024 | [paper](https://arxiv.org/pdf/2406.14991) [code](https://github.com/RUCKBReasoning/SpreadsheetBench/tree/main/data) | Benchmark for spreadsheet manipulation derived exclusively from real-world scenarios. Sub-tasks: Find, extract, sum, highlight, remove, modify, count, delete, calculate, and display. Input: Real-world user instructions from Excel forums paired with complex spreadsheet files. Output: Modified spreadsheet files or specific values matching the instruction. |
 
 ### Selected Classical Reasoning Benchmarks for Tabular Data
-| Benchmark Name | Task Type     | Year | Source                                                                                  | 
-|:--------------:|:-------------:|:----:|:---------------------------------------------------------------------------------------:|
-| FinQA          | Reasoning     | 2021 | [Link](https://arxiv.org/pdf/2109.00122)  [Repo](https://github.com/czyssrs/FinQA)|
-| FeTaQA         | Reasoning     | 2021 | [Link](https://arxiv.org/pdf/2104.00369)  [Repo](https://github.com/Yale-LILY/FeTaQA)|
-| HiTab          | Reasoning     | 2022 | [Link](https://aclanthology.org/2022.acl-long.78.pdf) [Repo](https://github.com/microsoft/HiTab)
 
+| Benchmark | Task Type | Year | Links |
+|:---:|:---:|:---:|:---:|
+| FinQA | Reasoning | 2021 | [paper](https://arxiv.org/pdf/2109.00122) [code](https://github.com/czyssrs/FinQA) |
+| FeTaQA | Reasoning | 2021 | [paper](https://arxiv.org/pdf/2104.00369) [code](https://github.com/Yale-LILY/FeTaQA) |
+| HiTab | Reasoning | 2022 | [paper](https://aclanthology.org/2022.acl-long.78.pdf) [code](https://github.com/microsoft/HiTab) |
 
-## Conference Paper (including arxiv)
-| Venue       | Paper                                                        | Authors |                           Links                             |
-| :---------- | :----------------------------------------------------------- | :-------------: |:----------------------------------------------------------: |
-| SIGMOD'26   | ST-Raptor: LLM-Powered Semi-Structured Table Question Answering | Xuanhe Zhou |  [paper](https://arxiv.org/pdf/2508.18190)   |
-| Arxiv/2601  | Can We Predict Before Executing Machine Learning Agents? | Ningyu Zhang | [paper](https://arxiv.org/pdf/2601.05930) |
-| CIDR'25     | AOP: Automated and Interactive LLM Pipeline Orchestration for Answering Complex Queries | Guoliang Li |  [paper](https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf)   |
-| CIDR'25     | Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing | Gerardo Vitagliano |  [paper](https://www.vldb.org/cidrdb/papers/2025/p12-liu.pdf)   |
-| IEEE Data Eng. Bull.  | iDataLake: An LLM-Powered Analytics System on Data Lakes | Guoliang Li |  [paper](http://sites.computer.org/debull/A25mar/p57.pdf#:~:text=In%20this%20paper%20we%20highlight%20challenges%20for%20supporting,query%20and%20outputs%20the%20results%20for%20the%20query.)   |
-| VLDB'25     | Towards Automated Cross-domain Exploratory Data Analysis through Large Language Models  | Qi Liu | [paper](https://www.vldb.org/pvldb/vol18/p5086-zhu.pdf)   |
-| VLDB'25     | AutoPrep: Natural Language Question-Aware Data Preparation with a Multi-Agent Framework | Ju Fan | [paper](https://www.vldb.org/pvldb/vol18/p5086-zhu.pdf)   |
-| VLDB'25     | DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing | Eugene Wu | [paper](https://arxiv.org/pdf/2410.12189)   |
-| VLDB'25     | Data Imputation with Limited Data Redundancy Using Data Lakes | Yuyu Luo | [paper](https://www.vldb.org/pvldb/vol18/p3354-tang.pdf)  
-| VLDB'25     | Semantic Operators and Their Optimization: Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS | Matei Zaharia | [paper](https://www.vldb.org/pvldb/vol18/p4171-patel.pdf)   |
-| VLDB'25     | Weak-to-Strong Prompts with Lightweight-to-Powerful LLMs for High-Accuracy, Low-Cost, and Explainable Data Transformation | Yuyu Luo, Ju Fan, and Nan Tang et al | [paper](https://www.vldb.org/pvldb/vol18/p2371-tang.pdf)   |
-| SIGMOD'25     | Automatic Database Configuration Debugging using Retrieval-Augmented Language Models | Nan Tang, Ju Fan, et al | [paper](https://dl.acm.org/doi/10.1145/3709663)   |
-| SIGMOD'25     | Andromeda: Debugging Database Performance Issues with Retrieval-Augmented Large Language Models | Nan Tang, Ju Fan, Xiaoyong Du, et al | [paper](https://dl.acm.org/doi/10.1145/3722212.3725080)   |
-| ICDE'25     | DataLab: A Unified Platform for LLM-Powered Business Intelligence | Wei Chen | [paper](https://arxiv.org/pdf/2412.02205)   |
-| ICML'25     | AutoML-Agent: A Multi-Agent LLM Framework for Full-Pipeline AutoML | Sung Ju Hwang | [paper](https://arxiv.org/pdf/2410.02958)   |
-| ICML'25     | Compositional Condition Question Answering in Tabular Understanding | Han-Jia Ye | [paper](https://openreview.net/attachment?id=aXU48nrA2v&name=pdf)   |
-| ICML'25     | Are Large Language Models Ready for Multi-Turn Tabular Data Analysis? | Reynold Cheng | [paper](https://openreview.net/attachment?id=flKhxGTBj2&name=pdf) |
-| ICML'25     | Agent Workflow Memory | Graham Neubig |  [paper](https://arxiv.org/pdf/2409.07429)   |
-| ICLR'25     | SeCom: On Memory Construction and Retrieval for Personalized Conversational Agents | Qianhui Wu | [paper](https://openreview.net/pdf?id=xKDZAW0He39) |
-| ICLR'25     | InsightBench: Evaluating Business Analytics Agents Through Multi-Step Insight Generation | Issam Hadj Laradji | [paper](https://arxiv.org/pdf/2407.06423) |
-| ICLR'25     | Agent-Oriented Planning in Multi-Agent Systems | Yaliang Li | [paper](https://arxiv.org/pdf/2410.02189) |
-| ICLR'25 Oral | AFlow: Automating Agentic Workflow Generation | Chenglin Wu | [paper](https://openreview.net/pdf?id=z5uVAKwmjf) |
-| COLM'25     | Inducing Programmatic Skills for Agentic Tasks | Zora Zhiruo Wang, Apurva Gandhi, Graham Neubig, Daniel Fried | [paper](https://arxiv.org/pdf/2504.06821) |
-| NAACL'25    | H-STAR: LLM-driven Hybrid SQL-Text Adaptive Reasoning on Tables | Chandan K. Reddy | [paper](https://arxiv.org/pdf/2407.05952) |
-| ACL'25      | Table-Critic: A Multi-Agent Framework for Collaborative Criticism and Refinement in Table Reasoning | Peiying Yu, Jingjing Wang | [paper](https://arxiv.org/pdf/2502.11799) |
+## 🧹 Data Preparation & Integration
+
+> Agents that clean, transform, impute, and integrate data — structured or unstructured — before analysis.
+
+| Venue | Paper | Corresp. Author | Links |
+|:---|:---|:---:|:---:|
+| VLDB'25 | AutoPrep: Natural Language Question-Aware Data Preparation with a Multi-Agent Framework `multi-agent` | Ju Fan | [paper](https://arxiv.org/pdf/2412.10422) |
+| VLDB'25 | Data Imputation with Limited Data Redundancy Using Data Lakes `data-lake` | Yuyu Luo | [paper](https://www.vldb.org/pvldb/vol18/p3354-tang.pdf) |
+| VLDB'25 | Weak-to-Strong Prompts with Lightweight-to-Powerful LLMs for High-Accuracy, Low-Cost, and Explainable Data Transformation | Yuyu Luo, Ju Fan, and Nan Tang et al | [paper](https://www.vldb.org/pvldb/vol18/p2371-tang.pdf) |
+| VLDB'25 | DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing `unstructured-data` | Eugene Wu | [paper](https://arxiv.org/pdf/2410.12189) |
+
+## 💬 NL2SQL (Text-to-SQL)
+
+> Translating natural language questions into SQL, increasingly via agentic exploration, decomposition, and self-correction. See also papers tagged `nl2sql` in other sections.
+
+| Venue | Paper | Corresp. Author | Links |
+|:---|:---|:---:|:---:|
+| arXiv'26.04 | AV-SQL: Decomposing Complex Text-to-SQL Queries with Agentic Views `nl2sql` | Thanh Tam Nguyen | [paper](https://arxiv.org/pdf/2604.07041) [code](https://github.com/pminhtam/AV-SQL) |
+| arXiv'26.02 | APEX-SQL: Talking to the data via Agentic Exploration for Text-to-SQL `nl2sql` | Wai Lam | [paper](https://arxiv.org/pdf/2602.16720) [code](https://github.com/Tencent/APEX-SQL-Project) |
+
+## 📋 Table Understanding & Reasoning
+
+> Question answering and reasoning over tables and semi-structured data, including SQL-hybrid approaches.
+
+| Venue | Paper | Corresp. Author | Links |
+|:---|:---|:---:|:---:|
+| SIGMOD'26 | ST-Raptor: LLM-Powered Semi-Structured Table Question Answering | Xuanhe Zhou | [paper](https://arxiv.org/pdf/2508.18190) |
+| ICML'25 | Compositional Condition Question Answering in Tabular Understanding | Han-Jia Ye | [paper](https://openreview.net/attachment?id=aXU48nrA2v&name=pdf) |
+| ICML'25 | Are Large Language Models Ready for Multi-Turn Tabular Data Analysis? | Reynold Cheng | [paper](https://openreview.net/attachment?id=flKhxGTBj2&name=pdf) |
+| NeurIPS'25 | Table as a Modality for Large Language Models | Junbo Zhao | [paper](https://neurips.cc/virtual/2025/poster/116332) |
+| NAACL'25 | H-STAR: LLM-driven Hybrid SQL-Text Adaptive Reasoning on Tables `nl2sql` | Chandan K. Reddy | [paper](https://arxiv.org/pdf/2407.05952) |
+| ACL'25 | Table-Critic: A Multi-Agent Framework for Collaborative Criticism and Refinement in Table Reasoning `multi-agent` | Peiying Yu, Jingjing Wang | [paper](https://arxiv.org/pdf/2502.11799) |
+| arXiv'25.09 | TableMind: An Autonomous Programmatic Agent for Tool-Augmented Table Reasoning | Qi Liu | [paper](https://arxiv.org/pdf/2509.06278) |
+| arXiv'25.06 | MAPLE: Multi-Agent Adaptive Planning with Long-Term Memory for Table Reasoning `memory` `multi-agent` | Thuy-Trang Vu | [paper](https://arxiv.org/pdf/2506.05813) |
+| arXiv'25.05 | Weaver: Interweaving SQL and LLM for Table Reasoning `nl2sql` | Vivek Gupta | [paper](https://arxiv.org/pdf/2505.18961) |
+| arXiv'25.01 | TableMaster: A Recipe to Advance Table Understanding with Language Models | Hanbing Liu | [paper](https://arxiv.org/pdf/2501.19378) |
+| ICLR'24 | OpenTab: Advancing Large Language Models as Open-domain Table Reasoners | Jiani Zhang | [paper](https://arxiv.org/pdf/2402.14361) |
+| ICLR'24 | CABINET: Content Relevance based Noise Reduction for Table Question Answering | Balaji Krishnamurthy | [paper](https://arxiv.org/pdf/2402.01155) |
+| ICLR'24 | Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding | Tomas Pfister | [paper](https://arxiv.org/pdf/2401.04398) |
+| VLDB'24 | ReAcTable: Enhancing ReAct for Table Question Answering | Jignesh M. Patel | [paper](https://arxiv.org/pdf/2310.00815) |
+| VLDB'24 | AutoTQA: Towards Autonomous Tabular Question Answering through Multi-Agent Large Language Models `multi-agent` | Qi Liu | [paper](https://www.vldb.org/pvldb/vol17/p3920-zhu.pdf) |
+| SIGIR'23 | Large Language Models are Versatile Decomposers: Decompose Evidence and Questions for Table-based Reasoning (Dater) | Yongbin Li | [paper](https://arxiv.org/pdf/2301.13808) |
+
+## 📊 Data Analysis & Insight Discovery
+
+> End-to-end analytics systems: EDA, BI platforms, semantic operators over data lakes, report generation, and insight discovery.
+
+| Venue | Paper | Corresp. Author | Links |
+|:---|:---|:---:|:---:|
+| CIDR'25 | AOP: Automated and Interactive LLM Pipeline Orchestration for Answering Complex Queries | Guoliang Li | [paper](https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf) |
+| CIDR'25 | Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing `semantic-operators` | Gerardo Vitagliano | [paper](https://www.vldb.org/cidrdb/papers/2025/p12-liu.pdf) |
+| IEEE Data Eng. Bull. | iDataLake: An LLM-Powered Analytics System on Data Lakes `data-lake` | Guoliang Li | [paper](http://sites.computer.org/debull/A25mar/p57.pdf) |
+| VLDB'25 | Towards Automated Cross-domain Exploratory Data Analysis through Large Language Models | Qi Liu | [paper](https://www.vldb.org/pvldb/vol18/p5086-zhu.pdf) |
+| VLDB'25 | Semantic Operators and Their Optimization: Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS `semantic-operators` | Matei Zaharia | [paper](https://www.vldb.org/pvldb/vol18/p4171-patel.pdf) |
+| ICDE'25 | DataLab: A Unified Platform for LLM-Powered Business Intelligence | Wei Chen | [paper](https://arxiv.org/pdf/2412.02205) |
+| arXiv'25.08 | AgenticData: An Agentic Data Analytics System for Heterogeneous Data | Yuan Li | [paper](https://arxiv.org/pdf/2508.05002) |
+| arXiv'25.05 | TAIJI: MCP-based Multi-Modal Data Analytics on Data Lakes `data-lake` | Ju Fan | [paper](https://arxiv.org/pdf/2505.11270) |
+| arXiv'25.04 | AgentAda: Skill-Adaptive Data Analytics for Tailored Insight Discovery | Issam H. Laradji | [paper](https://arxiv.org/pdf/2504.07421v3) |
+| arXiv'25.03 | DAgent: A Relational Database-Driven Data Analysis Report Generation Agent | Yunjun Gao | [paper](https://arxiv.org/pdf/2503.13269) |
+| arXiv'25.01 | ChartInsighter: An Approach for Mitigating Hallucination in Time-series Chart Summary Generation with A Benchmark Dataset `visualization` | Fen Wang, Siming Chen | [paper](https://arxiv.org/pdf/2501.09349) |
+| IEEE VIS'23 | What Exactly is an Insight? A Literature Review `insight` | Alvitta Ottley | [paper](https://arxiv.org/pdf/2307.06551) |
+
+## 🔬 Data Science & Machine Learning Agents
+
+> Autonomous agents for the full data science lifecycle: modeling, AutoML, and Kaggle-style competitions.
+
+| Venue | Paper | Corresp. Author | Links |
+|:---|:---|:---:|:---:|
+| arXiv'26.01 | Can We Predict Before Executing Machine Learning Agents? | Ningyu Zhang | [paper](https://arxiv.org/pdf/2601.05930) |
+| ICML'25 | AutoML-Agent: A Multi-Agent LLM Framework for Full-Pipeline AutoML `multi-agent` `automl` | Sung Ju Hwang | [paper](https://arxiv.org/pdf/2410.02958) |
 | ACL'25 Findings | Data Interpreter: An LLM Agent For Data Science | Bang Liu & Chenglin Wu | [paper](https://arxiv.org/pdf/2402.18679) |
-| Neurips'25  | Table as a Modality for Large Language Models | Junbo Zhao | [paper](https://neurips.cc/virtual/2025/poster/116332)  |
-| Arxiv/2512  | Beyond Sliding Windows: Learning to Manage Memory in Non-Markovian Environments | Tim Klinger | [paper](https://arxiv.org/pdf/2512.19154) |
-| Arxiv/2512  | MemR3: Memory Retrieval via Reflective Reasoning for LLM Agents | Song Le | [paper](https://arxiv.org/pdf/2512.20237) |
-| Arxiv/2512  | Learning Hierarchical Procedural Memory for LLM Agents through Bayesian Selection and Contrastive Refinement | Mahdi Jalili | [paper](https://arxiv.org/pdf/2512.18950) |
-| Arxiv/2512  | Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution | Zouying Cao, Zhaoyang Liu, Bolin Ding, Hai Zhao | [paper](https://arxiv.org/pdf/2512.10696v1) |
-| Arxiv/2510  | AgentFold: Long-Horizon Web Agents with Proactive Context Management | Rui Ye, Siheng Chen | [paper](https://arxiv.org/pdf/2510.24699) |
-| Arxiv/2510  | Scaling Long-Horizon LLM Agent via Context-Folding | Weiwei Sun | [paper](https://arxiv.org/pdf/2510.11967) |
-| Arxiv/2510  | LEGOMem: Modular Procedural Memory for Multi-agent LLM Systems for Workflow Automation | Dongge Han | [paper](https://arxiv.org/pdf/2510.04851) |
-| Arxiv/2510  | TOOLMEM: Enhancing Multimodal Agents with Learnable Tool Capability Memory | Zora Zhiruo Wang | [paper](https://arxiv.org/pdf/2510.06664) |
-| Arxiv/2510  | Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks | Jitao Sang | [paper](https://arxiv.org/abs/2510.12635) |
-| Arxiv/2510  | LLM-based Multi-Agent Blackboard System for Information Discovery in Data Science | Tomas Pfister | [paper](https://arxiv.org/pdf/2510.01285) |
-| Arxiv/2510  | DeepAnalyze: Agentic Large Language Models for Autonomous Data Science | Ju Fan | [paper](https://arxiv.org/pdf/2510.16872?) |
-| Arxiv/2510  | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models | Qizheng Zhang & Changran Hu | [paper](https://www.arxiv.org/abs/2510.04618) |
-| Arxiv/2509  | Latent learning: episodic memory complements parametric learning by enabling flexible reuse of experiences | Andrew Kyle Lampinen | [paper](https://arxiv.org/pdf/2509.16189) |
-| Arxiv/2509  | H2R: Hierarchical Hindsight Reflection for Multi-Task LLM Agents | Chengdong Xu | [paper](https://arxiv.org/pdf/2509.12810) |
-| Arxiv/2509  | Mem-α: Learning Memory Construction via Reinforcement Learning | Yu Wang | [paper](https://arxiv.org/pdf/2509.25911) |
-| Arxiv/2509  | ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory | Siru Ouyang | [paper](https://arxiv.org/abs/2509.25140) |
-| Arxiv/2509  | SGMem: Sentence Graph Memory for Long-Term Conversational Agents | Yaxiong Wu |  [paper](https://arxiv.org/pdf/2509.21212v1)   |
-| Arxiv/2509  | TableMind: An Autonomous Programmatic Agent for Tool-Augmented Table Reasoning | Qi Liu |  [paper](https://arxiv.org/pdf/2509.06278)   |
-| Arxiv/2509  | MemGen: Weaving Generative Latent Memory for Self-Evolving Agents | Shuicheng Yan |  [paper](https://arxiv.org/pdf/2509.24704)   |
-| Arxiv/2508  | Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models | Zhouhan Lin |  [paper](https://arxiv.org/pdf/2508.09874)   |
-| Arxiv/2508  | Memory-R1: Enhancing Large Language Model Agents to Actively Manage and Utilize External Memory | Yunpu Ma |  [paper](https://arxiv.org/pdf/2508.19828)   |
-| Arxiv/2508  | Data Agent: A Holistic Architecture for Orchestrating Data+AI Ecosystems | Guoliang Li |  [paper](https://arxiv.org/pdf/2507.01599)   |
-| Arxiv/2508  | Memp: Exploring Agent Procedural Memory | Ningyu Zhang |  [paper](https://arxiv.org/pdf/2508.06433)   |
-| Arxiv/2508  | Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory | Wei Li |  [paper](https://arxiv.org/pdf/2508.09736)   |
-| Arxiv/2508  | AgenticData: An Agentic Data Analytics System for Heterogeneous Data | Yuan Li |  [paper](https://arxiv.org/pdf/2508.50002)   |
-| Arxiv/2508  | Multiple Memory Systems for Enhancing the Long-term Memory of Agent | Bo Wang |  [paper](https://arxiv.org/pdf/2508.15294)   |
-| Arxiv/2507  | H-MEM: Hierarchical Memory for High-Efficiency Long-Term Reasoning in LLM Agents | Shaoning Zeng |  [paper](https://arxiv.org/pdf/2507.22925v1)   |
-| Arxiv/2507  | MemOS: A Memory OS for AI System | Siheng Chen, Wentao Zhang, Zhi-Qin John Xu, Feiyu Xiong |  [paper](https://arxiv.org/pdf/2507.07957)   |
-| Arxiv/2507  | MIRIX: Multi-Agent Memory System for LLM-Based Agents | Xi Chen |  [paper](https://arxiv.org/pdf/2507.07957)   |
-| Arxiv/2507  | MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent | Hao Zhou |  [paper](https://arxiv.org/pdf/2507.02259)   |
-| Arxiv/2506  | MAPLE: Multi-Agent Adaptive Planning with Long-Term Memory for Table Reasoning | Thuy-Trang Vu |  [paper](https://arxiv.org/pdf/2503.13269)   |
-| Arxiv/2506  | Memory OS of AIAgent | Ting Bai |  [paper](https://arxiv.org/pdf/2506.06326)   |
-| Arxiv/2506  | G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems | Shuicheng Yan |  [paper](https://arxiv.org/pdf/2506.07398)   |
-| Arxiv/2506  | AutoMind: Adaptive Knowledgeable Agent for Automated Data Science | Ningyu Zhang |  [paper](https://arxiv.org/pdf/2506.10974)   |
-| Arxiv/2505  | DSMentor: Enhancing Data Science Agents with Curriculum Learning and Online Knowledge Accumulation | Patrick Ng |  [paper](https://arxiv.org/pdf/2505.14163)   |
-| Arxiv/2505  | TAIJI: MCP-based Multi-Modal Data Analytics on Data Lakes | Ju Fan |  [paper](https://arxiv.org/pdf/2505.11270)   |
-| Arxiv/2505  | How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior | Zidi Xiong |  [paper](https://arxiv.org/pdf/2505.16067)   |
-| Arxiv'2505  | Weaver: Interweaving SQL and LLM for Table Reasoning | Vivek Gupta |  [paper](https://arxiv.org/pdf/2505.18961)    |
-| Arxiv/2504  | AgentAda: Skill-Adaptive Data Analytics for Tailored Insight Discovery | Issam H. Laradji |  [paper](https://arxiv.org/pdf/2504.07421v3)   |
-| Arxiv/2504  | Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory | Deshraj Yadav |  [paper](https://arxiv.org/pdf/2504.19413)   |
-| Arxiv/2503  | R3Mem: Bridging Memory Retention and Retrieval via Reversible Compression | Yun Zhu |  [paper](https://arxiv.org/pdf/2502.15957v1)   |
-| Arxiv/2503  | DatawiseAgent: A Notebook-Centric LLM Agent Framework for Automated Data Science | Yu Huang |  [paper](https://arxiv.org/pdf/2503.07044)   |
-| Arxiv/2503  | DAgent: A Relational Database-Driven Data Analysis Report Generation Agent | Yunjun Gao |  [paper](https://arxiv.org/pdf/2503.13269)   |
-| Arxiv/2502  | A-MEM: Agentic Memory for LLM Agents | Yongfeng Zhang |  [paper](https://arxiv.org/pdf/2502.12110)   |
-| Arxiv'2501  | TableMaster: A Recipe to Advance Table Understanding with Language Models | Hanbing Liu |  [paper](https://arxiv.org/pdf/2501.19378)    |
-| Arxiv'2501  | ChartInsighter: An Approach for Mitigating Hallucination in Time-series Chart Summary Generation with A Benchmark Dataset | Fen Wang, Siming Chen |  [paper](https://arxiv.org/pdf/2501.09349)    |
-| Arxiv'2410  | AutoKaggle: A Multi-Agent Framework for Autonomous Data Science Competition | Wenhao Huang & Ge Zhang | [paper](https://arxiv.org/abs/2410.20424) |
-| Arxiv'2407  | LAMBDA: A Large Model Based Data Agent | Yancheng Yuan & Jian Huang | [paper](https://arxiv.org/abs/2407.17535) |
-| ICML'24     | DS-Agent: Automated Data Science by Empowering Large Language Models with Case-Based Reasoning | Hechang Chen | [paper](https://arxiv.org/abs/2402.17453) |
-| ICLR'24     | Synapse: Trajectory-as-exemplar prompting with memory for computer control | Bo An | [paper](https://arxiv.org/pdf/2306.07863) |
-| ICLR'24     | OpenTab: Advancing Large Language Models as Open-domain Table Reasoners | Jiani Zhang  |  [paper](https://arxiv.org/pdf/2402.14361)    |
-| ICLR'24     | CABINET: Content Relevance based Noise Reduction for Table Question Answering |  Balaji Krishnamurthy |  [paper](https://arxiv.org/pdf/2402.01155)    |
-| ICLR'24     | Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection | Hannaneh Hajishirzi  |  [paper](https://arxiv.org/pdf/2401.04398)    |
-| ICLR'24     | Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding | Tomas Pfister  |  [paper](https://arxiv.org/pdf/2401.04398)    |
-| ICLR'24     | MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework | Chenglin Wu  |  [paper](https://arxiv.org/pdf/2308.00352)    |
-| AAAI'24     | ExpeL: LLM Agents Are Experiential Learners | Gao Huang |  [paper](https://arxiv.org/pdf/2308.10144)    |
-| VLDB'24     | ReAcTable: Enhancing ReAct for Table Question Answering |  Jignesh M. Patel |  [paper](https://arxiv.org/pdf/2310.00815)    |
-| VLDB'24     | AutoTQA: Towards Autonomous Tabular Question Answering through Multi-Agent Large Language Models | Qi Liu |  [paper](https://www.vldb.org/pvldb/vol17/p3920-zhu.pdf)    |
-| VLDB'24     | D-Bot: Database Diagnosis System using Large Language Models | Guoliang Li |  [paper](https://arxiv.org/pdf/2312.01454)    |
-| NIPS'23     | Augmenting language models with long-term memory | Furu Wei |  [paper](https://arxiv.org/pdf/2306.07174)    |
-| NIPS'23     | Reflexion: Language Agents with Verbal Reinforcement Learning | Shunyu Yao |  [paper](https://arxiv.org/pdf/2303.11366)    |
-| IEEE VIS'23 | What Exactly is an Insight? A Literature Review | Alvitta Ottley |  [paper](https://arxiv.org/pdf/2307.06551)    |
-| SIGIR'23    | Large Language Models are Versatile Decomposers: Decompose Evidence and Questions for Table-based Reasoning (Dater) | Yongbin Li |  [paper](https://arxiv.org/pdf/2301.13808)    |
-| Arxiv'2310  | MemGPT: Towards LLMs as Operating Systems | Charles Packer |  [paper](https://arxiv.org/pdf/2310.08560)    |
+| arXiv'25.10 | LLM-based Multi-Agent Blackboard System for Information Discovery in Data Science `multi-agent` | Tomas Pfister | [paper](https://arxiv.org/pdf/2510.01285) |
+| arXiv'25.10 | DeepAnalyze: Agentic Large Language Models for Autonomous Data Science | Ju Fan | [paper](https://arxiv.org/pdf/2510.16872) |
+| arXiv'25.06 | AutoMind: Adaptive Knowledgeable Agent for Automated Data Science | Ningyu Zhang | [paper](https://arxiv.org/pdf/2506.10974) |
+| arXiv'25.05 | DSMentor: Enhancing Data Science Agents with Curriculum Learning and Online Knowledge Accumulation `memory` | Patrick Ng | [paper](https://arxiv.org/pdf/2505.14163) |
+| arXiv'25.03 | DatawiseAgent: A Notebook-Centric LLM Agent Framework for Automated Data Science | Yu Huang | [paper](https://arxiv.org/pdf/2503.07044) |
+| ICML'24 | DS-Agent: Automated Data Science by Empowering Large Language Models with Case-Based Reasoning `memory` | Hechang Chen | [paper](https://arxiv.org/abs/2402.17453) |
+| arXiv'24.10 | AutoKaggle: A Multi-Agent Framework for Autonomous Data Science Competition `multi-agent` | Wenhao Huang & Ge Zhang | [paper](https://arxiv.org/abs/2410.20424) |
+| arXiv'24.07 | LAMBDA: A Large Model Based Data Agent | Yancheng Yuan & Jian Huang | [paper](https://arxiv.org/abs/2407.17535) |
 
-## Survey Paper
+## 🛠️ Database Operations & Diagnosis
 
-[A Survey of Data Agents: Emerging Paradigm or Overstated Hype?](https://arxiv.org/pdf/2510.23587)
+> LLM agents for database administration: configuration debugging, performance diagnosis, and tuning.
 
-[Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions](https://arxiv.org/pdf/2505.11270)
+| Venue | Paper | Corresp. Author | Links |
+|:---|:---|:---:|:---:|
+| SIGMOD'25 | Automatic Database Configuration Debugging using Retrieval-Augmented Language Models `rag` | Nan Tang, Ju Fan, et al | [paper](https://dl.acm.org/doi/10.1145/3709663) |
+| SIGMOD'25 | Andromeda: Debugging Database Performance Issues with Retrieval-Augmented Large Language Models `rag` | Nan Tang, Ju Fan, Xiaoyong Du, et al | [paper](https://dl.acm.org/doi/10.1145/3722212.3725080) |
+| VLDB'24 | D-Bot: Database Diagnosis System using Large Language Models | Guoliang Li | [paper](https://arxiv.org/pdf/2312.01454) |
 
-[A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
+## 🧠 Agent Memory & Context Engineering
 
-[Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
+> Memory is a core capability for long-horizon data agents: episodic/procedural memory, memory operating systems, context folding, and experience-driven self-evolution.
 
-[LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+| Venue | Paper | Corresp. Author | Links |
+|:---|:---|:---:|:---:|
+| ICML'25 | Agent Workflow Memory `procedural-memory` | Graham Neubig | [paper](https://arxiv.org/pdf/2409.07429) |
+| ICLR'25 | SeCom: On Memory Construction and Retrieval for Personalized Conversational Agents | Qianhui Wu | [paper](https://openreview.net/pdf?id=xKDZAW0He39) |
+| COLM'25 | Inducing Programmatic Skills for Agentic Tasks `procedural-memory` | Zora Zhiruo Wang, Apurva Gandhi, Graham Neubig, Daniel Fried | [paper](https://arxiv.org/pdf/2504.06821) |
+| arXiv'25.12 | Beyond Sliding Windows: Learning to Manage Memory in Non-Markovian Environments | Tim Klinger | [paper](https://arxiv.org/pdf/2512.19154) |
+| arXiv'25.12 | MemR3: Memory Retrieval via Reflective Reasoning for LLM Agents | Song Le | [paper](https://arxiv.org/pdf/2512.20237) |
+| arXiv'25.12 | Learning Hierarchical Procedural Memory for LLM Agents through Bayesian Selection and Contrastive Refinement `procedural-memory` | Mahdi Jalili | [paper](https://arxiv.org/pdf/2512.18950) |
+| arXiv'25.12 | Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution `procedural-memory` | Zouying Cao, Zhaoyang Liu, Bolin Ding, Hai Zhao | [paper](https://arxiv.org/pdf/2512.10696v1) |
+| arXiv'25.10 | AgentFold: Long-Horizon Web Agents with Proactive Context Management `context-engineering` | Rui Ye, Siheng Chen | [paper](https://arxiv.org/pdf/2510.24699) |
+| arXiv'25.10 | Scaling Long-Horizon LLM Agent via Context-Folding `context-engineering` | Weiwei Sun | [paper](https://arxiv.org/pdf/2510.11967) |
+| arXiv'25.10 | LEGOMem: Modular Procedural Memory for Multi-agent LLM Systems for Workflow Automation `procedural-memory` `multi-agent` | Dongge Han | [paper](https://arxiv.org/pdf/2510.04851) |
+| arXiv'25.10 | TOOLMEM: Enhancing Multimodal Agents with Learnable Tool Capability Memory | Zora Zhiruo Wang | [paper](https://arxiv.org/pdf/2510.06664) |
+| arXiv'25.10 | Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks `context-engineering` | Jitao Sang | [paper](https://arxiv.org/abs/2510.12635) |
+| arXiv'25.10 | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models `context-engineering` | Qizheng Zhang & Changran Hu | [paper](https://www.arxiv.org/abs/2510.04618) |
+| arXiv'25.09 | Latent learning: episodic memory complements parametric learning by enabling flexible reuse of experiences `episodic-memory` | Andrew Kyle Lampinen | [paper](https://arxiv.org/pdf/2509.16189) |
+| arXiv'25.09 | H2R: Hierarchical Hindsight Reflection for Multi-Task LLM Agents `reflection` | Chengdong Xu | [paper](https://arxiv.org/pdf/2509.12810) |
+| arXiv'25.09 | Mem-α: Learning Memory Construction via Reinforcement Learning `rl` | Yu Wang | [paper](https://arxiv.org/pdf/2509.25911) |
+| arXiv'25.09 | ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory | Siru Ouyang | [paper](https://arxiv.org/abs/2509.25140) |
+| arXiv'25.09 | SGMem: Sentence Graph Memory for Long-Term Conversational Agents | Yaxiong Wu | [paper](https://arxiv.org/pdf/2509.21212v1) |
+| arXiv'25.09 | MemGen: Weaving Generative Latent Memory for Self-Evolving Agents | Shuicheng Yan | [paper](https://arxiv.org/pdf/2509.24704) |
+| arXiv'25.08 | Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models `parametric-memory` | Zhouhan Lin | [paper](https://arxiv.org/pdf/2508.09874) |
+| arXiv'25.08 | Memory-R1: Enhancing Large Language Model Agents to Actively Manage and Utilize External Memory `rl` | Yunpu Ma | [paper](https://arxiv.org/pdf/2508.19828) |
+| arXiv'25.08 | Memp: Exploring Agent Procedural Memory `procedural-memory` | Ningyu Zhang | [paper](https://arxiv.org/pdf/2508.06433) |
+| arXiv'25.08 | Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory `multimodal` | Wei Li | [paper](https://arxiv.org/pdf/2508.09736) |
+| arXiv'25.08 | Multiple Memory Systems for Enhancing the Long-term Memory of Agent | Bo Wang | [paper](https://arxiv.org/pdf/2508.15294) |
+| arXiv'25.07 | H-MEM: Hierarchical Memory for High-Efficiency Long-Term Reasoning in LLM Agents | Shaoning Zeng | [paper](https://arxiv.org/pdf/2507.22925v1) |
+| arXiv'25.07 | MemOS: A Memory OS for AI System | Siheng Chen, Wentao Zhang, Zhi-Qin John Xu, Feiyu Xiong | [paper](https://arxiv.org/pdf/2507.03724) |
+| arXiv'25.07 | MIRIX: Multi-Agent Memory System for LLM-Based Agents `multi-agent` | Xi Chen | [paper](https://arxiv.org/pdf/2507.07957) |
+| arXiv'25.07 | MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent `rl` | Hao Zhou | [paper](https://arxiv.org/pdf/2507.02259) |
+| arXiv'25.06 | Memory OS of AI Agent | Ting Bai | [paper](https://arxiv.org/pdf/2506.06326) |
+| arXiv'25.06 | G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems `multi-agent` | Shuicheng Yan | [paper](https://arxiv.org/pdf/2506.07398) |
+| arXiv'25.05 | How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior `empirical-study` | Zidi Xiong | [paper](https://arxiv.org/pdf/2505.16067) |
+| arXiv'25.04 | Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory | Deshraj Yadav | [paper](https://arxiv.org/pdf/2504.19413) |
+| arXiv'25.02 | R3Mem: Bridging Memory Retention and Retrieval via Reversible Compression | Yun Zhu | [paper](https://arxiv.org/pdf/2502.15957v1) |
+| arXiv'25.02 | A-MEM: Agentic Memory for LLM Agents | Yongfeng Zhang | [paper](https://arxiv.org/pdf/2502.12110) |
+| ICLR'24 | Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control `episodic-memory` | Bo An | [paper](https://arxiv.org/pdf/2306.07863) |
+| AAAI'24 | ExpeL: LLM Agents Are Experiential Learners `episodic-memory` | Gao Huang | [paper](https://arxiv.org/pdf/2308.10144) |
+| NeurIPS'23 | Augmenting Language Models with Long-Term Memory `parametric-memory` | Furu Wei | [paper](https://arxiv.org/pdf/2306.07174) |
+| NeurIPS'23 | Reflexion: Language Agents with Verbal Reinforcement Learning `reflection` | Shunyu Yao | [paper](https://arxiv.org/pdf/2303.11366) |
+| arXiv'23.10 | MemGPT: Towards LLMs as Operating Systems | Charles Packer | [paper](https://arxiv.org/pdf/2310.08560) |
 
+## 🧩 General Agent Techniques
 
+> General-purpose agent building blocks frequently used by data agents: planning, workflow generation, multi-agent frameworks, and RAG.
 
+| Venue | Paper | Corresp. Author | Links |
+|:---|:---|:---:|:---:|
+| ICLR'25 | Agent-Oriented Planning in Multi-Agent Systems `planning` `multi-agent` | Yaliang Li | [paper](https://arxiv.org/pdf/2410.02189) |
+| ICLR'25 Oral | AFlow: Automating Agentic Workflow Generation `workflow` | Chenglin Wu | [paper](https://openreview.net/pdf?id=z5uVAKwmjf) |
+| ICLR'24 | Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection `rag` | Hannaneh Hajishirzi | [paper](https://arxiv.org/pdf/2310.11511) |
+| ICLR'24 | MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework `multi-agent` | Chenglin Wu | [paper](https://arxiv.org/pdf/2308.00352) |
 
+## 🤝 Contributing
 
+Contributions are welcome! Add the paper's metadata to [`data/papers.yaml`](data/papers.yaml)
+(or [`data/benchmarks.yaml`](data/benchmarks.yaml) / [`data/surveys.yaml`](data/surveys.yaml)),
+run `python scripts/generate_readme.py`, and open a PR. You can also simply
+[open an issue](https://github.com/SJTU-DMTai/Data-Agent-Reading-List/issues/new/choose)
+with the paper link. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
+## ⭐ Star History
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[![Star History Chart](https://api.star-history.com/svg?repos=SJTU-DMTai/Data-Agent-Reading-List&type=Date)](https://star-history.com/#SJTU-DMTai/Data-Agent-Reading-List&Date)
