@@ -141,6 +141,36 @@ def triage(records, rubric_text=None, cfg=None, batch_size=12):
     return out
 
 
+PAPER_CATEGORIES = ["data-preparation", "nl2sql", "table-reasoning", "data-analysis",
+                    "data-science", "db-operations", "memory", "foundations"]
+
+CLASSIFY_SYSTEM = """You assign a single category to a paper for an awesome-list on \
+LLM-based data agents. Pick the ONE best-fitting key from:
+- data-preparation: cleaning/transforming/imputing/integrating data
+- nl2sql: text-to-SQL / natural language to SQL
+- table-reasoning: QA and reasoning over tables / spreadsheets / semi-structured data
+- data-analysis: EDA, BI, insight discovery, semantic operators, report/visualization, time-series analytics
+- data-science: autonomous DS/ML/AutoML/Kaggle-style agents, model building
+- db-operations: LLM agents for DBA work (diagnosis, tuning, config, vector-DB ops)
+- memory: agent memory systems, memory OS, context engineering/folding, experience-driven self-evolution
+- foundations: general agent building blocks (planning, workflow, multi-agent, RAG, skills)
+Reply with ONLY the key, nothing else."""
+
+
+def classify(record, cfg=None):
+    """Return the single best category key for one enriched paper record."""
+    if cfg is None:
+        cfg = load_config()
+    user = (f"Title: {record['title']}\n\n"
+            f"Abstract: {record.get('abstract', '')[:1200]}")
+    out = _call([{"role": "system", "content": CLASSIFY_SYSTEM},
+                 {"role": "user", "content": user}], cfg).strip().lower()
+    for key in PAPER_CATEGORIES:  # tolerate extra words in the reply
+        if key in out:
+            return key
+    return "foundations"  # safe default; caller can override
+
+
 def load_config():
     key = os.environ.get("LLM_API_KEY") or os.environ.get("DEEPSEEK_API_KEY")
     if not key:
