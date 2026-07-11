@@ -49,15 +49,58 @@ Use `tags` for cross-cutting topics (e.g. `memory`, `nl2sql`, `multi-agent`, `ra
 
 ## Selection criteria
 
+A candidate is included only if it clears one of three gates — **substance**,
+**top institution**, or **top-venue acceptance**. The full rubric lives in
+[`scripts/curation_rubric.md`](scripts/curation_rubric.md) and is what both human
+maintainers and the automated triage follow. In short:
+
 - Directly about **LLM-based agents for data tasks**, the **memory/context machinery**
   that powers them, or benchmarks evaluating them.
-- Peer-reviewed venues preferred; arXiv preprints are welcome if they are influential or
-  from an active research line.
+- Real artifact (named system/benchmark/method) — not a keyword match or a thin position
+  piece. `memory` and `foundations` are held to a stricter bar than the core directions.
 - One paper, one entry — if a benchmark paper is also a system paper, put it where
   readers are most likely to look for it.
 
+## Automated curation pipeline
+
+The whole "find new papers → judge them → hand a shortlist to a human" loop is scripted,
+so it can run without any manual review or an interactive LLM session:
+
+```bash
+# 1. one command: scan arXiv, enrich, triage against the rubric, emit a digest
+export DEEPSEEK_API_KEY=sk-...        # any OpenAI-compatible key; see below
+python scripts/curate.py --from 2026-04-10 --to 2026-07-12 --out digest.md
+
+# 2. review digest.md, then add the ones you want (links + code auto-fetched)
+python scripts/add_paper.py 2504.01234 -c nl2sql
+python scripts/generate_readme.py     # regenerate README from data/
+```
+
+`curate.py` chains three reusable steps you can also run on their own:
+
+| Script | Does |
+|---|---|
+| `scripts/enrich.py` | arXiv ids → title/abstract/**acceptance comment** + Semantic Scholar citations/affiliations |
+| `scripts/llm_triage.py` | enriched records → `keep`/`maybe`/`drop` + category + which gate, per the rubric |
+| `scripts/curate.py` | scan → enrich → triage → Markdown digest grouped by category |
+
+**LLM provider.** Triage uses any OpenAI-compatible chat API, configured by env vars —
+defaults to DeepSeek (cheap, fine for this classification task):
+
+| Var | Default | Notes |
+|---|---|---|
+| `LLM_API_KEY` / `DEEPSEEK_API_KEY` | — | required |
+| `LLM_BASE_URL` | `https://api.deepseek.com` | e.g. `https://api.openai.com/v1` |
+| `LLM_MODEL` | `deepseek-chat` | |
+
+Run `python scripts/curate.py --no-triage` (or omit the key) to get a relevance-only
+list without gate judgment.
+
 ## Weekly arXiv digest
 
-A [GitHub Action](.github/workflows/weekly-arxiv.yml) scans arXiv every Monday and opens
-a `paper-candidate` issue with new matches. Maintainers triage it: tick the papers to
-add, then add them via the steps above.
+The same pipeline runs as a [GitHub Action](.github/workflows/weekly-arxiv.yml) every
+Monday and opens a `paper-candidate` issue with the triaged shortlist. Add a
+`DEEPSEEK_API_KEY` repo secret to enable gate-based triage (without it the digest still
+lists relevant candidates, untriaged). You can also trigger it manually with **from**/**to**
+dates to backfill a gap. Maintainers tick the papers to add, then add them via the steps
+above.
