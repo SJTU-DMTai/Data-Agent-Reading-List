@@ -4,6 +4,13 @@ on:
   schedule:
     - cron: '0 1 * * 1'   # every Monday 01:00 UTC
   workflow_dispatch:
+    inputs:
+      from:
+        description: 'Backfill start date YYYY-MM-DD (leave blank for the weekly 8-day window)'
+        required: false
+      to:
+        description: 'Backfill end date YYYY-MM-DD (default: today)'
+        required: false
 
 permissions:
   issues: write
@@ -17,10 +24,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Scan arXiv
+      - run: pip install pyyaml
+      - name: Scan + triage arXiv
         id: scan
+        env:
+          # Optional: set a DEEPSEEK_API_KEY repo secret to get gate-based triage.
+          # Without it the digest still lists relevant candidates (untriaged).
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
-          if python scripts/arxiv_scan.py --days 8 > digest.md; then
+          ARGS=""
+          [ -n "${{ github.event.inputs.from }}" ] && ARGS="--from ${{ github.event.inputs.from }}"
+          [ -n "${{ github.event.inputs.to }}" ] && ARGS="$ARGS --to ${{ github.event.inputs.to }}"
+          [ -z "$ARGS" ] && ARGS="--days 8"
+          [ -z "$DEEPSEEK_API_KEY" ] && ARGS="$ARGS --no-triage"
+          if python scripts/curate.py $ARGS > digest.md; then
             echo "found=true" >> "$GITHUB_OUTPUT"
           else
             echo "found=false" >> "$GITHUB_OUTPUT"
