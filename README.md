@@ -32,17 +32,6 @@ or see [CONTRIBUTING.md](CONTRIBUTING.md) — PRs are welcome!
 - [🧠 Agent Memory & Context Engineering](#-agent-memory--context-engineering)
 - [🧩 General Agent Techniques](#-general-agent-techniques)
 
-## 📚 Surveys & Vision
-
-- **arXiv'26.06** — [From Question Answering to Task Completion: A Survey on Agent System and Harness Design](https://arxiv.org/pdf/2606.20683) — Yunhe Wang
-- **ACL'26** — [From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms](https://arxiv.org/pdf/2605.06716) — Jing Ma
-- **arXiv'25.10** — [A Survey of Data Agents: Emerging Paradigm or Overstated Hype?](https://arxiv.org/pdf/2510.23587)
-- **arXiv'25.09** — [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
-- **arXiv'25.08** — [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
-- **arXiv'25.07** — [Data Agent: A Holistic Architecture for Orchestrating Data+AI Ecosystems](https://arxiv.org/pdf/2507.01599) — Guoliang Li (vision paper)
-- **arXiv'25.05** — [Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions](https://arxiv.org/pdf/2505.00675) (agent memory survey)
-- **arXiv'24.12** — [A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
-
 ## 🏆 Benchmarks
 
 ### Data Agent Benchmarks
@@ -312,14 +301,14 @@ or see [CONTRIBUTING.md](CONTRIBUTING.md) — PRs are welcome!
 | ICLR'24 | Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection `rag` | Hannaneh Hajishirzi | [paper](https://arxiv.org/pdf/2310.11511) |
 | ICLR'24 | MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework `multi-agent` | Chenglin Wu | [paper](https://arxiv.org/pdf/2308.00352) |
 
-## 🤝 Contributing
+## 📚 Surveys & Vision
 
-Contributions are welcome! Add the paper's metadata to [`data/papers.yaml`](data/papers.yaml)
-(or [`data/benchmarks.yaml`](data/benchmarks.yaml) / [`data/surveys.yaml`](data/surveys.yaml)),
-run `python scripts/generate_readme.py`, and open a PR. You can also simply
-[open an issue](https://github.com/SJTU-DMTai/Data-Agent-Reading-List/issues/new/choose)
-with the paper link. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+- **arXiv'26.06** — [From Question Answering to Task Completion: A Survey on Agent System and Harness Design](https://arxiv.org/pdf/2606.20683) — Yunhe Wang
+- **ACL'26** — [From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms](https://arxiv.org/pdf/2605.06716) — Jing Ma
+- **arXiv'25.10** — [A Survey of Data Agents: Emerging Paradigm or Overstated Hype?](https://arxiv.org/pdf/2510.23587)
+- **arXiv'25.09** — [LLM/Agent-as-Data-Analyst: A Survey](https://arxiv.org/pdf/2509.23988)
+- **arXiv'25.08** — [Large Language Model-based Data Science Agent: A Survey](https://arxiv.org/pdf/2508.02744)
+- **arXiv'25.07** — [Data Agent: A Holistic Architecture for Orchestrating Data+AI Ecosystems](https://arxiv.org/pdf/2507.01599) — Guoliang Li (vision paper)
+- **arXiv'25.05** — [Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions](https://arxiv.org/pdf/2505.00675) (agent memory survey)
+- **arXiv'24.12** — [A Survey on Large Language Model-based Agents for Statistics and Data Science](https://arxiv.org/abs/2412.14222)
 
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=SJTU-DMTai/Data-Agent-Reading-List&type=Date)](https://star-history.com/#SJTU-DMTai/Data-Agent-Reading-List&Date)
