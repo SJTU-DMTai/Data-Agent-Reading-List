@@ -1,0 +1,38 @@
+name: Weekly arXiv digest
+
+on:
+  schedule:
+    - cron: '0 1 * * 1'   # every Monday 01:00 UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Scan arXiv
+        id: scan
+        run: |
+          if python scripts/arxiv_scan.py --days 8 > digest.md; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Open digest issue
+        if: steps.scan.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create paper-candidate --color 0E8A16 --description "Weekly arXiv digest" --force
+          gh issue create \
+            --title "Weekly arXiv digest — $(date -u +%F)" \
+            --body-file digest.md \
+            --label paper-candidate \
+            --repo "$GITHUB_REPOSITORY"

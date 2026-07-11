@@ -1,0 +1,40 @@
+name: "📄 Add a paper"
+description: Suggest a paper for the reading list
+title: "[Paper] <title>"
+labels: [paper-candidate]
+body:
+  - type: input
+    id: link
+    attributes:
+      label: Paper link
+      description: arXiv / DOI / conference link
+      placeholder: https://arxiv.org/abs/xxxx.xxxxx
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Data Preparation & Integration
+        - NL2SQL (Text-to-SQL)
+        - Table Understanding & Reasoning
+        - Data Analysis & Insight Discovery
+        - Data Science & Machine Learning Agents
+        - Database Operations & Diagnosis
+        - Agent Memory & Context Engineering
+        - General Agent Techniques
+        - Benchmark
+        - Survey
+    validations:
+      required: true
+  - type: input
+    id: venue
+    attributes:
+      label: Venue
+      placeholder: "e.g. VLDB'25, ICLR'26, arXiv'25.10"
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does it belong here?
+      description: One or two sentences on what the paper does and why it is relevant.
