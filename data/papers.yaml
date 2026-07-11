@@ -1,0 +1,703 @@
+# Main paper list.
+# Fields: title (required), authors (corresponding author(s)), venue, year (required),
+#         paper (required), code (optional), category (required), tags (optional), tldr (optional)
+# Categories: data-preparation | table-reasoning | data-analysis | data-science
+#             | db-operations | memory | foundations
+# Within a category, papers are rendered sorted by year (desc), keeping file order for ties.
+
+# ---------------------------------------------------------------- data-preparation
+- title: "AutoPrep: Natural Language Question-Aware Data Preparation with a Multi-Agent Framework"
+  authors: Ju Fan
+  venue: VLDB'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2412.10422
+  category: data-preparation
+  tags: [multi-agent]
+
+- title: "Data Imputation with Limited Data Redundancy Using Data Lakes"
+  authors: Yuyu Luo
+  venue: VLDB'25
+  year: 2025
+  paper: https://www.vldb.org/pvldb/vol18/p3354-tang.pdf
+  category: data-preparation
+  tags: [data-lake]
+
+- title: "Weak-to-Strong Prompts with Lightweight-to-Powerful LLMs for High-Accuracy, Low-Cost, and Explainable Data Transformation"
+  authors: Yuyu Luo, Ju Fan, and Nan Tang et al
+  venue: VLDB'25
+  year: 2025
+  paper: https://www.vldb.org/pvldb/vol18/p2371-tang.pdf
+  category: data-preparation
+
+- title: "DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing"
+  authors: Eugene Wu
+  venue: VLDB'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2410.12189
+  category: data-preparation
+  tags: [unstructured-data]
+
+# ---------------------------------------------------------------- table-reasoning
+- title: "ST-Raptor: LLM-Powered Semi-Structured Table Question Answering"
+  authors: Xuanhe Zhou
+  venue: SIGMOD'26
+  year: 2026
+  paper: https://arxiv.org/pdf/2508.18190
+  category: table-reasoning
+
+- title: "Compositional Condition Question Answering in Tabular Understanding"
+  authors: Han-Jia Ye
+  venue: ICML'25
+  year: 2025
+  paper: https://openreview.net/attachment?id=aXU48nrA2v&name=pdf
+  category: table-reasoning
+
+- title: "Are Large Language Models Ready for Multi-Turn Tabular Data Analysis?"
+  authors: Reynold Cheng
+  venue: ICML'25
+  year: 2025
+  paper: https://openreview.net/attachment?id=flKhxGTBj2&name=pdf
+  category: table-reasoning
+
+- title: "Table as a Modality for Large Language Models"
+  authors: Junbo Zhao
+  venue: NeurIPS'25
+  year: 2025
+  paper: https://neurips.cc/virtual/2025/poster/116332
+  category: table-reasoning
+
+- title: "H-STAR: LLM-driven Hybrid SQL-Text Adaptive Reasoning on Tables"
+  authors: Chandan K. Reddy
+  venue: NAACL'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2407.05952
+  category: table-reasoning
+  tags: [nl2sql]
+
+- title: "Table-Critic: A Multi-Agent Framework for Collaborative Criticism and Refinement in Table Reasoning"
+  authors: Peiying Yu, Jingjing Wang
+  venue: ACL'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2502.11799
+  category: table-reasoning
+  tags: [multi-agent]
+
+- title: "TableMind: An Autonomous Programmatic Agent for Tool-Augmented Table Reasoning"
+  authors: Qi Liu
+  venue: arXiv'25.09
+  year: 2025
+  paper: https://arxiv.org/pdf/2509.06278
+  category: table-reasoning
+
+- title: "MAPLE: Multi-Agent Adaptive Planning with Long-Term Memory for Table Reasoning"
+  authors: Thuy-Trang Vu
+  venue: arXiv'25.06
+  year: 2025
+  paper: https://arxiv.org/pdf/2506.05813
+  category: table-reasoning
+  tags: [memory, multi-agent]
+
+- title: "Weaver: Interweaving SQL and LLM for Table Reasoning"
+  authors: Vivek Gupta
+  venue: arXiv'25.05
+  year: 2025
+  paper: https://arxiv.org/pdf/2505.18961
+  category: table-reasoning
+  tags: [nl2sql]
+
+- title: "TableMaster: A Recipe to Advance Table Understanding with Language Models"
+  authors: Hanbing Liu
+  venue: arXiv'25.01
+  year: 2025
+  paper: https://arxiv.org/pdf/2501.19378
+  category: table-reasoning
+
+- title: "OpenTab: Advancing Large Language Models as Open-domain Table Reasoners"
+  authors: Jiani Zhang
+  venue: ICLR'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2402.14361
+  category: table-reasoning
+
+- title: "CABINET: Content Relevance based Noise Reduction for Table Question Answering"
+  authors: Balaji Krishnamurthy
+  venue: ICLR'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2402.01155
+  category: table-reasoning
+
+- title: "Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding"
+  authors: Tomas Pfister
+  venue: ICLR'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2401.04398
+  category: table-reasoning
+
+- title: "ReAcTable: Enhancing ReAct for Table Question Answering"
+  authors: Jignesh M. Patel
+  venue: VLDB'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2310.00815
+  category: table-reasoning
+
+- title: "AutoTQA: Towards Autonomous Tabular Question Answering through Multi-Agent Large Language Models"
+  authors: Qi Liu
+  venue: VLDB'24
+  year: 2024
+  paper: https://www.vldb.org/pvldb/vol17/p3920-zhu.pdf
+  category: table-reasoning
+  tags: [multi-agent]
+
+- title: "Large Language Models are Versatile Decomposers: Decompose Evidence and Questions for Table-based Reasoning (Dater)"
+  authors: Yongbin Li
+  venue: SIGIR'23
+  year: 2023
+  paper: https://arxiv.org/pdf/2301.13808
+  category: table-reasoning
+
+# ---------------------------------------------------------------- data-analysis
+- title: "AOP: Automated and Interactive LLM Pipeline Orchestration for Answering Complex Queries"
+  authors: Guoliang Li
+  venue: CIDR'25
+  year: 2025
+  paper: https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf
+  category: data-analysis
+
+- title: "Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing"
+  authors: Gerardo Vitagliano
+  venue: CIDR'25
+  year: 2025
+  paper: https://www.vldb.org/cidrdb/papers/2025/p12-liu.pdf
+  category: data-analysis
+  tags: [semantic-operators]
+
+- title: "iDataLake: An LLM-Powered Analytics System on Data Lakes"
+  authors: Guoliang Li
+  venue: IEEE Data Eng. Bull.
+  year: 2025
+  paper: http://sites.computer.org/debull/A25mar/p57.pdf
+  category: data-analysis
+  tags: [data-lake]
+
+- title: "Towards Automated Cross-domain Exploratory Data Analysis through Large Language Models"
+  authors: Qi Liu
+  venue: VLDB'25
+  year: 2025
+  paper: https://www.vldb.org/pvldb/vol18/p5086-zhu.pdf
+  category: data-analysis
+
+- title: "Semantic Operators and Their Optimization: Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS"
+  authors: Matei Zaharia
+  venue: VLDB'25
+  year: 2025
+  paper: https://www.vldb.org/pvldb/vol18/p4171-patel.pdf
+  category: data-analysis
+  tags: [semantic-operators]
+
+- title: "DataLab: A Unified Platform for LLM-Powered Business Intelligence"
+  authors: Wei Chen
+  venue: ICDE'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2412.02205
+  category: data-analysis
+
+- title: "AgenticData: An Agentic Data Analytics System for Heterogeneous Data"
+  authors: Yuan Li
+  venue: arXiv'25.08
+  year: 2025
+  paper: https://arxiv.org/pdf/2508.05002
+  category: data-analysis
+
+- title: "TAIJI: MCP-based Multi-Modal Data Analytics on Data Lakes"
+  authors: Ju Fan
+  venue: arXiv'25.05
+  year: 2025
+  paper: https://arxiv.org/pdf/2505.11270
+  category: data-analysis
+  tags: [data-lake]
+
+- title: "AgentAda: Skill-Adaptive Data Analytics for Tailored Insight Discovery"
+  authors: Issam H. Laradji
+  venue: arXiv'25.04
+  year: 2025
+  paper: https://arxiv.org/pdf/2504.07421v3
+  category: data-analysis
+
+- title: "DAgent: A Relational Database-Driven Data Analysis Report Generation Agent"
+  authors: Yunjun Gao
+  venue: arXiv'25.03
+  year: 2025
+  paper: https://arxiv.org/pdf/2503.13269
+  category: data-analysis
+
+- title: "ChartInsighter: An Approach for Mitigating Hallucination in Time-series Chart Summary Generation with A Benchmark Dataset"
+  authors: Fen Wang, Siming Chen
+  venue: arXiv'25.01
+  year: 2025
+  paper: https://arxiv.org/pdf/2501.09349
+  category: data-analysis
+  tags: [visualization]
+
+- title: "What Exactly is an Insight? A Literature Review"
+  authors: Alvitta Ottley
+  venue: IEEE VIS'23
+  year: 2023
+  paper: https://arxiv.org/pdf/2307.06551
+  category: data-analysis
+  tags: [insight]
+
+# ---------------------------------------------------------------- data-science
+- title: "Can We Predict Before Executing Machine Learning Agents?"
+  authors: Ningyu Zhang
+  venue: arXiv'26.01
+  year: 2026
+  paper: https://arxiv.org/pdf/2601.05930
+  category: data-science
+
+- title: "AutoML-Agent: A Multi-Agent LLM Framework for Full-Pipeline AutoML"
+  authors: Sung Ju Hwang
+  venue: ICML'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2410.02958
+  category: data-science
+  tags: [multi-agent, automl]
+
+- title: "Data Interpreter: An LLM Agent For Data Science"
+  authors: Bang Liu & Chenglin Wu
+  venue: ACL'25 Findings
+  year: 2025
+  paper: https://arxiv.org/pdf/2402.18679
+  category: data-science
+
+- title: "LLM-based Multi-Agent Blackboard System for Information Discovery in Data Science"
+  authors: Tomas Pfister
+  venue: arXiv'25.10
+  year: 2025
+  paper: https://arxiv.org/pdf/2510.01285
+  category: data-science
+  tags: [multi-agent]
+
+- title: "DeepAnalyze: Agentic Large Language Models for Autonomous Data Science"
+  authors: Ju Fan
+  venue: arXiv'25.10
+  year: 2025
+  paper: https://arxiv.org/pdf/2510.16872
+  category: data-science
+
+- title: "AutoMind: Adaptive Knowledgeable Agent for Automated Data Science"
+  authors: Ningyu Zhang
+  venue: arXiv'25.06
+  year: 2025
+  paper: https://arxiv.org/pdf/2506.10974
+  category: data-science
+
+- title: "DSMentor: Enhancing Data Science Agents with Curriculum Learning and Online Knowledge Accumulation"
+  authors: Patrick Ng
+  venue: arXiv'25.05
+  year: 2025
+  paper: https://arxiv.org/pdf/2505.14163
+  category: data-science
+  tags: [memory]
+
+- title: "DatawiseAgent: A Notebook-Centric LLM Agent Framework for Automated Data Science"
+  authors: Yu Huang
+  venue: arXiv'25.03
+  year: 2025
+  paper: https://arxiv.org/pdf/2503.07044
+  category: data-science
+
+- title: "AutoKaggle: A Multi-Agent Framework for Autonomous Data Science Competition"
+  authors: Wenhao Huang & Ge Zhang
+  venue: arXiv'24.10
+  year: 2024
+  paper: https://arxiv.org/abs/2410.20424
+  category: data-science
+  tags: [multi-agent]
+
+- title: "LAMBDA: A Large Model Based Data Agent"
+  authors: Yancheng Yuan & Jian Huang
+  venue: arXiv'24.07
+  year: 2024
+  paper: https://arxiv.org/abs/2407.17535
+  category: data-science
+
+- title: "DS-Agent: Automated Data Science by Empowering Large Language Models with Case-Based Reasoning"
+  authors: Hechang Chen
+  venue: ICML'24
+  year: 2024
+  paper: https://arxiv.org/abs/2402.17453
+  category: data-science
+  tags: [memory]
+
+# ---------------------------------------------------------------- db-operations
+- title: "Automatic Database Configuration Debugging using Retrieval-Augmented Language Models"
+  authors: Nan Tang, Ju Fan, et al
+  venue: SIGMOD'25
+  year: 2025
+  paper: https://dl.acm.org/doi/10.1145/3709663
+  category: db-operations
+  tags: [rag]
+
+- title: "Andromeda: Debugging Database Performance Issues with Retrieval-Augmented Large Language Models"
+  authors: Nan Tang, Ju Fan, Xiaoyong Du, et al
+  venue: SIGMOD'25
+  year: 2025
+  paper: https://dl.acm.org/doi/10.1145/3722212.3725080
+  category: db-operations
+  tags: [rag]
+
+- title: "D-Bot: Database Diagnosis System using Large Language Models"
+  authors: Guoliang Li
+  venue: VLDB'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2312.01454
+  category: db-operations
+
+# ---------------------------------------------------------------- memory
+- title: "Agent Workflow Memory"
+  authors: Graham Neubig
+  venue: ICML'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2409.07429
+  category: memory
+  tags: [procedural-memory]
+
+- title: "SeCom: On Memory Construction and Retrieval for Personalized Conversational Agents"
+  authors: Qianhui Wu
+  venue: ICLR'25
+  year: 2025
+  paper: https://openreview.net/pdf?id=xKDZAW0He39
+  category: memory
+
+- title: "Inducing Programmatic Skills for Agentic Tasks"
+  authors: Zora Zhiruo Wang, Apurva Gandhi, Graham Neubig, Daniel Fried
+  venue: COLM'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2504.06821
+  category: memory
+  tags: [procedural-memory]
+
+- title: "Beyond Sliding Windows: Learning to Manage Memory in Non-Markovian Environments"
+  authors: Tim Klinger
+  venue: arXiv'25.12
+  year: 2025
+  paper: https://arxiv.org/pdf/2512.19154
+  category: memory
+
+- title: "MemR3: Memory Retrieval via Reflective Reasoning for LLM Agents"
+  authors: Song Le
+  venue: arXiv'25.12
+  year: 2025
+  paper: https://arxiv.org/pdf/2512.20237
+  category: memory
+
+- title: "Learning Hierarchical Procedural Memory for LLM Agents through Bayesian Selection and Contrastive Refinement"
+  authors: Mahdi Jalili
+  venue: arXiv'25.12
+  year: 2025
+  paper: https://arxiv.org/pdf/2512.18950
+  category: memory
+  tags: [procedural-memory]
+
+- title: "Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution"
+  authors: Zouying Cao, Zhaoyang Liu, Bolin Ding, Hai Zhao
+  venue: arXiv'25.12
+  year: 2025
+  paper: https://arxiv.org/pdf/2512.10696v1
+  category: memory
+  tags: [procedural-memory]
+
+- title: "AgentFold: Long-Horizon Web Agents with Proactive Context Management"
+  authors: Rui Ye, Siheng Chen
+  venue: arXiv'25.10
+  year: 2025
+  paper: https://arxiv.org/pdf/2510.24699
+  category: memory
+  tags: [context-engineering]
+
+- title: "Scaling Long-Horizon LLM Agent via Context-Folding"
+  authors: Weiwei Sun
+  venue: arXiv'25.10
+  year: 2025
+  paper: https://arxiv.org/pdf/2510.11967
+  category: memory
+  tags: [context-engineering]
+
+- title: "LEGOMem: Modular Procedural Memory for Multi-agent LLM Systems for Workflow Automation"
+  authors: Dongge Han
+  venue: arXiv'25.10
+  year: 2025
+  paper: https://arxiv.org/pdf/2510.04851
+  category: memory
+  tags: [procedural-memory, multi-agent]
+
+- title: "TOOLMEM: Enhancing Multimodal Agents with Learnable Tool Capability Memory"
+  authors: Zora Zhiruo Wang
+  venue: arXiv'25.10
+  year: 2025
+  paper: https://arxiv.org/pdf/2510.06664
+  category: memory
+
+- title: "Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks"
+  authors: Jitao Sang
+  venue: arXiv'25.10
+  year: 2025
+  paper: https://arxiv.org/abs/2510.12635
+  category: memory
+  tags: [context-engineering]
+
+- title: "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models"
+  authors: Qizheng Zhang & Changran Hu
+  venue: arXiv'25.10
+  year: 2025
+  paper: https://www.arxiv.org/abs/2510.04618
+  category: memory
+  tags: [context-engineering]
+
+- title: "Latent learning: episodic memory complements parametric learning by enabling flexible reuse of experiences"
+  authors: Andrew Kyle Lampinen
+  venue: arXiv'25.09
+  year: 2025
+  paper: https://arxiv.org/pdf/2509.16189
+  category: memory
+  tags: [episodic-memory]
+
+- title: "H2R: Hierarchical Hindsight Reflection for Multi-Task LLM Agents"
+  authors: Chengdong Xu
+  venue: arXiv'25.09
+  year: 2025
+  paper: https://arxiv.org/pdf/2509.12810
+  category: memory
+  tags: [reflection]
+
+- title: "Mem-α: Learning Memory Construction via Reinforcement Learning"
+  authors: Yu Wang
+  venue: arXiv'25.09
+  year: 2025
+  paper: https://arxiv.org/pdf/2509.25911
+  category: memory
+  tags: [rl]
+
+- title: "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
+  authors: Siru Ouyang
+  venue: arXiv'25.09
+  year: 2025
+  paper: https://arxiv.org/abs/2509.25140
+  category: memory
+
+- title: "SGMem: Sentence Graph Memory for Long-Term Conversational Agents"
+  authors: Yaxiong Wu
+  venue: arXiv'25.09
+  year: 2025
+  paper: https://arxiv.org/pdf/2509.21212v1
+  category: memory
+
+- title: "MemGen: Weaving Generative Latent Memory for Self-Evolving Agents"
+  authors: Shuicheng Yan
+  venue: arXiv'25.09
+  year: 2025
+  paper: https://arxiv.org/pdf/2509.24704
+  category: memory
+
+- title: "Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models"
+  authors: Zhouhan Lin
+  venue: arXiv'25.08
+  year: 2025
+  paper: https://arxiv.org/pdf/2508.09874
+  category: memory
+  tags: [parametric-memory]
+
+- title: "Memory-R1: Enhancing Large Language Model Agents to Actively Manage and Utilize External Memory"
+  authors: Yunpu Ma
+  venue: arXiv'25.08
+  year: 2025
+  paper: https://arxiv.org/pdf/2508.19828
+  category: memory
+  tags: [rl]
+
+- title: "Memp: Exploring Agent Procedural Memory"
+  authors: Ningyu Zhang
+  venue: arXiv'25.08
+  year: 2025
+  paper: https://arxiv.org/pdf/2508.06433
+  category: memory
+  tags: [procedural-memory]
+
+- title: "Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory"
+  authors: Wei Li
+  venue: arXiv'25.08
+  year: 2025
+  paper: https://arxiv.org/pdf/2508.09736
+  category: memory
+  tags: [multimodal]
+
+- title: "Multiple Memory Systems for Enhancing the Long-term Memory of Agent"
+  authors: Bo Wang
+  venue: arXiv'25.08
+  year: 2025
+  paper: https://arxiv.org/pdf/2508.15294
+  category: memory
+
+- title: "H-MEM: Hierarchical Memory for High-Efficiency Long-Term Reasoning in LLM Agents"
+  authors: Shaoning Zeng
+  venue: arXiv'25.07
+  year: 2025
+  paper: https://arxiv.org/pdf/2507.22925v1
+  category: memory
+
+- title: "MemOS: A Memory OS for AI System"
+  authors: Siheng Chen, Wentao Zhang, Zhi-Qin John Xu, Feiyu Xiong
+  venue: arXiv'25.07
+  year: 2025
+  paper: https://arxiv.org/pdf/2507.03724
+  category: memory
+
+- title: "MIRIX: Multi-Agent Memory System for LLM-Based Agents"
+  authors: Xi Chen
+  venue: arXiv'25.07
+  year: 2025
+  paper: https://arxiv.org/pdf/2507.07957
+  category: memory
+  tags: [multi-agent]
+
+- title: "MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent"
+  authors: Hao Zhou
+  venue: arXiv'25.07
+  year: 2025
+  paper: https://arxiv.org/pdf/2507.02259
+  category: memory
+  tags: [rl]
+
+- title: "Memory OS of AI Agent"
+  authors: Ting Bai
+  venue: arXiv'25.06
+  year: 2025
+  paper: https://arxiv.org/pdf/2506.06326
+  category: memory
+
+- title: "G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems"
+  authors: Shuicheng Yan
+  venue: arXiv'25.06
+  year: 2025
+  paper: https://arxiv.org/pdf/2506.07398
+  category: memory
+  tags: [multi-agent]
+
+- title: "How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior"
+  authors: Zidi Xiong
+  venue: arXiv'25.05
+  year: 2025
+  paper: https://arxiv.org/pdf/2505.16067
+  category: memory
+  tags: [empirical-study]
+
+- title: "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory"
+  authors: Deshraj Yadav
+  venue: arXiv'25.04
+  year: 2025
+  paper: https://arxiv.org/pdf/2504.19413
+  category: memory
+
+- title: "R3Mem: Bridging Memory Retention and Retrieval via Reversible Compression"
+  authors: Yun Zhu
+  venue: arXiv'25.02
+  year: 2025
+  paper: https://arxiv.org/pdf/2502.15957v1
+  category: memory
+
+- title: "A-MEM: Agentic Memory for LLM Agents"
+  authors: Yongfeng Zhang
+  venue: arXiv'25.02
+  year: 2025
+  paper: https://arxiv.org/pdf/2502.12110
+  category: memory
+
+- title: "Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control"
+  authors: Bo An
+  venue: ICLR'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2306.07863
+  category: memory
+  tags: [episodic-memory]
+
+- title: "ExpeL: LLM Agents Are Experiential Learners"
+  authors: Gao Huang
+  venue: AAAI'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2308.10144
+  category: memory
+  tags: [episodic-memory]
+
+- title: "Augmenting Language Models with Long-Term Memory"
+  authors: Furu Wei
+  venue: NeurIPS'23
+  year: 2023
+  paper: https://arxiv.org/pdf/2306.07174
+  category: memory
+  tags: [parametric-memory]
+
+- title: "Reflexion: Language Agents with Verbal Reinforcement Learning"
+  authors: Shunyu Yao
+  venue: NeurIPS'23
+  year: 2023
+  paper: https://arxiv.org/pdf/2303.11366
+  category: memory
+  tags: [reflection]
+
+- title: "MemGPT: Towards LLMs as Operating Systems"
+  authors: Charles Packer
+  venue: arXiv'23.10
+  year: 2023
+  paper: https://arxiv.org/pdf/2310.08560
+  category: memory
+
+# ---------------------------------------------------------------- foundations
+- title: "Agent-Oriented Planning in Multi-Agent Systems"
+  authors: Yaliang Li
+  venue: ICLR'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2410.02189
+  category: foundations
+  tags: [planning, multi-agent]
+
+- title: "AFlow: Automating Agentic Workflow Generation"
+  authors: Chenglin Wu
+  venue: ICLR'25 Oral
+  year: 2025
+  paper: https://openreview.net/pdf?id=z5uVAKwmjf
+  category: foundations
+  tags: [workflow]
+
+- title: "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection"
+  authors: Hannaneh Hajishirzi
+  venue: ICLR'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2310.11511
+  category: foundations
+  tags: [rag]
+
+- title: "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework"
+  authors: Chenglin Wu
+  venue: ICLR'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2308.00352
+  category: foundations
+  tags: [multi-agent]
+
+- title: "APEX-SQL: Talking to the data via Agentic Exploration for Text-to-SQL"
+  authors: Wai Lam
+  venue: arXiv'26.02
+  year: 2026
+  paper: https://arxiv.org/pdf/2602.16720
+  code: https://github.com/Tencent/APEX-SQL-Project
+  category: nl2sql
+  tags: [nl2sql]
+
+- title: "AV-SQL: Decomposing Complex Text-to-SQL Queries with Agentic Views"
+  authors: Thanh Tam Nguyen
+  venue: arXiv'26.04
+  year: 2026
+  paper: https://arxiv.org/pdf/2604.07041
+  code: https://github.com/pminhtam/AV-SQL
+  category: nl2sql
+  tags: [nl2sql]
