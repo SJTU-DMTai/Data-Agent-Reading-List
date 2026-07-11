@@ -33,3 +33,15 @@
   venue: "arXiv'24.12"
   year: 2024
   paper: https://arxiv.org/abs/2412.14222
+
+- title: "From Question Answering to Task Completion: A Survey on Agent System and Harness Design"
+  venue: "arXiv'26.06"
+  year: 2026
+  paper: https://arxiv.org/pdf/2606.20683
+  corresponding: Yunhe Wang  # TODO verify
+
+- title: "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms"
+  venue: "ACL'26"
+  year: 2026
+  paper: https://arxiv.org/pdf/2605.06716
+  corresponding: Jing Ma  # TODO verify
