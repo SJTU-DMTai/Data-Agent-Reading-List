@@ -1612,3 +1612,10 @@
   paper: https://arxiv.org/pdf/2408.14717
   code: https://github.com/TAG-Research/TAG-Bench  # auto-detected from abstract, please verify
   category: foundations
+
+- title: "Grounding Natural Language to SQL Translation with Data-Based Self-Explanations"
+  authors: X. Sean Wang  # TODO verify corresponding author
+  venue: ICDE'25
+  year: 2024
+  paper: https://arxiv.org/pdf/2411.02948
+  category: nl2sql
