@@ -91,6 +91,13 @@
       paper: https://arxiv.org/pdf/2402.17168
       code: https://github.com/MetaCopilot/dseval
       tldr: Full data-science lifecycle evaluated via bootstrapped annotation over sequences of interdependent problems (Kaggle/LeetCode).
+    - name: The Dawn of Natural Language to SQL
+      label: Nan Tang  # TODO verify corresponding author
+      year: 2024
+      paper: https://arxiv.org/pdf/2406.01265
+      tldr: >-
+        This benchmark evaluates NL2SQL methods across diverse data domains and SQL characteristics
+        using the NL2SQL360 framework on Spider and BIRD datasets.
 
 - name: Benchmarks for Tabular Data
   label_column: Task Type

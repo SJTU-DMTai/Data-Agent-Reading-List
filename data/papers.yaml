@@ -1415,3 +1415,200 @@
   category: nl2sql
   tags: [nl2sql]
 
+
+- title: "DeepEye-SQL: A Software-Engineering-Inspired Text-to-SQL Framework"
+  authors: Yuyu Luo  # TODO verify corresponding author
+  venue: SIGMOD'26
+  year: 2025
+  paper: https://arxiv.org/pdf/2510.17586
+  category: nl2sql
+
+- title: "Alpha-SQL: Zero-Shot Text-to-SQL using Monte Carlo Tree Search"
+  authors: Yuyu Luo  # TODO verify corresponding author
+  venue: ICML'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2502.17248
+  category: nl2sql
+
+- title: "DIVER: A Robust Text-to-SQL System with Dynamic Interactive Value Linking and Evidence Reasoning"
+  authors: Jingyu Wang  # TODO verify corresponding author
+  venue: SIGMOD'26
+  year: 2026
+  paper: https://arxiv.org/pdf/2602.12064
+  category: nl2sql
+
+- title: "OmniSQL: Synthesizing High-quality Text-to-SQL Data at Scale"
+  authors: Cuiping Li  # TODO verify corresponding author
+  venue: VLDB'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2503.02240
+  category: nl2sql
+
+- title: "OpenSearch-SQL: Enhancing Text-to-SQL with Dynamic Few-shot and Consistency Alignment"
+  authors: Ruijie Guo  # TODO verify corresponding author
+  venue: arXiv'25.02  # TODO verify venue
+  year: 2025
+  paper: https://arxiv.org/pdf/2502.14913
+  category: nl2sql
+
+- title: "ROUTE: Robust Multitask Tuning and Collaboration for Text-to-SQL"
+  authors: Jieping Ye  # TODO verify corresponding author
+  venue: ICLR'25
+  year: 2024
+  paper: https://arxiv.org/pdf/2412.10138
+  category: nl2sql
+
+- title: "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning"
+  authors: Jian Guo  # TODO verify corresponding author
+  venue: NeurIPS'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2504.08600
+  code: https://github.com/IDEA-FinAI/SQL-R1  # auto-detected from abstract, please verify
+  category: nl2sql
+
+- title: "Reasoning-SQL: Reinforcement Learning with SQL Tailored Partial Rewards for Reasoning-Enhanced Text-to-SQL"
+  authors: Sercan "O. Arik  # TODO verify corresponding author
+  venue: arXiv'25.03  # TODO verify venue
+  year: 2025
+  paper: https://arxiv.org/pdf/2503.23157
+  category: nl2sql
+
+- title: "Agentar-Scale-SQL: Advancing Text-to-SQL through Orchestrated Test-Time Scaling"
+  authors: Ying Yan  # TODO verify corresponding author
+  venue: arXiv'25.09  # TODO verify venue
+  year: 2025
+  paper: https://arxiv.org/pdf/2509.24403
+  category: nl2sql
+
+- title: "MARS-SQL: A multi-agent reinforcement learning framework for Text-to-SQL"
+  authors: Yi R. Fung  # TODO verify corresponding author
+  venue: arXiv'25.11  # TODO verify venue
+  year: 2025
+  paper: https://arxiv.org/pdf/2511.01008
+  code: https://github.com/YangHaolin0526/MARS-SQL  # auto-detected from abstract, please verify
+  category: nl2sql
+
+- title: "Reward-SQL: Boosting Text-to-SQL via Stepwise Execution-Aware Reasoning and Process-Supervised Rewards"
+  authors: Wenchao Zhou  # TODO verify corresponding author
+  venue: arXiv'25.05  # TODO verify venue
+  year: 2025
+  paper: https://arxiv.org/pdf/2505.04671
+  category: nl2sql
+
+- title: "Arctic-Text2SQL-R1: Simple Rewards, Strong Reasoning in Text-to-SQL"
+  authors: Yuxiong He  # TODO verify corresponding author
+  venue: ACL'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2505.20315
+  category: nl2sql
+
+- title: "CodeS: Towards Building Open-source Language Models for Text-to-SQL"
+  authors: Hong Chen  # TODO verify corresponding author
+  venue: SIGMOD'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2402.16347
+  category: nl2sql
+
+- title: "PURPLE: Making a Large Language Model a Better SQL Writer"
+  authors: X. Sean Wang  # TODO verify corresponding author
+  venue: ICDE'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2403.20014
+  category: nl2sql
+
+- title: "Synthesizing Text-to-SQL Data from Weak and Strong LLMs"
+  authors: Chang Zhou  # TODO verify corresponding author
+  venue: ACL'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2408.03256
+  category: nl2sql
+
+- title: "A Preview of XiYan-SQL: A Multi-Generator Ensemble Framework for Text-to-SQL"
+  authors: Yu Li  # TODO verify corresponding author
+  venue: arXiv'24.11  # TODO verify venue
+  year: 2024
+  paper: https://arxiv.org/pdf/2411.08599
+  category: nl2sql
+
+- title: "RSL-SQL: Robust Schema Linking in Text-to-SQL Generation"
+  authors: Xiang Bai  # TODO verify corresponding author
+  venue: arXiv'24.10  # TODO verify venue
+  year: 2024
+  paper: https://arxiv.org/pdf/2411.00073
+  code: https://github.com/Laqcce-cao/RSL-SQL  # auto-detected from abstract, please verify
+  category: nl2sql
+
+- title: "E-SQL: Direct Schema Linking via Question Enrichment in Text-to-SQL"
+  authors: Özgür Ulusoy  # TODO verify corresponding author
+  venue: arXiv'24.09  # TODO verify venue
+  year: 2024
+  paper: https://arxiv.org/pdf/2409.16751
+  category: nl2sql
+
+- title: "DB-GPT: Empowering Database Interactions with Private Large Language Models"
+  authors: Faqiang Chen  # TODO verify corresponding author
+  venue: arXiv'23.12  # TODO verify venue
+  year: 2023
+  paper: https://arxiv.org/pdf/2312.17449
+  code: https://github.com/eosphoros-ai/DB-GPT  # auto-detected from abstract, please verify
+  category: nl2sql
+
+- title: "The Death of Schema Linking? Text-to-SQL in the Age of Well-Reasoned Language Models"
+  authors: Amine Mhedhbi  # TODO verify corresponding author
+  venue: arXiv'24.08  # TODO verify venue
+  year: 2024
+  paper: https://arxiv.org/pdf/2408.07702
+  category: nl2sql
+
+- title: "PET-SQL: A Prompt-Enhanced Two-Round Refinement of Text-to-SQL with Cross-consistency"
+  authors: Hangyu Mao  # TODO verify corresponding author
+  venue: DASFAA'25
+  year: 2024
+  paper: https://arxiv.org/pdf/2403.09732
+  category: nl2sql
+
+- title: "ACT-SQL: In-Context Learning for Text-to-SQL with Automatically-Generated Chain-of-Thought"
+  authors: Kai Yu  # TODO verify corresponding author
+  venue: EMNLP'23
+  year: 2023
+  paper: https://arxiv.org/pdf/2310.17342
+  category: nl2sql
+
+- title: "RESDSQL: Decoupling Schema Linking and Skeleton Parsing for Text-to-SQL"
+  authors: Hong Chen  # TODO verify corresponding author
+  venue: AAAI'23
+  year: 2023
+  paper: https://arxiv.org/pdf/2302.05965
+  code: https://github.com/RUCKBReasoning/RESDSQL  # auto-detected from abstract, please verify
+  category: nl2sql
+
+- title: "Graphix-T5: Mixing Pre-Trained Transformers with Graph-Aware Layers for Text-to-SQL Parsing"
+  authors: Yongbin Li  # TODO verify corresponding author
+  venue: AAAI'23
+  year: 2023
+  paper: https://arxiv.org/pdf/2301.07507
+  category: nl2sql
+
+- title: "A comprehensive evaluation of ChatGPT's zero-shot Text-to-SQL capability"
+  authors: Philip S. Yu  # TODO verify corresponding author
+  venue: arXiv'23.03  # TODO verify venue
+  year: 2023
+  paper: https://arxiv.org/pdf/2303.13547
+  code: https://github.com/THU-BPM/chatgpt-sql  # auto-detected from abstract, please verify
+  category: nl2sql
+
+- title: "Binding Language Models in Symbolic Languages"
+  authors: Tao Yu  # TODO verify corresponding author
+  venue: ICLR'23
+  year: 2022
+  paper: https://arxiv.org/pdf/2210.02875
+  code: https://github.com/HKUNLP/Binder  # auto-detected from abstract, please verify
+  category: nl2sql
+
+- title: "Text2SQL is Not Enough: Unifying AI and Databases with TAG"
+  authors: Matei Zaharia  # TODO verify corresponding author
+  venue: CIDR'25
+  year: 2024
+  paper: https://arxiv.org/pdf/2408.14717
+  code: https://github.com/TAG-Research/TAG-Bench  # auto-detected from abstract, please verify
+  category: foundations
