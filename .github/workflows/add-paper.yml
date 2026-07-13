@@ -1,0 +1,63 @@
+name: Add paper from issue
+
+# Fill in the "📄 Add a paper" issue form -> this resolves + grounds venue + commits.
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+permissions:
+  contents: write   # push the new paper + regenerated README
+  issues: write     # comment back / close the issue
+
+jobs:
+  add:
+    # only the add-paper form (not the weekly digest, which uses `paper-candidate`)
+    if: contains(join(github.event.issue.labels.*.name, ','), 'add-paper')
+    runs-on: ubuntu-latest
+    concurrency: add-paper          # serialize so two issues don't race on papers.yaml
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml
+
+      - name: Resolve + add paper
+        id: add
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          # Secrets (add under Settings → Secrets → Actions):
+          #   DEEPSEEK_API_KEY  — enables auto-classify + web venue extraction
+          #   TAVILY_API_KEY (or SERPER_API_KEY) — enables the web venue channel
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+        run: python scripts/add_from_issue.py
+
+      - name: Commit + push
+        if: steps.add.outputs.status == 'added'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/papers.yaml README.md
+          git commit -m "Add paper from #${{ github.event.issue.number }}" \
+            -m "Closes #${{ github.event.issue.number }}"
+          git push
+
+      - name: Comment result
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          STATUS='${{ steps.add.outputs.status }}'
+          BODY=$(cat <<'__EOF__'
+          ${{ steps.add.outputs.summary }}
+          __EOF__
+          )
+          [ -z "$BODY" ] && BODY="Something went wrong before the paper could be processed — check the workflow logs."
+          gh issue comment ${{ github.event.issue.number }} --body "$BODY" --repo "$GITHUB_REPOSITORY"
+          if [ "$STATUS" = "added" ] || [ "$STATUS" = "duplicate" ]; then
+            gh issue close ${{ github.event.issue.number }} --repo "$GITHUB_REPOSITORY" || true
+          fi

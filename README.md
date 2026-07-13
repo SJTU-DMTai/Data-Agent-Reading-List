@@ -105,6 +105,8 @@ or see [CONTRIBUTING.md](CONTRIBUTING.md) — PRs are welcome!
 
 | Venue | Paper | Corresp. Author | Links |
 |:---|:---|:---:|:---:|
+| KDD'26 | APEX-SQL: Talking to the data via Agentic Exploration for Text-to-SQL `nl2sql` | Wai Lam | [paper](https://arxiv.org/pdf/2602.16720) [code](https://github.com/Tencent/APEX-SQL-Project) |
+| ICDE'26 | LEAF-SQL: Level-wise Exploration with Adaptive Fine-graining for Text-to-SQL Skeleton Prediction `nl2sql` | Changxuan Wan | [paper](https://arxiv.org/pdf/2605.09295) |
 | ACL'26 | R$^3$-SQL: Ranking Reward and Resampling for Text-to-SQL `nl2sql` | Yuxiong He | [paper](https://arxiv.org/pdf/2604.25325) |
 | ACL'26 | PExA: Parallel Exploration Agent for Complex Text-to-SQL `nl2sql` | Yunmo Chen | [paper](https://arxiv.org/pdf/2604.22934) |
 | ACL'26 | PV-SQL: Synergizing Database Probing and Rule-based Verification for Text-to-SQL Agents `nl2sql` | Tianyi Zhang | [paper](https://arxiv.org/pdf/2604.17653) |
@@ -117,12 +119,10 @@ or see [CONTRIBUTING.md](CONTRIBUTING.md) — PRs are welcome!
 | arXiv'26.05 | Are Diffusion Language Models Good Database Analysts? `nl2sql` | Chengwei Qin | [paper](https://arxiv.org/pdf/2605.27791) |
 | arXiv'26.05 | Memory Architectures for Multi-Turn Text-to-SQL: A Benchmark and Empirical Study `nl2sql` | Suman Addanki | [paper](https://arxiv.org/pdf/2605.26394) |
 | arXiv'26.05 | Residual Skill Optimization for Text-to-SQL Ensembles `nl2sql` | Babak Salimi | [paper](https://arxiv.org/pdf/2605.21792) |
-| arXiv'26.05 | LEAF-SQL: Level-wise Exploration with Adaptive Fine-graining for Text-to-SQL Skeleton Prediction `nl2sql` | Changxuan Wan | [paper](https://arxiv.org/pdf/2605.09295) |
 | arXiv'26.05 | FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents `nl2sql` | Jocelyn Qiaochu Chen | [paper](https://arxiv.org/pdf/2605.02815) [code](https://github.com/StringNLPLAB/FlexSQL) |
 | arXiv'26.04 | AV-SQL: Decomposing Complex Text-to-SQL Queries with Agentic Views `nl2sql` | Thanh Tam Nguyen | [paper](https://arxiv.org/pdf/2604.07041) [code](https://github.com/pminhtam/AV-SQL) |
 | arXiv'26.04 | Agent-Agnostic Evaluation of SQL Accuracy in Production Text-to-SQL Systems `nl2sql` | Kuldeep Singh | [paper](https://arxiv.org/pdf/2604.28049) |
 | arXiv'26.04 | IndicDB -- Benchmarking Multilingual Text-to-SQL Capabilities in Indian Languages `nl2sql` | Dhruv Kumar | [paper](https://arxiv.org/pdf/2604.13686) |
-| arXiv'26.02 | APEX-SQL: Talking to the data via Agentic Exploration for Text-to-SQL `nl2sql` | Wai Lam | [paper](https://arxiv.org/pdf/2602.16720) [code](https://github.com/Tencent/APEX-SQL-Project) |
 
 ## 📋 Table Understanding & Reasoning
 

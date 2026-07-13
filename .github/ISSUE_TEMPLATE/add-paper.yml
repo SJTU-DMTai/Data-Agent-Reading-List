@@ -1,21 +1,29 @@
 name: "📄 Add a paper"
-description: Suggest a paper for the reading list
+description: Add a paper to the reading list — the bot resolves, classifies, and commits it
 title: "[Paper] <title>"
-labels: [paper-candidate]
+labels: [add-paper]
 body:
-  - type: input
-    id: link
+  - type: markdown
     attributes:
-      label: Paper link
-      description: arXiv / DOI / conference link
-      placeholder: https://arxiv.org/abs/xxxx.xxxxx
+      value: |
+        Fill this in and submit — a GitHub Action will resolve the paper, ground its
+        venue, add it to `data/papers.yaml`, regenerate the README, and push. It comments
+        back here with the result. Just paste an **arXiv link _or_ the paper title**.
+  - type: input
+    id: paper
+    attributes:
+      label: arXiv link or paper title
+      description: An arXiv id/URL, or just the exact title (the bot will look it up).
+      placeholder: "https://arxiv.org/abs/2602.16720  —or—  APEX-SQL: Talking to the data via Agentic Exploration"
     validations:
       required: true
   - type: dropdown
     id: category
     attributes:
       label: Category
+      description: Pick one, or let the bot classify it for you.
       options:
+        - Auto (let the bot classify)
         - Data Preparation & Integration
         - NL2SQL (Text-to-SQL)
         - Table Understanding & Reasoning
@@ -26,15 +34,17 @@ body:
         - General Agent Techniques
         - Benchmark
         - Survey
+      default: 0
     validations:
       required: true
   - type: input
     id: venue
     attributes:
-      label: Venue
-      placeholder: "e.g. VLDB'25, ICLR'26, arXiv'25.10"
+      label: Venue (optional)
+      description: Leave blank to auto-ground it. Fill in to override (e.g. a brand-new acceptance).
+      placeholder: "e.g. VLDB'25, ICDE'26, KDD'26"
   - type: textarea
     id: why
     attributes:
-      label: Why does it belong here?
-      description: One or two sentences on what the paper does and why it is relevant.
+      label: Why does it belong here? (optional)
+      description: One or two sentences — helps a human sanity-check the bot.

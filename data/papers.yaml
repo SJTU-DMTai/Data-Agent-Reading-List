@@ -686,7 +686,7 @@
 
 - title: "APEX-SQL: Talking to the data via Agentic Exploration for Text-to-SQL"
   authors: Wai Lam
-  venue: arXiv'26.02
+  venue: KDD'26
   year: 2026
   paper: https://arxiv.org/pdf/2602.16720
   code: https://github.com/Tencent/APEX-SQL-Project
@@ -924,7 +924,7 @@
 
 - title: "LEAF-SQL: Level-wise Exploration with Adaptive Fine-graining for Text-to-SQL Skeleton Prediction"
   authors: Changxuan Wan  # TODO verify corresponding author
-  venue: arXiv'26.05
+  venue: ICDE'26
   year: 2026
   paper: https://arxiv.org/pdf/2605.09295
   category: nl2sql
