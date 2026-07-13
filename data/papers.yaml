@@ -1619,3 +1619,19 @@
   year: 2024
   paper: https://arxiv.org/pdf/2411.02948
   category: nl2sql
+
+- title: "WorkflowLLM: Enhancing Workflow Orchestration Capability of Large Language Models"
+  authors: Maosong Sun  # TODO verify corresponding author
+  venue: ICLR'25
+  year: 2024
+  paper: https://arxiv.org/pdf/2411.05451
+  code: https://github.com/OpenBMB/WorkflowLLM  # auto-detected from abstract, please verify
+  category: db-operations
+
+- title: "Flow: Modularized Agentic Workflow Automation"
+  authors: Tongliang Liu  # TODO verify corresponding author
+  venue: ICLR'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2501.07834
+  code: https://github.com/tmllab/2025_ICLR_FLOW  # auto-detected from abstract, please verify
+  category: foundations
