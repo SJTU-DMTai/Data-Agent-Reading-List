@@ -1,9 +1,11 @@
 name: Remove paper from issue
 
 # Fill in the "🗑️ Remove a paper" issue form -> this deletes it + regenerates the README.
+# `labeled` (not `opened`): the form applies the remove-paper label on submit, so labeled
+# fires once. Listening on opened too would double-fire and race two runs on the push.
 on:
   issues:
-    types: [opened, edited, labeled]
+    types: [labeled, edited]
 
 permissions:
   contents: write
