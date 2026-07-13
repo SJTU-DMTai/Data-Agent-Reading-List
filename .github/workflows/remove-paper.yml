@@ -1,0 +1,56 @@
+name: Remove paper from issue
+
+# Fill in the "🗑️ Remove a paper" issue form -> this deletes it + regenerates the README.
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  remove:
+    if: contains(join(github.event.issue.labels.*.name, ','), 'remove-paper')
+    runs-on: ubuntu-latest
+    concurrency: edit-papers          # share the lane with add-paper: no racing on papers.yaml
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml
+
+      - name: Resolve + remove paper
+        id: remove
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python scripts/remove_from_issue.py
+
+      - name: Commit + push
+        if: steps.remove.outputs.status == 'removed'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/papers.yaml README.md
+          git commit -m "Remove paper from #${{ github.event.issue.number }}" \
+            -m "Closes #${{ github.event.issue.number }}"
+          git push
+
+      - name: Comment result
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          STATUS='${{ steps.remove.outputs.status }}'
+          BODY=$(cat <<'__EOF__'
+          ${{ steps.remove.outputs.summary }}
+          __EOF__
+          )
+          [ -z "$BODY" ] && BODY="Something went wrong before the paper could be processed — check the workflow logs."
+          gh issue comment ${{ github.event.issue.number }} --body "$BODY" --repo "$GITHUB_REPOSITORY"
+          if [ "$STATUS" = "removed" ] || [ "$STATUS" = "not_found" ]; then
+            gh issue close ${{ github.event.issue.number }} --repo "$GITHUB_REPOSITORY" || true
+          fi

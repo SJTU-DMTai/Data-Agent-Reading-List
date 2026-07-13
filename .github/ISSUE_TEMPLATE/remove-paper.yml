@@ -1,0 +1,24 @@
+name: "🗑️ Remove a paper"
+description: Remove a paper from the list — the bot deletes it and updates the README
+title: "[Remove] <title>"
+labels: [remove-paper]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit and a GitHub Action will delete the matching entry from `data/papers.yaml`,
+        regenerate the README, push, and comment/close here. **Prefer the arXiv id** — a
+        title that matches more than one paper is refused for safety.
+  - type: input
+    id: paper
+    attributes:
+      label: arXiv id or paper title
+      description: The arXiv id/URL (safest) or the exact title of the paper to remove.
+      placeholder: "2304.11015  —or—  DIN-SQL: Decomposed In-Context Learning of Text-to-SQL"
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason (optional)
+      description: Why remove it? (duplicate, out of scope, wrong entry, …)

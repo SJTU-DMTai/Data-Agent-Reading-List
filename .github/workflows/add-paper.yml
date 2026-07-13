@@ -14,7 +14,7 @@ jobs:
     # only the add-paper form (not the weekly digest, which uses `paper-candidate`)
     if: contains(join(github.event.issue.labels.*.name, ','), 'add-paper')
     runs-on: ubuntu-latest
-    concurrency: add-paper          # serialize so two issues don't race on papers.yaml
+    concurrency: edit-papers        # shared lane with remove-paper: no racing on papers.yaml
     steps:
       - uses: actions/checkout@v4
         with:
