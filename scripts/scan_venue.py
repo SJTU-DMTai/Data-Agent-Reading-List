@@ -171,9 +171,11 @@ def digest(keepers, venue, year, source):
     lines = [f"Venue scan: **{venue} {year}** (via {source}) — "
              f"**{n}** relevant paper(s) after filtering.",
              "",
-             "Papers with an arXiv match have a ready `add_paper.py` command (the venue "
-             "is grounded automatically). Papers without one are linked to their venue "
-             "page — add those by hand or via the issue form.",
+             "**Tick the papers you want, then add the `add-selected` label** — a bot adds "
+             "all checked ones to the list and marks each row ✅/⚠️/❌. (Each row also shows "
+             "the equivalent `add_paper.py` command if you prefer the CLI.) Papers with no "
+             "arXiv match are linked to their venue page — add those by hand or via the "
+             "issue form.",
              ""]
     from curate import CATEGORY_TITLES
     by_cat = {}

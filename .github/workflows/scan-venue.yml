@@ -55,6 +55,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh label create venue-scan --color 1D76DB --description "Per-venue scan digest" --force
+          gh label create add-selected --color 5319E7 --description "Add the checked papers from this digest" --force
           gh issue create \
             --title "Venue scan: ${{ github.event.inputs.venue }} ${{ github.event.inputs.year }}" \
             --body-file digest.md \

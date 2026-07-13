@@ -1,0 +1,63 @@
+name: Add selected papers from a digest
+
+# Tick the checkboxes in a "Venue scan" or "Weekly arXiv digest" issue, then add the
+# `add-selected` label. This reads the checked entries and adds them all at once —
+# no copy-pasting the add_paper.py commands by hand.
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write   # push the added papers + regenerated README
+  issues: write     # edit the issue body (mark done), comment, remove the label
+
+jobs:
+  add-selected:
+    if: github.event.label.name == 'add-selected'
+    runs-on: ubuntu-latest
+    concurrency: edit-papers          # shared lane with add-paper / remove-paper
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml
+
+      - name: Add the checked papers
+        id: sel
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          UPDATED_BODY: updated_body.md
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}   # for `-c TODO` auto-classify
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+        run: python scripts/add_selected.py
+
+      - name: Commit + push
+        if: steps.sel.outputs.status == 'added'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ README.md
+          git commit -m "Add selected papers from #${{ github.event.issue.number }}"
+          git push
+
+      - name: Update issue + remove label + comment
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # push the ✅/⚠️/❌ markers back into the checklist so re-runs skip done rows
+          [ -f updated_body.md ] && gh issue edit ${{ github.event.issue.number }} \
+            --body-file updated_body.md --repo "$GITHUB_REPOSITORY" || true
+          # remove the label so the user can tick more and re-apply it later
+          gh issue edit ${{ github.event.issue.number }} \
+            --remove-label add-selected --repo "$GITHUB_REPOSITORY" || true
+          BODY=$(cat <<'__EOF__'
+          ${{ steps.sel.outputs.summary }}
+          __EOF__
+          )
+          [ -z "$BODY" ] && BODY="Something went wrong before the selection could be processed — check the workflow logs."
+          gh issue comment ${{ github.event.issue.number }} --body "$BODY" --repo "$GITHUB_REPOSITORY"

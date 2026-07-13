@@ -155,11 +155,23 @@ fill in the inputs → click the green **Run workflow**.
 
 **Important:** these three only *find* papers — they do **not** add anything
 automatically. When a run finishes it opens a new issue containing the list of
-candidates. You look through it, and for the ones you want, you add them using
-the Add form in Section 2. When you are done, close that issue yourself.
+candidates, each as a checkbox.
 
-**重要：** 这三个只*查找*论文，**不会**自动添加任何东西。跑完后会新开一个 issue，里面是候选列表。你看一遍，
-想要的就用第 2 节的添加表单加进去。处理完后，自己把那个 issue 关掉。
+**重要：** 这三个只*查找*论文，**不会**自动添加任何东西。跑完后会新开一个 issue，里面是候选列表，每篇一个
+勾选框。
+
+**Adding the ones you want, in one step:** open that issue, tick the checkboxes
+for the papers you want, then add the **`add-selected`** label (right sidebar →
+Labels). A bot adds every checked paper to the list at once and marks each row
+✅ added / ⚠️ already in list / ❌ failed. You can tick a few more later and
+re-apply the label — rows already marked done are skipped. No copy-pasting. When
+you are finished with the issue, close it yourself. (Each row also shows the
+equivalent `add_paper.py` command if you would rather use the command line.)
+
+**一步加进想要的：** 打开那个 issue，勾选想要的论文，然后加上 **`add-selected`** 标签（右侧栏 → Labels）。
+机器人会把所有勾选的论文一次性加进列表，并在每行标上 ✅ 已加 / ⚠️ 已存在 / ❌ 失败。之后你可以再勾几篇、
+重新加一次标签——已标记完成的行会跳过。不用复制粘贴。处理完这个 issue 后，自己把它关掉。（每行下面也保留了
+等效的 `add_paper.py` 命令，想用命令行也行。）
 
 | Goal / 目的 | Workflow | Inputs / 参数 |
 |---|---|---|
@@ -219,25 +231,41 @@ Where to change what / 改哪里:
 
 ---
 
-## 6. Editing the YAML by hand / 手动编辑 YAML
+## 6. Benchmarks and surveys / benchmark 和 survey
 
-Benchmarks and surveys have no issue form — edit their files directly.
+**Adding a benchmark is automated — same as a paper.** Use the **📄 Add a paper**
+issue form (Section 2) and set **Category = Benchmark**. The bot adds it to
+`data/benchmarks.yaml` (into the "Data Agent Benchmarks" group), drafts a short
+summary, and rebuilds the README. It also appears as a checkbox in the weekly
+digest, so the tick-and-label flow in Section 4 adds benchmarks too.
 
-benchmarks 和 surveys 没有 issue 表单——直接编辑它们的文件。
+**添加 benchmark 已经自动化了——和加论文一样。** 用 **📄 Add a paper** 表单（第 2 节），把
+**Category 选成 Benchmark** 即可。机器人会把它加进 `data/benchmarks.yaml`（放进 "Data Agent
+Benchmarks" 分组）、起草一段简短摘要、重新生成 README。它也会作为勾选框出现在每周 digest 里，所以第 4 节的
+「勾选 + 加标签」流程同样能加 benchmark。
 
-- On the website: open `data/benchmarks.yaml` → ✏️ edit → add or remove an entry
-  following the same indentation and fields as the existing ones → commit to
-  `main`.
-- Locally, a benchmark can also be added with
-  `python scripts/add_benchmark.py <arxiv-id>` (it drafts a short summary and
-  inserts it into the right group).
+Two things the form does **not** do, which still need a hand edit of
+`data/benchmarks.yaml` (open it → ✏️ → edit → commit to `main`):
 
-- 网页上：打开 `data/benchmarks.yaml` → ✏️ 编辑 → 照已有条目的缩进和字段格式增删 → 提交到 `main`。
-- 本地也可以用 `python scripts/add_benchmark.py <arxiv-id>` 添加 benchmark（会起草一段简短摘要并插进对应分组）。
+- Putting a benchmark in a group other than the default, or setting its
+  corresponding-author / task-type label.
+- **Removing** a benchmark (the 🗑️ Remove form only handles papers).
 
-After committing, the build rebuilds the README automatically.
+有两件事表单**做不了**，仍需手动编辑 `data/benchmarks.yaml`（打开 → ✏️ → 编辑 → 提交到 `main`）：
 
-提交后，构建会自动重新生成 README。
+- 把 benchmark 放进默认之外的分组，或设置它的通讯作者 / 任务类型标签。
+- **删除** benchmark（🗑️ Remove 表单只处理论文）。
+
+**Surveys** have no form yet — add or remove them by editing `data/surveys.yaml`
+directly. Locally, a benchmark can also be added with
+`python scripts/add_benchmark.py <arxiv-id>`.
+
+**Survey** 还没有表单——直接编辑 `data/surveys.yaml` 增删。本地也可以用
+`python scripts/add_benchmark.py <arxiv-id>` 添加 benchmark。
+
+After any commit, the build rebuilds the README automatically.
+
+任何提交之后，构建都会自动重新生成 README。
 
 ---
 
@@ -317,6 +345,8 @@ Then `git add data/ && git commit && git push`.
 | Scan a conference / 扫一个会议 | Actions → Scan a venue |
 | Scan a date range / 扫一个时间段 | Actions → Weekly arXiv digest (fill in from/to) |
 | Backfill from another list / 从别的列表回补 | Actions → Harvest a sibling list |
+| Add the papers I ticked in a digest / 加进 digest 里勾选的论文 | Tick boxes → add the `add-selected` label |
+| Add a benchmark / 加一个 benchmark | 📄 Add a paper form, Category = Benchmark |
 | Change layout / intro / 改版式、介绍 | Edit `scripts/generate_readme.py` |
 | Change highlights / 改精选 | Add `featured: true` in `papers.yaml` |
 | Change people / resources / 改学者、资源 | `data/resources.yaml` |

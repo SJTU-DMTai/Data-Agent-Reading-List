@@ -76,7 +76,9 @@ def digest(verdicts, span):
              f"(from {len(verdicts)} candidates that passed relevance).",
              "",
              "Each paper cleared at least one gate (A=substance, B=institution, "
-             "C=top venue). Review, then run the `add_paper.py` command to include it.",
+             "C=top venue). **Tick the ones you want, then add the `add-selected` label** — "
+             "a bot adds all checked papers and marks each row ✅/⚠️/❌. (The `add_paper.py` "
+             "command under each row is the CLI equivalent.)",
              ""]
     for bucket, name in ((keep, "✅ KEEP"), (maybe, "🤔 MAYBE (borderline)")):
         if not bucket:
