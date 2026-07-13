@@ -43,8 +43,8 @@ HEADER = """\
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Last Commit](https://img.shields.io/github/last-commit/SJTU-DMTai/Data-Agent-Reading-List)](https://github.com/SJTU-DMTai/Data-Agent-Reading-List/commits/main)
-[![GitHub stars](https://img.shields.io/github/stars/SJTU-DMTai/Data-Agent-Reading-List?style=social)](https://github.com/SJTU-DMTai/Data-Agent-Reading-List/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/SJTU-DMTai/Awesome-Data-Agent-Papers)](https://github.com/SJTU-DMTai/Awesome-Data-Agent-Papers/commits/main)
+[![GitHub stars](https://img.shields.io/github/stars/SJTU-DMTai/Awesome-Data-Agent-Papers?style=social)](https://github.com/SJTU-DMTai/Awesome-Data-Agent-Papers/stargazers)
 
 > A curated reading list on **LLM-based data agents** — autonomous agents that prepare,
 > query, analyze, and learn from data. Covers data preparation, NL2SQL & table reasoning,
@@ -55,7 +55,7 @@ HEADER = """\
 **How this list is maintained:** every paper lives as structured metadata in
 [`data/`](data/), the README is auto-generated, links are checked in CI, and a weekly
 GitHub Action scans arXiv for new candidate papers. Found a missing paper?
-[Open an issue](https://github.com/SJTU-DMTai/Data-Agent-Reading-List/issues/new/choose)
+[Open an issue](https://github.com/SJTU-DMTai/Awesome-Data-Agent-Papers/issues/new/choose)
 or see [CONTRIBUTING.md](CONTRIBUTING.md) — PRs are welcome!
 """
 

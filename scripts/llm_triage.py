@@ -35,7 +35,7 @@ CATEGORIES = ["data-preparation", "nl2sql", "table-reasoning", "table-curation",
               "benchmark", "survey"]
 
 SYSTEM = """You triage paper candidates for a CURATED awesome-list on LLM-based data \
-agents (github.com/SJTU-DMTai/Data-Agent-Reading-List). Apply the rubric below EXACTLY.
+agents (github.com/SJTU-DMTai/Awesome-Data-Agent-Papers). Apply the rubric below EXACTLY.
 
 A paper is KEEP if it clears ANY ONE gate:
   Gate A (Substance): a named system/method/benchmark/dataset squarely in one of our
