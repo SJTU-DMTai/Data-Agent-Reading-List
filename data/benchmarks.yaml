@@ -91,13 +91,6 @@
       paper: https://arxiv.org/pdf/2402.17168
       code: https://github.com/MetaCopilot/dseval
       tldr: Full data-science lifecycle evaluated via bootstrapped annotation over sequences of interdependent problems (Kaggle/LeetCode).
-    - name: The Dawn of Natural Language to SQL
-      label: Nan Tang  # TODO verify corresponding author
-      year: 2024
-      paper: https://arxiv.org/pdf/2406.01265
-      tldr: >-
-        This benchmark evaluates NL2SQL methods across diverse data domains and SQL characteristics
-        using the NL2SQL360 framework on Spider and BIRD datasets.
 
 - name: Benchmarks for Tabular Data
   label_column: Task Type
@@ -180,10 +173,17 @@
       paper: https://aclanthology.org/2022.acl-long.78.pdf
       code: https://github.com/microsoft/HiTab
       tldr: Question answering and natural-language generation over hierarchical (matrix) tables.
-    - name: Can LLM Already Serve as A Database Interface? A BIg Bench for Large-Scale Database Grounded Text-to-SQLs
-      label: Text2SQL  # TODO set task type
+    - name: BIRD
+      label: Text2SQL
       year: 2023
       paper: https://arxiv.org/pdf/2305.03111
       tldr: >-
-        This benchmark evaluates text-to-SQL models on 12,751 pairs across 95 large, real-world
-        databases (33.4 GB) spanning 37 domains, testing dirty data handling and SQL efficiency.
+        Large-scale text-to-SQL over 95 real-world databases (33.4 GB) in 37 domains, testing
+        dirty-data handling and SQL efficiency across 12,751 question–SQL pairs.
+    - name: NL2SQL360
+      label: Text2SQL
+      year: 2024
+      paper: https://arxiv.org/pdf/2406.01265
+      tldr: >-
+        Evaluation testbed comparing NL2SQL methods across data domains and SQL characteristics on
+        Spider and BIRD (the "Dawn of NL2SQL" study).

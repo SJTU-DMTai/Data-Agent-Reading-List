@@ -94,7 +94,6 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 | InfiAgent-DABench | Jingjing Xu | 2024 | [paper](https://arxiv.org/pdf/2401.05507) [code](https://github.com/InfiAgent/InfiAgent) | Closed-form data-analysis tasks over CSVs in Python, with answers matched to canonical labels (ICML'24). |
 | DA-Code | Kang Liu | 2024 | [paper](https://arxiv.org/pdf/2410.07331) [code](https://da-code-bench.github.io/) | Agentic code generation for challenging data-wrangling and analytics problems grounded in real input data. |
 | DSEval | Kan Ren | 2024 | [paper](https://arxiv.org/pdf/2402.17168) [code](https://github.com/MetaCopilot/dseval) | Full data-science lifecycle evaluated via bootstrapped annotation over sequences of interdependent problems (Kaggle/LeetCode). |
-| The Dawn of Natural Language to SQL | Nan Tang | 2024 | [paper](https://arxiv.org/pdf/2406.01265) | This benchmark evaluates NL2SQL methods across diverse data domains and SQL characteristics using the NL2SQL360 framework on Spider and BIRD datasets. |
 
 ### Benchmarks for Tabular Data
 
@@ -113,7 +112,8 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 | FinQA | Reasoning | 2021 | [paper](https://arxiv.org/pdf/2109.00122) [code](https://github.com/czyssrs/FinQA) | Multi-step numerical reasoning over financial-report tables and text. |
 | FeTaQA | Reasoning | 2021 | [paper](https://arxiv.org/pdf/2104.00369) [code](https://github.com/Yale-LILY/FeTaQA) | Free-form table QA requiring generative, explanatory answers rather than short spans. |
 | HiTab | Reasoning | 2022 | [paper](https://aclanthology.org/2022.acl-long.78.pdf) [code](https://github.com/microsoft/HiTab) | Question answering and natural-language generation over hierarchical (matrix) tables. |
-| Can LLM Already Serve as A Database Interface? A BIg Bench for Large-Scale Database Grounded Text-to-SQLs | Text2SQL | 2023 | [paper](https://arxiv.org/pdf/2305.03111) | This benchmark evaluates text-to-SQL models on 12,751 pairs across 95 large, real-world databases (33.4 GB) spanning 37 domains, testing dirty data handling and SQL efficiency. |
+| BIRD | Text2SQL | 2023 | [paper](https://arxiv.org/pdf/2305.03111) | Large-scale text-to-SQL over 95 real-world databases (33.4 GB) in 37 domains, testing dirty-data handling and SQL efficiency across 12,751 question–SQL pairs. |
+| NL2SQL360 | Text2SQL | 2024 | [paper](https://arxiv.org/pdf/2406.01265) | Evaluation testbed comparing NL2SQL methods across data domains and SQL characteristics on Spider and BIRD (the "Dawn of NL2SQL" study). |
 
 ## 🧹 Data Preparation & Integration
 
