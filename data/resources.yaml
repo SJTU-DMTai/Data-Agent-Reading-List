@@ -1,0 +1,48 @@
+# Community resources rendered under "🌐 Community & Resources" in the README.
+# All three parts are optional. Edit freely — this file is human-maintained.
+
+# Seeded from the most frequent corresponding authors in papers.yaml. Add a `url`
+# (Google Scholar / homepage) and fix affiliations as you like.
+researchers:
+  - name: Guoliang Li
+    affiliation: Tsinghua University
+  - name: Ju Fan
+    affiliation: Renmin University of China
+  - name: Yuyu Luo
+    affiliation: HKUST (Guangzhou)
+  - name: Nan Tang
+    affiliation: HKUST (Guangzhou)
+  - name: Xuanhe Zhou
+    affiliation: Shanghai Jiao Tong University
+  - name: Qi Liu
+    affiliation: USTC
+  - name: Ningyu Zhang
+    affiliation: Zhejiang University
+  - name: Yunjun Gao
+    affiliation: Zhejiang University
+  - name: Eugene Wu
+    affiliation: Columbia University
+  - name: Reynold Cheng
+    affiliation: The University of Hong Kong
+  - name: Chenglin Wu
+    affiliation: DeepWisdom (MetaGPT)
+
+# Real workshops/tutorials with verified links. Add more as you find them.
+workshops_tutorials:
+  - venue: SIGMOD'26 Tutorial
+    title: "Data Agents: Levels, State of the Art, and Open Problems"
+    links:
+      paper: https://arxiv.org/pdf/2602.04261
+      slides: https://luoyuyu.vip/files/SIGMOD26-Tutorial-DataAgents.pdf
+
+# Sibling awesome-lists worth following.
+related_repos:
+  - name: awesome-ml-data-quality-papers
+    url: https://github.com/SJTU-DMTai/awesome-ml-data-quality-papers
+    note: "Training-data quality for ML — data attribution & data selection (sibling SJTU-DMTai list)"
+  - name: NL2SQL_Handbook
+    url: https://github.com/HKUSTDial/NL2SQL_Handbook
+    note: "Continuously-updated handbook of Text-to-SQL techniques"
+  - name: Awesome-Tabular-LLMs
+    url: https://github.com/SpursGoZmy/Awesome-Tabular-LLMs
+    note: "Papers on LLMs for table-related tasks"

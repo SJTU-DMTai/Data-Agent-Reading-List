@@ -59,6 +59,35 @@ GitHub Action scans arXiv for new candidate papers. Found a missing paper?
 or see [CONTRIBUTING.md](CONTRIBUTING.md) — PRs are welcome!
 """
 
+INTRO = """\
+## Introduction
+
+A **data agent** is an LLM-powered autonomous system that operates over data: it interprets
+a user's intent expressed in natural language and then plans and executes the whole
+workflow of **preparing, querying, analyzing, and learning from data** — calling tools
+(SQL engines, code, databases, retrieval), inspecting intermediate results, and
+self-correcting along the way. As data work shifts from hand-written pipelines to
+natural-language-driven automation, data agents are becoming the interface between people
+and their data: they lower the barrier to analytics and increasingly take on end-to-end
+tasks that used to require a dedicated data engineer, analyst, or scientist.
+
+Building a capable data agent spans many sub-problems. We **structure this list around the
+directions we see as core to that goal** — from getting data ready, to querying and
+reasoning over it, to full-lifecycle analysis and the agent capabilities underneath:
+
+- 🧹 **Data Preparation & Integration** — clean, transform, impute, and integrate raw data
+- 💬 **NL2SQL** — translate natural-language questions into executable SQL
+- 📋 **Table Understanding & Reasoning** — QA and reasoning over tables and semi-structured data
+- 🧱 **Table Generation, Curation & Synthesis** — construct and improve the tables themselves
+- 📊 **Data Analysis & Insight Discovery** — EDA, BI, semantic operators, report generation
+- 🔬 **Data Science & ML Agents** — the full modeling / AutoML lifecycle
+- 🛠️ **Database Operations & Diagnosis** — configuration, tuning, and diagnosis for DBAs
+- 🧠 **Agent Memory & Context Engineering** — a key capability for long-horizon data agents
+- 🧩 **General Agent Techniques** — the planning, workflow, multi-agent, and RAG building blocks underneath
+
+— plus the **surveys** that frame the field and the **benchmarks** that measure progress.
+"""
+
 FOOTER = ""
 
 
@@ -114,22 +143,62 @@ def render_benchmark_group(group: dict) -> list:
     return lines
 
 
-def render_papers(papers: list, key: str) -> list:
-    rows = [p for p in papers if p["category"] == key]
+def _paper_sort_key(p):
+    # arXiv venues carry a month (arXiv'26.02); conference papers sort first
+    # within their year, then arXiv entries newest-first.
+    m = re.search(r"'\d{2}\.(\d{2})", p.get("venue", ""))
+    return (-p.get("year", 0), -(int(m.group(1)) if m else 99))
 
-    def sort_key(p):
-        # arXiv venues carry a month (arXiv'26.02); conference papers sort first
-        # within their year, then arXiv entries newest-first.
-        m = re.search(r"'\d{2}\.(\d{2})", p.get("venue", ""))
-        return (-p.get("year", 0), -(int(m.group(1)) if m else 99))
 
-    rows.sort(key=sort_key)
+def render_paper_rows(rows: list) -> list:
+    """A paper table (Venue | Paper | Corresp. Author | Links) for a pre-filtered list."""
     lines = ["| Venue | Paper | Corresp. Author | Links |",
              "|:---|:---|:---:|:---:|"]
-    for p in rows:
+    for p in sorted(rows, key=_paper_sort_key):
         title = md_escape(p["title"]) + render_tags(p.get("tags"))
         lines.append(f"| {p['venue']} | {title} | {md_escape(p.get('authors', ''))} | {render_links(p)} |")
     lines.append("")
+    return lines
+
+
+def render_papers(papers: list, key: str) -> list:
+    return render_paper_rows([p for p in papers if p["category"] == key])
+
+
+def render_featured(papers: list) -> list:
+    """Top 'Must-Read' section — every paper marked `featured: true`, across categories."""
+    featured = [p for p in papers if p.get("featured")]
+    blurb = ("> Foundational and high-impact work — the best entry points into the field. "
+             "Every paper here also appears in its topic section below.")
+    return [blurb, ""] + render_paper_rows(featured)
+
+
+def render_resources(res: dict) -> list:
+    """Render the community-resources block from data/resources.yaml (all parts optional)."""
+    lines = []
+    people = res.get("researchers") or []
+    if people:
+        lines += ["### 🎓 Researchers", "",
+                  "> Active groups shaping data agents — a starting point for following the field.", ""]
+        chunks = []
+        for r in people:
+            name = f"[{r['name']}]({r['url']})" if r.get("url") else f"**{r['name']}**"
+            chunks.append(name + (f" ({r['affiliation']})" if r.get("affiliation") else ""))
+        lines += [" · ".join(chunks), ""]
+    talks = res.get("workshops_tutorials") or []
+    if talks:
+        lines += ["### 📅 Workshops & Tutorials", ""]
+        for t in talks:
+            links = " ".join(f"[{k}]({v})" for k, v in (t.get("links") or {}).items())
+            lines.append(f"- **[{t['venue']}]** {md_escape(t['title'])} {links}".rstrip())
+        lines.append("")
+    repos = res.get("related_repos") or []
+    if repos:
+        lines += ["### 🔗 Related Repositories", ""]
+        for r in repos:
+            note = f" — {r['note']}" if r.get("note") else ""
+            lines.append(f"- [{r['name']}]({r['url']}){note}")
+        lines.append("")
     return lines
 
 
@@ -148,7 +217,10 @@ def main() -> int:
         if p["category"] not in known:
             sys.exit(f"error: unknown category {p['category']!r} in paper {p['title']!r}")
 
-    sections = [("📚 Surveys & Vision", render_surveys(surveys))]
+    sections = []
+    if any(p.get("featured") for p in papers):
+        sections.append(("⭐ Must-Read / Foundational", render_featured(papers)))
+    sections.append(("📚 Surveys & Vision", render_surveys(surveys)))
 
     bench_lines = []
     for group in benchmarks:
@@ -159,12 +231,20 @@ def main() -> int:
         body = [f"> {blurb}", ""] + render_papers(papers, key)
         sections.append((title, body))
 
+    res_path = DATA / "resources.yaml"
+    resources = yaml.safe_load(res_path.read_text()) if res_path.exists() else {}
+    resource_body = render_resources(resources or {})
+    if resource_body:
+        sections.append(("🌐 Community & Resources", resource_body))
+
     n_papers = len(papers) + len(surveys) + sum(len(g["items"]) for g in benchmarks)
 
     out = [HEADER]
     out.append(f"**{n_papers} papers** and counting. Last generated from "
                f"[`data/`](data/) — do not edit this file by hand.\n")
+    out.append(INTRO)
     out.append("## Contents\n")
+    out.append("- [Introduction](#introduction)")
     for title, _ in sections:
         out.append(f"- [{title}](#{slugify(title)})")
     out.append("")

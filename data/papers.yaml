@@ -1,6 +1,7 @@
 # Main paper list.
 # Fields: title (required), authors (corresponding author(s)), venue, year (required),
-#         paper (required), code (optional), category (required), tags (optional), tldr (optional)
+#         paper (required), code (optional), category (required), tags (optional), tldr (optional),
+#         featured (optional bool — also surfaces in the top "Must-Read / Foundational" section)
 # Categories: data-preparation | table-reasoning | data-analysis | data-science
 #             | db-operations | memory | foundations
 # Within a category, papers are rendered sorted by year (desc), keeping file order for ties.
@@ -30,6 +31,7 @@
   category: data-preparation
 
 - title: "DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing"
+  featured: true
   authors: Eugene Wu
   venue: VLDB'25
   year: 2025
@@ -127,6 +129,7 @@
   category: table-reasoning
 
 - title: "Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding"
+  featured: true
   authors: Tomas Pfister
   venue: ICLR'24
   year: 2024
@@ -164,6 +167,7 @@
   category: data-analysis
 
 - title: "Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing"
+  featured: true
   authors: Gerardo Vitagliano
   venue: CIDR'25
   year: 2025
@@ -187,6 +191,7 @@
   category: data-analysis
 
 - title: "Semantic Operators and Their Optimization: Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS"
+  featured: true
   authors: Matei Zaharia
   venue: VLDB'25
   year: 2025
@@ -263,6 +268,7 @@
   tags: [multi-agent, automl]
 
 - title: "Data Interpreter: An LLM Agent For Data Science"
+  featured: true
   authors: Bang Liu & Chenglin Wu
   venue: ACL'25 Findings
   year: 2025
@@ -546,6 +552,7 @@
   category: memory
 
 - title: "MemOS: A Memory OS for AI System"
+  featured: true
   authors: Siheng Chen, Wentao Zhang, Zhi-Qin John Xu, Feiyu Xiong
   venue: arXiv'25.07
   year: 2025
@@ -645,6 +652,7 @@
   tags: [reflection]
 
 - title: "MemGPT: Towards LLMs as Operating Systems"
+  featured: true
   authors: Charles Packer
   venue: arXiv'23.10
   year: 2023
@@ -661,6 +669,7 @@
   tags: [planning, multi-agent]
 
 - title: "AFlow: Automating Agentic Workflow Generation"
+  featured: true
   authors: Chenglin Wu
   venue: ICLR'25 Oral
   year: 2025
@@ -669,6 +678,7 @@
   tags: [workflow]
 
 - title: "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection"
+  featured: true
   authors: Hannaneh Hajishirzi
   venue: ICLR'24
   year: 2024
@@ -677,6 +687,7 @@
   tags: [rag]
 
 - title: "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework"
+  featured: true
   authors: Chenglin Wu
   venue: ICLR'24
   year: 2024
