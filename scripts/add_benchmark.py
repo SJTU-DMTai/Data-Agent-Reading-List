@@ -59,11 +59,9 @@ def _make_tldr(meta):
     rec = enrich([meta["id"]], use_s2=False)
     abstract = rec[0]["abstract"] if rec else ""
     prompt = (
-        "Write a concise TLDR (60-90 words) for this benchmark, in this exact structured "
-        "style, as ONE paragraph:\n"
-        "\"<one sentence on what the benchmark evaluates>. Sub-tasks: <...>. Input: <...>. "
-        "Output: <...>. Metrics: <...>.\"\n"
-        "No markdown, no line breaks, plain sentences.\n\n"
+        "Write a ONE-sentence TLDR (about 20-30 words, max 35) for this benchmark: what "
+        "it evaluates and over what kind of data. Plain sentence, no markdown, no line "
+        "breaks, no 'Sub-tasks/Input/Output/Metrics' structure.\n\n"
         f"Title: {meta['title']}\nAbstract: {abstract[:1600]}")
     try:
         out = _call([{"role": "user", "content": prompt}], cfg).strip()

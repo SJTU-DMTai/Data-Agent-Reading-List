@@ -52,8 +52,7 @@ body:
       options:
         - Auto (Data Agent Benchmarks)
         - Data Agent Benchmarks
-        - Latest Benchmarks for Tabular Data (Since 2024)
-        - Selected Classical Reasoning Benchmarks for Tabular Data
+        - Benchmarks for Tabular Data
       default: 0
   - type: input
     id: author
