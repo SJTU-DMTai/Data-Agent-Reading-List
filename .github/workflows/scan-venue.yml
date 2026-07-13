@@ -1,0 +1,62 @@
+name: Scan a venue
+
+# Manually scan a whole conference for relevant papers and open a digest issue.
+# Actions tab -> "Scan a venue" -> Run workflow -> fill venue/year/source.
+on:
+  workflow_dispatch:
+    inputs:
+      venue:
+        description: 'Venue acronym (e.g. ICDE, VLDB, SIGMOD, KDD, ICLR, NeurIPS, ACL)'
+        required: true
+      year:
+        description: 'Year (e.g. 2026)'
+        required: true
+      source:
+        description: 'Where to pull the paper list from'
+        required: true
+        type: choice
+        default: auto
+        options: [auto, dblp, openreview]
+      no_triage:
+        description: 'Skip the LLM relevance filter (list everything topic-matching)'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml
+      - name: Scan venue
+        id: scan
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          ARGS="--venue '${{ github.event.inputs.venue }}' --year ${{ github.event.inputs.year }} --source ${{ github.event.inputs.source }}"
+          [ "${{ github.event.inputs.no_triage }}" = "true" ] && ARGS="$ARGS --no-triage"
+          [ -z "$DEEPSEEK_API_KEY" ] && ARGS="$ARGS --no-triage"
+          if eval python scripts/scan_venue.py $ARGS > digest.md; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Open digest issue
+        if: steps.scan.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create venue-scan --color 1D76DB --description "Per-venue scan digest" --force
+          gh issue create \
+            --title "Venue scan: ${{ github.event.inputs.venue }} ${{ github.event.inputs.year }}" \
+            --body-file digest.md \
+            --label venue-scan \
+            --repo "$GITHUB_REPOSITORY"
