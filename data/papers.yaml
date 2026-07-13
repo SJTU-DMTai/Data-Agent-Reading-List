@@ -1427,9 +1427,3 @@
   category: nl2sql
   tags: [nl2sql]
 
-- title: "TRUST-SQL: Tool-Integrated Multi-Turn Reinforcement Learning for Text-to-SQL over Unknown Schemas"
-  authors: Xunliang Cai  # TODO verify corresponding author
-  venue: arXiv'26.03  # TODO verify venue
-  year: 2026
-  paper: https://arxiv.org/pdf/2603.16448
-  category: nl2sql
