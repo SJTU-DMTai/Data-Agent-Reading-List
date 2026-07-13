@@ -49,7 +49,6 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 ## Contents
 
 - [Introduction](#introduction)
-- [⭐ Must-Read / Foundational](#-must-read--foundational)
 - [📚 Surveys & Vision](#-surveys--vision)
 - [🏆 Benchmarks](#-benchmarks)
 - [🧹 Data Preparation & Integration](#-data-preparation--integration)
@@ -62,25 +61,6 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 - [🧠 Agent Memory & Context Engineering](#-agent-memory--context-engineering)
 - [🧩 General Agent Techniques](#-general-agent-techniques)
 - [🌐 Community & Resources](#-community--resources)
-
-## ⭐ Must-Read / Foundational
-
-> Foundational and high-impact work — the best entry points into the field. Every paper here also appears in its topic section below.
-
-| Venue | Paper | Corresp. Author | Links |
-|:---|:---|:---:|:---:|
-| VLDB'25 | DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing `unstructured-data` | Eugene Wu | [paper](https://arxiv.org/pdf/2410.12189) |
-| CIDR'25 | Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing `semantic-operators` | Gerardo Vitagliano | [paper](https://www.vldb.org/cidrdb/papers/2025/p12-liu.pdf) |
-| VLDB'25 | Semantic Operators and Their Optimization: Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS `semantic-operators` | Matei Zaharia | [paper](https://www.vldb.org/pvldb/vol18/p4171-patel.pdf) |
-| ACL'25 Findings | Data Interpreter: An LLM Agent For Data Science | Bang Liu & Chenglin Wu | [paper](https://arxiv.org/pdf/2402.18679) |
-| ICLR'25 Oral | AFlow: Automating Agentic Workflow Generation `workflow` | Chenglin Wu | [paper](https://openreview.net/pdf?id=z5uVAKwmjf) |
-| arXiv'25.07 | MemOS: A Memory OS for AI System | Siheng Chen, Wentao Zhang, Zhi-Qin John Xu, Feiyu Xiong | [paper](https://arxiv.org/pdf/2507.03724) |
-| ICLR'24 | Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding | Tomas Pfister | [paper](https://arxiv.org/pdf/2401.04398) |
-| ICLR'24 | Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection `rag` | Hannaneh Hajishirzi | [paper](https://arxiv.org/pdf/2310.11511) |
-| ICLR'24 | MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework `multi-agent` | Chenglin Wu | [paper](https://arxiv.org/pdf/2308.00352) |
-| NeurIPS'23 | DIN-SQL: Decomposed In-Context Learning of Text-to-SQL with Self-Correction `nl2sql` | Davood Rafiei | [paper](https://arxiv.org/pdf/2304.11015) |
-| COLING'25 | MAC-SQL: A Multi-Agent Collaborative Framework for Text-to-SQL `nl2sql` `multi-agent` | Zhoujun Li | [paper](https://arxiv.org/pdf/2312.11242) [code](https://github.com/wbbeyourself/MAC-SQL) |
-| arXiv'23.10 | MemGPT: Towards LLMs as Operating Systems | Charles Packer | [paper](https://arxiv.org/pdf/2310.08560) |
 
 ## 📚 Surveys & Vision
 
@@ -374,12 +354,6 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 | ICLR'24 | MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework `multi-agent` | Chenglin Wu | [paper](https://arxiv.org/pdf/2308.00352) |
 
 ## 🌐 Community & Resources
-
-### 🎓 Researchers
-
-> Active groups shaping data agents — a starting point for following the field.
-
-**Guoliang Li** (Tsinghua University) · **Ju Fan** (Renmin University of China) · **Yuyu Luo** (HKUST (Guangzhou)) · **Nan Tang** (HKUST (Guangzhou)) · **Xuanhe Zhou** (Shanghai Jiao Tong University) · **Qi Liu** (USTC) · **Ningyu Zhang** (Zhejiang University) · **Yunjun Gao** (Zhejiang University) · **Eugene Wu** (Columbia University) · **Reynold Cheng** (The University of Hong Kong) · **Chenglin Wu** (DeepWisdom (MetaGPT))
 
 ### 📅 Workshops & Tutorials
 

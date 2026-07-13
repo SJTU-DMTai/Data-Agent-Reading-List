@@ -1,31 +1,5 @@
 # Community resources rendered under "🌐 Community & Resources" in the README.
-# All three parts are optional. Edit freely — this file is human-maintained.
-
-# Seeded from the most frequent corresponding authors in papers.yaml. Add a `url`
-# (Google Scholar / homepage) and fix affiliations as you like.
-researchers:
-  - name: Guoliang Li
-    affiliation: Tsinghua University
-  - name: Ju Fan
-    affiliation: Renmin University of China
-  - name: Yuyu Luo
-    affiliation: HKUST (Guangzhou)
-  - name: Nan Tang
-    affiliation: HKUST (Guangzhou)
-  - name: Xuanhe Zhou
-    affiliation: Shanghai Jiao Tong University
-  - name: Qi Liu
-    affiliation: USTC
-  - name: Ningyu Zhang
-    affiliation: Zhejiang University
-  - name: Yunjun Gao
-    affiliation: Zhejiang University
-  - name: Eugene Wu
-    affiliation: Columbia University
-  - name: Reynold Cheng
-    affiliation: The University of Hong Kong
-  - name: Chenglin Wu
-    affiliation: DeepWisdom (MetaGPT)
+# All parts are optional. Edit freely — this file is human-maintained.
 
 # Real workshops/tutorials with verified links. Add more as you find them.
 workshops_tutorials:

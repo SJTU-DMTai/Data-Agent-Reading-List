@@ -165,26 +165,9 @@ def render_papers(papers: list, key: str) -> list:
     return render_paper_rows([p for p in papers if p["category"] == key])
 
 
-def render_featured(papers: list) -> list:
-    """Top 'Must-Read' section — every paper marked `featured: true`, across categories."""
-    featured = [p for p in papers if p.get("featured")]
-    blurb = ("> Foundational and high-impact work — the best entry points into the field. "
-             "Every paper here also appears in its topic section below.")
-    return [blurb, ""] + render_paper_rows(featured)
-
-
 def render_resources(res: dict) -> list:
     """Render the community-resources block from data/resources.yaml (all parts optional)."""
     lines = []
-    people = res.get("researchers") or []
-    if people:
-        lines += ["### 🎓 Researchers", "",
-                  "> Active groups shaping data agents — a starting point for following the field.", ""]
-        chunks = []
-        for r in people:
-            name = f"[{r['name']}]({r['url']})" if r.get("url") else f"**{r['name']}**"
-            chunks.append(name + (f" ({r['affiliation']})" if r.get("affiliation") else ""))
-        lines += [" · ".join(chunks), ""]
     talks = res.get("workshops_tutorials") or []
     if talks:
         lines += ["### 📅 Workshops & Tutorials", ""]
@@ -218,8 +201,6 @@ def main() -> int:
             sys.exit(f"error: unknown category {p['category']!r} in paper {p['title']!r}")
 
     sections = []
-    if any(p.get("featured") for p in papers):
-        sections.append(("⭐ Must-Read / Foundational", render_featured(papers)))
     sections.append(("📚 Surveys & Vision", render_surveys(surveys)))
 
     bench_lines = []
