@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/papers.yaml README.md
+          git add data/ README.md          # data/ so a benchmark/survey deletion is committed too
           git commit -m "Remove paper from #${{ github.event.issue.number }}" \
             -m "Closes #${{ github.event.issue.number }}"
           git push

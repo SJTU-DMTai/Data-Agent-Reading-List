@@ -21,16 +21,25 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 PAPERS = HERE.parent / "data" / "papers.yaml"
+SURVEYS = HERE.parent / "data" / "surveys.yaml"
+BENCH = HERE.parent / "data" / "benchmarks.yaml"
 TITLE_RE = re.compile(r'^- title:\s*"?(.*?)"?\s*$')
+BENCH_ITEM_RE = re.compile(r'^(\s+)- name:\s*"?(.*?)"?\s*$')
+
+
+def _query_parts(query):
+    q = query.lower().strip()
+    aid = re.search(r"(\d{4}\.\d{4,5})", query)
+    return q, (aid.group(1) if aid else None)
 
 
 def find_entries(lines, query):
-    """Yield (start, end, title) for every entry whose id/title matches `query`."""
-    q = query.lower().strip()
-    aid = re.search(r"(\d{4}\.\d{4,5})", query)
-    aid = aid.group(1) if aid else None
+    """Yield (start, end, title) for every `- title:` entry matching `query`.
+
+    Works for both papers.yaml and surveys.yaml (same top-level `- title:` schema)."""
+    q, aid = _query_parts(query)
     starts = [i for i, l in enumerate(lines) if l.startswith("- title:")]
-    for k, i in enumerate(starts):
+    for i in starts:
         # entry body = the `- title:` line plus following indented field lines
         j = i + 1
         while j < len(lines) and (lines[j].startswith((" ", "\t"))):
@@ -43,6 +52,34 @@ def find_entries(lines, query):
             if end < len(lines) and lines[end].strip() == "":  # eat one trailing blank
                 end += 1
             yield i, end, title
+
+
+def find_benchmark_items(lines, query):
+    """Yield (start, end, name) for every benchmark *item* matching `query`.
+
+    Items are indented `- name:` blocks nested under a group's `items:` — distinct from
+    the top-level `- name:` group headers (which sit at column 0)."""
+    q, aid = _query_parts(query)
+    for i, line in enumerate(lines):
+        m = BENCH_ITEM_RE.match(line)
+        if not m:
+            continue
+        indent = len(m.group(1))
+        j = i + 1
+        while j < len(lines):
+            l = lines[j]
+            if l.strip() == "":
+                break
+            if len(l) - len(l.lstrip()) <= indent:   # next item / group / dedent
+                break
+            j += 1
+        block = "".join(lines[i:j])
+        hit = (aid and aid in block) or (not aid and q in m.group(2).lower())
+        if hit:
+            end = j
+            if end < len(lines) and lines[end].strip() == "":  # eat one trailing blank
+                end += 1
+            yield i, end, m.group(2)
 
 
 def main():

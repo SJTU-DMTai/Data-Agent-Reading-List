@@ -20,7 +20,13 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from add_from_issue import parse_form, _get, set_output  # noqa: E402
-from remove_paper import find_entries, PAPERS  # noqa: E402
+from remove_paper import (find_entries, find_benchmark_items,  # noqa: E402
+                          PAPERS, SURVEYS, BENCH)
+
+# (file, kind label, finder) — searched in order; a hit can be in any of them.
+TARGETS = [(PAPERS, "paper", find_entries),
+           (SURVEYS, "survey", find_entries),
+           (BENCH, "benchmark", find_benchmark_items)]
 
 
 def main():
@@ -38,25 +44,34 @@ def main():
         set_output("error", "no arXiv id / title found in the form.")
         return 1
 
-    lines = PAPERS.read_text().splitlines(keepends=True)
-    matches = list(find_entries(lines, ref))
+    # search papers, surveys, and benchmark items; collect matches across all files
+    file_lines, matches = {}, []
+    for path, kind, finder in TARGETS:
+        if not path.exists():
+            continue
+        lines = path.read_text().splitlines(keepends=True)
+        file_lines[path] = lines
+        for start, end, label in finder(lines, ref):
+            matches.append((path, kind, start, end, label))
+
     if not matches:
-        set_output("not_found", f"no paper matching **{ref}** in `data/papers.yaml`. "
-                                "(Only papers.yaml is supported — benchmarks/surveys are "
-                                "still removed by hand.)")
+        set_output("not_found", f"no paper, survey, or benchmark matching **{ref}** in "
+                                "`data/`. Double-check the arXiv id or exact title.")
         return 0
     if len(matches) > 1:
-        listed = "\n".join(f"- {t}" for _, _, t in matches)
+        listed = "\n".join(f"- ({k}) {t}" for _, k, _, _, t in matches)
         set_output("ambiguous",
-                   f"**{ref}** matches {len(matches)} papers — please re-open with the "
+                   f"**{ref}** matches {len(matches)} entries — please re-open with the "
                    f"exact **arXiv id** so only one is removed:\n{listed}")
         return 0
 
-    start, end, title = matches[0]
+    path, kind, start, end, label = matches[0]
+    lines = file_lines[path]
     del lines[start:end]
-    PAPERS.write_text("".join(lines))
+    path.write_text("".join(lines))
     subprocess.run([sys.executable, str(HERE / "generate_readme.py")], check=True)
-    set_output("removed", f"🗑️ Removed **{title}** from the list and regenerated the README.")
+    set_output("removed", f"🗑️ Removed {kind} **{label}** (from `data/{path.name}`) and "
+                          "regenerated the README.")
     return 0
 
 

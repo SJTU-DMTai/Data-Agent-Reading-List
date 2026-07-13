@@ -112,13 +112,13 @@ comments the result on your issue and closes it.
 
 ---
 
-## 3. Remove a paper / 删除一篇论文
+## 3. Remove a paper, benchmark, or survey / 删除论文、benchmark 或 survey
 
-1. **Issues → New issue → 🗑️ Remove a paper**.
+1. **Issues → New issue → 🗑️ Remove an entry**.
 2. **arXiv id or paper title** — **prefer the arXiv id.**
 3. Submit.
 
-1. **Issues → New issue → 🗑️ Remove a paper**。
+1. **Issues → New issue → 🗑️ Remove an entry**。
 2. **arXiv id or paper title** —— **优先填 arXiv 编号。**
 3. 提交。
 
@@ -137,10 +137,10 @@ What happens:
 - 标题**匹配到多篇** → **故意拒绝删除**。机器人会列出候选，让你改用 arXiv 编号重新提交，保证一次只会删一篇。
 - 没匹配到 → 回复 `not_found`。
 
-> The remove form only works on `data/papers.yaml`. Benchmarks and surveys are
-> removed by hand (see Section 6).
+> The remove form searches papers, benchmarks, **and** surveys — it deletes the
+> entry wherever it lives (see Section 6).
 >
-> 删除表单只作用于 `data/papers.yaml`。benchmarks 和 surveys 需要手动删除（见第 6 节）。
+> 删除表单会在论文、benchmark、**和** survey 里一起搜，命中在哪就删哪（见第 6 节）。
 
 ---
 
@@ -233,35 +233,35 @@ Where to change what / 改哪里:
 
 ## 6. Benchmarks and surveys / benchmark 和 survey
 
-**Adding a benchmark is automated — same as a paper.** Use the **📄 Add a paper**
-issue form (Section 2) and set **Category = Benchmark**. The bot adds it to
-`data/benchmarks.yaml` (into the "Data Agent Benchmarks" group), drafts a short
-summary, and rebuilds the README. It also appears as a checkbox in the weekly
-digest, so the tick-and-label flow in Section 4 adds benchmarks too.
+**Papers, benchmarks, and surveys are all handled by the same two forms — none
+of them needs hand-editing anymore.**
 
-**添加 benchmark 已经自动化了——和加论文一样。** 用 **📄 Add a paper** 表单（第 2 节），把
-**Category 选成 Benchmark** 即可。机器人会把它加进 `data/benchmarks.yaml`（放进 "Data Agent
-Benchmarks" 分组）、起草一段简短摘要、重新生成 README。它也会作为勾选框出现在每周 digest 里，所以第 4 节的
-「勾选 + 加标签」流程同样能加 benchmark。
+**论文、benchmark、survey 现在都由同样的两个表单管理——它们都不再需要手改。**
 
-Two things the form does **not** do, which still need a hand edit of
-`data/benchmarks.yaml` (open it → ✏️ → edit → commit to `main`):
+- **Add a benchmark:** the **📄 Add a paper** form (Section 2), **Category =
+  Benchmark**. Optionally pick the table in **Benchmark group** and type the
+  author in **Corresponding author**; leave them on Auto to default to the "Data
+  Agent Benchmarks" table and the last author. The bot drafts a short summary
+  automatically.
+- **Add a survey:** the same form, **Category = Survey**. **Corresponding
+  author** is optional.
+- **Remove a benchmark or survey:** the **🗑️ Remove an entry** form (Section 3),
+  with the arXiv id. It searches papers, benchmarks, and surveys and deletes
+  wherever the match is.
 
-- Putting a benchmark in a group other than the default, or setting its
-  corresponding-author / task-type label.
-- **Removing** a benchmark (the 🗑️ Remove form only handles papers).
+- **加 benchmark：** 用 **📄 Add a paper** 表单（第 2 节），**Category 选 Benchmark**。可选地在
+  **Benchmark group** 里挑放哪张表、在 **Corresponding author** 里填作者；保持 Auto 就默认放进
+  "Data Agent Benchmarks" 表、用最后一位作者。机器人会自动起草一段简短摘要。
+- **加 survey：** 同一个表单，**Category 选 Survey**。**Corresponding author** 可选。
+- **删 benchmark 或 survey：** 用 **🗑️ Remove an entry** 表单（第 3 节），填 arXiv id。它会在论文、
+  benchmark、survey 里一起搜，命中在哪就删哪。
 
-有两件事表单**做不了**，仍需手动编辑 `data/benchmarks.yaml`（打开 → ✏️ → 编辑 → 提交到 `main`）：
+The only leftover hand edit is the *task-type* label in the two tabular-benchmark
+tables (the main table uses the author field). For that, edit
+`data/benchmarks.yaml` directly (open → ✏️ → edit → commit to `main`).
 
-- 把 benchmark 放进默认之外的分组，或设置它的通讯作者 / 任务类型标签。
-- **删除** benchmark（🗑️ Remove 表单只处理论文）。
-
-**Surveys** have no form yet — add or remove them by editing `data/surveys.yaml`
-directly. Locally, a benchmark can also be added with
-`python scripts/add_benchmark.py <arxiv-id>`.
-
-**Survey** 还没有表单——直接编辑 `data/surveys.yaml` 增删。本地也可以用
-`python scripts/add_benchmark.py <arxiv-id>` 添加 benchmark。
+唯一剩下的手改，是「表格类 benchmark」那两张表里的*任务类型*标签（主表用作者字段就够了）。这种情况直接编辑
+`data/benchmarks.yaml`（打开 → ✏️ → 编辑 → 提交到 `main`）。
 
 After any commit, the build rebuilds the README automatically.
 
@@ -341,12 +341,13 @@ Then `git add data/ && git commit && git push`.
 | I want to… / 我想… | Where / 去哪 |
 |---|---|
 | Add one paper / 加一篇 | Issues → 📄 Add a paper |
-| Remove one paper / 删一篇 | Issues → 🗑️ Remove a paper |
+| Remove a paper/benchmark/survey / 删论文、benchmark、survey | Issues → 🗑️ Remove an entry |
 | Scan a conference / 扫一个会议 | Actions → Scan a venue |
 | Scan a date range / 扫一个时间段 | Actions → Weekly arXiv digest (fill in from/to) |
 | Backfill from another list / 从别的列表回补 | Actions → Harvest a sibling list |
 | Add the papers I ticked in a digest / 加进 digest 里勾选的论文 | Tick boxes → add the `add-selected` label |
 | Add a benchmark / 加一个 benchmark | 📄 Add a paper form, Category = Benchmark |
+| Add a survey / 加一篇 survey | 📄 Add a paper form, Category = Survey |
 | Change layout / intro / 改版式、介绍 | Edit `scripts/generate_readme.py` |
 | Change highlights / 改精选 | Add `featured: true` in `papers.yaml` |
 | Change people / resources / 改学者、资源 | `data/resources.yaml` |

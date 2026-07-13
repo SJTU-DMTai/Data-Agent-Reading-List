@@ -35,7 +35,6 @@ CATEGORY_MAP = {
     "agent memory & context engineering": "memory",
     "general agent techniques": "foundations",
 }
-UNSUPPORTED = {"survey"}  # surveys.yaml still has its own schema; benchmarks are handled
 ARXIV_RE = re.compile(r"(\d{4}\.\d{4,5})")
 
 
@@ -108,15 +107,12 @@ def main():
     paper_ref = _get(fields, "arxiv link or paper title", "paper link", "paper")
     cat_label = _get(fields, "category").lower()
     venue_override = _get(fields, "venue (optional)", "venue")
+    bench_group = _get(fields, "benchmark group (benchmarks only)", "benchmark group")
+    author = _get(fields, "corresponding author (benchmarks & surveys, optional)",
+                  "corresponding author", "author")
 
     if not paper_ref:
         set_output("error", "no paper link/title found in the form.")
-        return 1
-    if cat_label in UNSUPPORTED:
-        set_output("error",
-                   f"**{cat_label.title()}** entries live in `data/{cat_label}s.yaml` "
-                   "with a different schema and aren't auto-added yet — please add it "
-                   "with a PR. Sorry!")
         return 1
 
     aid, note = resolve_input(paper_ref)
@@ -124,11 +120,32 @@ def main():
         set_output("error", note)
         return 1
 
+    # surveys live in surveys.yaml (flat title/venue/year/paper schema)
+    if cat_label == "survey":
+        from add_survey import insert_survey
+        try:
+            s = insert_survey(aid, corresponding=author or None,
+                              venue=venue_override or None)
+        except ValueError as exc:
+            status = "duplicate" if "already" in str(exc) else "error"
+            set_output(status, f"not added: {exc}")
+            return 0 if status == "duplicate" else 1
+        subprocess.run([sys.executable, str(HERE / "generate_readme.py")], check=True)
+        lines = [f"✅ Added survey **{s['title']}**", "",
+                 (note + "\n" if note else "") + f"venue: **{s['venue']}**"
+                 + (f"  ·  corresponding: {s['corresponding']}" if s['corresponding'] else ""),
+                 "```yaml", s["yaml"].strip(), "```"]
+        set_output("added", "\n".join(lines))
+        return 0
+
     # benchmarks live in benchmarks.yaml with their own group/tldr schema
     if cat_label == "benchmark":
         from add_benchmark import insert_benchmark, DEFAULT_GROUP
+        group = DEFAULT_GROUP
+        if bench_group and not bench_group.lower().startswith("auto"):
+            group = bench_group
         try:
-            b = insert_benchmark(aid, group=DEFAULT_GROUP)
+            b = insert_benchmark(aid, group=group, label=author or None)
         except ValueError as exc:
             status = "duplicate" if "already" in str(exc) else "error"
             set_output(status, f"not added: {exc}")
@@ -140,8 +157,9 @@ def main():
                  f"label: {b['label']}  ·  year: {b['year']}"
                  + (f"  ·  tldr drafted by LLM" if b.get("tldr") else ""),
                  "```yaml", b["block"].strip(), "```",
-                 "_Default group is \"Data Agent Benchmarks\"; move it and check the "
-                 "label (corresponding author / task type) if needed._"]
+                 "_Group and author come from the form (defaults to \"Data Agent "
+                 "Benchmarks\" / last author). Tweak the tldr in `data/benchmarks.yaml` "
+                 "if needed._"]
         set_output("added", "\n".join(lines))
         return 0
 

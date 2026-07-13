@@ -44,6 +44,23 @@ body:
       label: Venue (optional)
       description: Leave blank to auto-ground it. Fill in to override (e.g. a brand-new acceptance).
       placeholder: "e.g. VLDB'25, ICDE'26, KDD'26"
+  - type: dropdown
+    id: bench_group
+    attributes:
+      label: Benchmark group (benchmarks only)
+      description: Only used when Category = Benchmark — which of the three benchmark tables it goes in.
+      options:
+        - Auto (Data Agent Benchmarks)
+        - Data Agent Benchmarks
+        - Latest Benchmarks for Tabular Data (Since 2024)
+        - Selected Classical Reasoning Benchmarks for Tabular Data
+      default: 0
+  - type: input
+    id: author
+    attributes:
+      label: Corresponding author (benchmarks & surveys, optional)
+      description: For a Benchmark this fills the author/task-type column; for a Survey the corresponding author. Leave blank to auto-fill.
+      placeholder: "e.g. Guoliang Li"
   - type: textarea
     id: why
     attributes:
