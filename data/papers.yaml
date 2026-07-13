@@ -1338,3 +1338,28 @@
   paper: https://arxiv.org/pdf/2604.10352
   category: foundations
   tags: [agent-technique]
+
+- title: "Text-Tuple-Table: Towards Information Integration in Text-to-Table Generation via Global Tuple Extraction"
+  authors: Yangqiu Song  # TODO verify corresponding author
+  venue: EMNLP'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2404.14215
+  code: https://github.com/HKUST-KnowComp/LiveSum  # auto-detected from abstract, please verify
+  category: table-curation
+  tags: [text-to-table]
+
+- title: "Schema-Driven Information Extraction from Heterogeneous Tables"
+  authors: Alan Ritter  # TODO verify corresponding author
+  venue: EMNLP'24
+  year: 2023
+  paper: https://arxiv.org/pdf/2305.14336
+  category: table-curation
+  tags: [table-extraction]
+
+- title: "LLM driven Text-to-Table Generation through Sub-Tasks Guidance and Iterative Refinement"
+  authors: Arvind Agarwal  # TODO verify corresponding author
+  venue: arXiv'25.08  # TODO verify venue
+  year: 2025
+  paper: https://arxiv.org/pdf/2508.08653
+  category: table-curation
+  tags: [text-to-table]

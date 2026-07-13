@@ -35,7 +35,7 @@ CATEGORY_MAP = {
     "agent memory & context engineering": "memory",
     "general agent techniques": "foundations",
 }
-UNSUPPORTED = {"benchmark", "survey"}  # live in other yaml files with different schemas
+UNSUPPORTED = {"survey"}  # surveys.yaml still has its own schema; benchmarks are handled
 ARXIV_RE = re.compile(r"(\d{4}\.\d{4,5})")
 
 
@@ -123,6 +123,27 @@ def main():
     if not aid:
         set_output("error", note)
         return 1
+
+    # benchmarks live in benchmarks.yaml with their own group/tldr schema
+    if cat_label == "benchmark":
+        from add_benchmark import insert_benchmark, DEFAULT_GROUP
+        try:
+            b = insert_benchmark(aid, group=DEFAULT_GROUP)
+        except ValueError as exc:
+            status = "duplicate" if "already" in str(exc) else "error"
+            set_output(status, f"not added: {exc}")
+            return 0 if status == "duplicate" else 1
+        subprocess.run([sys.executable, str(HERE / "generate_readme.py")], check=True)
+        lines = [f"✅ Added benchmark **{b['name']}** to group *{b['group']}*",
+                 "",
+                 (note + "\n" if note else "") +
+                 f"label: {b['label']}  ·  year: {b['year']}"
+                 + (f"  ·  tldr drafted by LLM" if b.get("tldr") else ""),
+                 "```yaml", b["block"].strip(), "```",
+                 "_Default group is \"Data Agent Benchmarks\"; move it and check the "
+                 "label (corresponding author / task type) if needed._"]
+        set_output("added", "\n".join(lines))
+        return 0
 
     # category: explicit label, or auto-classify
     if cat_label in CATEGORY_MAP and CATEGORY_MAP[cat_label]:

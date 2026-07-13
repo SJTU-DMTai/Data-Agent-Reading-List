@@ -99,12 +99,16 @@ def digest(verdicts, span):
                              f"({v.get('published', '?')}{cmeta}){gates}")
                 if v.get("reason"):
                     lines.append(f"      <sub>{v['reason']}</sub>")
-                add_cat = cat if cat in (
-                    "data-preparation", "nl2sql", "table-reasoning", "table-curation",
-                    "data-analysis", "data-science", "db-operations", "memory",
-                    "foundations") else "TODO"
-                lines.append(f"      <sub>`python scripts/add_paper.py {v['id']} "
-                             f"-c {add_cat}`</sub>")
+                paper_cats = ("data-preparation", "nl2sql", "table-reasoning",
+                              "table-curation", "data-analysis", "data-science",
+                              "db-operations", "memory", "foundations")
+                if cat == "benchmark":
+                    cmd = f"python scripts/add_benchmark.py {v['id']}"
+                elif cat in paper_cats:
+                    cmd = f"python scripts/add_paper.py {v['id']} -c {cat}"
+                else:  # survey / uncategorized — no automation yet
+                    cmd = f"python scripts/add_paper.py {v['id']} -c TODO"
+                lines.append(f"      <sub>`{cmd}`</sub>")
             lines.append("")
     return "\n".join(lines)
 
