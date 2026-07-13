@@ -161,8 +161,8 @@ def pick_source(source, venue):
 
 
 # --------------------------------------------------------------------------- digest
-PAPER_CATS = {"data-preparation", "nl2sql", "table-reasoning", "data-analysis",
-              "data-science", "db-operations", "memory", "foundations"}
+PAPER_CATS = {"data-preparation", "nl2sql", "table-reasoning", "table-curation",
+              "data-analysis", "data-science", "db-operations", "memory", "foundations"}
 
 
 def digest(keepers, venue, year, source):

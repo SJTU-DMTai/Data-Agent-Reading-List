@@ -28,6 +28,7 @@ CATEGORY_MAP = {
     "data preparation & integration": "data-preparation",
     "nl2sql (text-to-sql)": "nl2sql",
     "table understanding & reasoning": "table-reasoning",
+    "table generation, curation & synthesis": "table-curation",
     "data analysis & insight discovery": "data-analysis",
     "data science & machine learning agents": "data-science",
     "database operations & diagnosis": "db-operations",

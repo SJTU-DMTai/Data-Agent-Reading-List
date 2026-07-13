@@ -27,6 +27,7 @@ body:
         - Data Preparation & Integration
         - NL2SQL (Text-to-SQL)
         - Table Understanding & Reasoning
+        - Table Generation, Curation & Synthesis
         - Data Analysis & Insight Discovery
         - Data Science & Machine Learning Agents
         - Database Operations & Diagnosis

@@ -30,7 +30,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RUBRIC = ROOT / "scripts" / "curation_rubric.md"
-CATEGORIES = ["data-preparation", "nl2sql", "table-reasoning", "data-analysis",
+CATEGORIES = ["data-preparation", "nl2sql", "table-reasoning", "table-curation", "data-analysis",
               "data-science", "db-operations", "memory", "foundations",
               "benchmark", "survey"]
 
@@ -40,7 +40,8 @@ agents (github.com/SJTU-DMTai/Data-Agent-Reading-List). Apply the rubric below E
 A paper is KEEP if it clears ANY ONE gate:
   Gate A (Substance): a named system/method/benchmark/dataset squarely in one of our
     categories with a novel mechanism. Lenient for the core directions (nl2sql,
-    data-analysis, data-science, db-operations, table-reasoning, data-preparation);
+    data-analysis, data-science, db-operations, table-reasoning, table-curation,
+    data-preparation);
     STRICT for memory and foundations (require a named system/OS/benchmark/survey or a
     clearly novel mechanism; drop domain-specific applications).
   Gate B (Institution): led by a whitelisted top university or company. Affiliations are
@@ -141,7 +142,7 @@ def triage(records, rubric_text=None, cfg=None, batch_size=12):
     return out
 
 
-PAPER_CATEGORIES = ["data-preparation", "nl2sql", "table-reasoning", "data-analysis",
+PAPER_CATEGORIES = ["data-preparation", "nl2sql", "table-reasoning", "table-curation", "data-analysis",
                     "data-science", "db-operations", "memory", "foundations"]
 
 CLASSIFY_SYSTEM = """You assign a single category to a paper for an awesome-list on \
@@ -149,6 +150,7 @@ LLM-based data agents. Pick the ONE best-fitting key from:
 - data-preparation: cleaning/transforming/imputing/integrating data
 - nl2sql: text-to-SQL / natural language to SQL
 - table-reasoning: QA and reasoning over tables / spreadsheets / semi-structured data
+- table-curation: generating / synthesizing / augmenting tables and tabular data, schema & column expansion, dataset construction
 - data-analysis: EDA, BI, insight discovery, semantic operators, report/visualization, time-series analytics
 - data-science: autonomous DS/ML/AutoML/Kaggle-style agents, model building
 - db-operations: LLM agents for DBA work (diagnosis, tuning, config, vector-DB ops)

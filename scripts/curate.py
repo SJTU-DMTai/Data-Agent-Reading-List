@@ -33,6 +33,7 @@ CATEGORY_TITLES = {
     "data-preparation": "🧹 Data Preparation & Integration",
     "nl2sql": "💬 NL2SQL (Text-to-SQL)",
     "table-reasoning": "📋 Table Understanding & Reasoning",
+    "table-curation": "🧱 Table Generation, Curation & Synthesis",
     "data-analysis": "📊 Data Analysis & Insight Discovery",
     "data-science": "🔬 Data Science & ML Agents",
     "db-operations": "🛠️ Database Operations & Diagnosis",
@@ -99,8 +100,9 @@ def digest(verdicts, span):
                 if v.get("reason"):
                     lines.append(f"      <sub>{v['reason']}</sub>")
                 add_cat = cat if cat in (
-                    "data-preparation", "nl2sql", "table-reasoning", "data-analysis",
-                    "data-science", "db-operations", "memory", "foundations") else "TODO"
+                    "data-preparation", "nl2sql", "table-reasoning", "table-curation",
+                    "data-analysis", "data-science", "db-operations", "memory",
+                    "foundations") else "TODO"
                 lines.append(f"      <sub>`python scripts/add_paper.py {v['id']} "
                              f"-c {add_cat}`</sub>")
             lines.append("")

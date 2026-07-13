@@ -26,6 +26,7 @@ or see [CONTRIBUTING.md](CONTRIBUTING.md) — PRs are welcome!
 - [🧹 Data Preparation & Integration](#-data-preparation--integration)
 - [💬 NL2SQL (Text-to-SQL)](#-nl2sql-text-to-sql)
 - [📋 Table Understanding & Reasoning](#-table-understanding--reasoning)
+- [🧱 Table Generation, Curation & Synthesis](#-table-generation-curation--synthesis)
 - [📊 Data Analysis & Insight Discovery](#-data-analysis--insight-discovery)
 - [🔬 Data Science & Machine Learning Agents](#-data-science--machine-learning-agents)
 - [🛠️ Database Operations & Diagnosis](#-database-operations--diagnosis)
@@ -158,6 +159,13 @@ or see [CONTRIBUTING.md](CONTRIBUTING.md) — PRs are welcome!
 | VLDB'24 | ReAcTable: Enhancing ReAct for Table Question Answering | Jignesh M. Patel | [paper](https://arxiv.org/pdf/2310.00815) |
 | VLDB'24 | AutoTQA: Towards Autonomous Tabular Question Answering through Multi-Agent Large Language Models `multi-agent` | Qi Liu | [paper](https://www.vldb.org/pvldb/vol17/p3920-zhu.pdf) |
 | SIGIR'23 | Large Language Models are Versatile Decomposers: Decompose Evidence and Questions for Table-based Reasoning (Dater) | Yongbin Li | [paper](https://arxiv.org/pdf/2301.13808) |
+
+## 🧱 Table Generation, Curation & Synthesis
+
+> Constructing and improving the tables themselves: synthetic table / tabular-data generation, table synthesis and augmentation, schema and column expansion, and dataset curation for training and evaluation.
+
+| Venue | Paper | Corresp. Author | Links |
+|:---|:---|:---:|:---:|
 
 ## 📊 Data Analysis & Insight Discovery
 
@@ -312,14 +320,3 @@ or see [CONTRIBUTING.md](CONTRIBUTING.md) — PRs are welcome!
 | ICLR'24 | Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection `rag` | Hannaneh Hajishirzi | [paper](https://arxiv.org/pdf/2310.11511) |
 | ICLR'24 | MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework `multi-agent` | Chenglin Wu | [paper](https://arxiv.org/pdf/2308.00352) |
 
-## 🤝 Contributing
-
-Contributions are welcome! Add the paper's metadata to [`data/papers.yaml`](data/papers.yaml)
-(or [`data/benchmarks.yaml`](data/benchmarks.yaml) / [`data/surveys.yaml`](data/surveys.yaml)),
-run `python scripts/generate_readme.py`, and open a PR. You can also simply
-[open an issue](https://github.com/SJTU-DMTai/Data-Agent-Reading-List/issues/new/choose)
-with the paper link. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=SJTU-DMTai/Data-Agent-Reading-List&type=Date)](https://star-history.com/#SJTU-DMTai/Data-Agent-Reading-List&Date)

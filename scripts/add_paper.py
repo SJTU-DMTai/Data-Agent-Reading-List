@@ -29,8 +29,8 @@ ATOM = "{http://www.w3.org/2005/Atom}"
 ARXIV_NS = "{http://arxiv.org/schemas/atom}"
 CODE_URL = re.compile(r"https?://(?:github\.com|gitlab\.com|huggingface\.co)/[\w.\-]+/[\w.\-]+", re.I)
 
-CATEGORIES = ["data-preparation", "nl2sql", "table-reasoning", "data-analysis",
-              "data-science", "db-operations", "memory", "foundations"]
+CATEGORIES = ["data-preparation", "nl2sql", "table-reasoning", "table-curation",
+              "data-analysis", "data-science", "db-operations", "memory", "foundations"]
 
 
 def arxiv_id(text: str) -> str:
