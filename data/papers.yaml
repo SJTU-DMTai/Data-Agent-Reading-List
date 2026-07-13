@@ -1374,3 +1374,55 @@
   paper: https://arxiv.org/pdf/2508.08653
   category: table-curation
   tags: [text-to-table]
+
+- title: "DIN-SQL: Decomposed In-Context Learning of Text-to-SQL with Self-Correction"
+  featured: true
+  authors: Davood Rafiei  # TODO verify corresponding author
+  venue: NeurIPS'23
+  year: 2023
+  paper: https://arxiv.org/pdf/2304.11015
+  category: nl2sql
+  tags: [nl2sql]
+
+- title: "Text-to-SQL Empowered by Large Language Models: A Benchmark Evaluation"
+  authors: Jingren Zhou  # TODO verify corresponding author
+  venue: VLDB'24
+  year: 2023
+  paper: https://arxiv.org/pdf/2308.15363
+  code: https://github.com/BeachWang/DAIL-SQL  # auto-detected from abstract, please verify
+  category: nl2sql
+  tags: [nl2sql]
+
+- title: "C3: Zero-shot Text-to-SQL with ChatGPT"
+  authors: Dongfang Lou  # TODO verify corresponding author
+  venue: arXiv'23.07
+  year: 2023
+  paper: https://arxiv.org/pdf/2307.07306
+  category: nl2sql
+  tags: [nl2sql]
+
+- title: "MAC-SQL: A Multi-Agent Collaborative Framework for Text-to-SQL"
+  featured: true
+  authors: Zhoujun Li  # TODO verify corresponding author
+  venue: COLING'25
+  year: 2023
+  paper: https://arxiv.org/pdf/2312.11242
+  code: https://github.com/wbbeyourself/MAC-SQL  # auto-detected from abstract, please verify
+  category: nl2sql
+  tags: [nl2sql, multi-agent]
+
+- title: "CHESS: Contextual Harnessing for Efficient SQL Synthesis"
+  authors: Amin Saberi  # TODO verify corresponding author
+  venue: arXiv'24.05
+  year: 2024
+  paper: https://arxiv.org/pdf/2405.16755
+  category: nl2sql
+  tags: [nl2sql]
+
+- title: "CHASE-SQL: Multi-Path Reasoning and Preference Optimized Candidate Selection in Text-to-SQL"
+  authors: Sercan O. Arik  # TODO verify corresponding author
+  venue: ICLR'25
+  year: 2024
+  paper: https://arxiv.org/pdf/2410.01943
+  category: nl2sql
+  tags: [nl2sql]

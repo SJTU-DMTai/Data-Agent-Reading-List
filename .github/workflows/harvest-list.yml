@@ -1,0 +1,54 @@
+name: Harvest a sibling list
+
+# Backfill from other curated lists: pull their papers, drop ones we have, triage,
+# and open a digest issue. Actions tab -> "Harvest a sibling list" -> Run workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: 'Sibling list(s) — space-separated owner/name or raw README URLs'
+        required: true
+        default: 'HKUSTDial/NL2SQL_Handbook eosphoros-ai/Awesome-Text2SQL'
+      no_triage:
+        description: 'Skip the LLM relevance filter (list everything not already in our list)'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml
+      - name: Harvest
+        id: harvest
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          ARGS="${{ github.event.inputs.sources }}"
+          [ "${{ github.event.inputs.no_triage }}" = "true" ] && ARGS="$ARGS --no-triage"
+          [ -z "$DEEPSEEK_API_KEY" ] && ARGS="$ARGS --no-triage"
+          if python scripts/harvest_list.py $ARGS > digest.md; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Open digest issue
+        if: steps.harvest.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create harvest --color 5319E7 --description "Backfill from sibling lists" --force
+          gh issue create \
+            --title "Harvest digest — $(date -u +%F)" \
+            --body-file digest.md \
+            --label harvest \
+            --repo "$GITHUB_REPOSITORY"
