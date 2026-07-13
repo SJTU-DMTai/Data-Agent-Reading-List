@@ -45,3 +45,8 @@
   year: 2026
   paper: https://arxiv.org/pdf/2605.06716
   corresponding: Jing Ma  # TODO verify
+
+- title: "Next-Generation Database Interfaces: A Survey of LLM-based Text-to-SQL"
+  venue: TKDE'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2406.08426
