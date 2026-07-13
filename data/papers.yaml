@@ -1635,3 +1635,61 @@
   paper: https://arxiv.org/pdf/2501.07834
   code: https://github.com/tmllab/2025_ICLR_FLOW  # auto-detected from abstract, please verify
   category: foundations
+
+- title: "TableLLM: Enabling Tabular Data Manipulation by LLMs in Real Office Usage Scenarios"
+  authors: Jie Tang  # TODO verify corresponding author
+  venue: ACL'25
+  year: 2024
+  paper: https://arxiv.org/pdf/2403.19318
+  code: https://github.com/TableLLM/TableLLM  # auto-detected from abstract, please verify
+  category: data-preparation
+
+- title: "TableDreamer: Progressive and Weakness-guided Data Synthesis from Scratch for Table Instruction Tuning"
+  authors: Weiping Wang  # TODO verify corresponding author
+  venue: ACL'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2506.08646
+  code: https://github.com/SpursGoZmy/TableDreamer  # auto-detected from abstract, please verify
+  category: data-preparation
+
+- title: "Abacus-SQL: A Text-to-SQL System Empowering Cross-Domain and Open-Domain Database Retrieval"
+  authors: Wanxiang Che  # TODO verify corresponding author
+  venue: ACL'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2504.09824
+  category: nl2sql
+
+- title: "Uncovering the Impact of Chain-of-Thought Reasoning for Direct Preference Optimization: Lessons from Text-to-SQL"
+  authors: Jing Zhang  # TODO verify corresponding author
+  venue: ACL'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2502.11656
+  category: nl2sql
+
+- title: "LLM-Symbolic Integration for Robust Temporal Tabular Reasoning"
+  authors: Vivek Gupta  # TODO verify corresponding author
+  venue: ACL'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2506.05746
+  category: table-reasoning
+
+- title: "RePanda: Pandas-powered Tabular Verification and Reasoning"
+  authors: Soheil Feizi  # TODO verify corresponding author
+  venue: ACL'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2503.11921
+  category: table-reasoning
+
+- title: "Map&Make: Schema Guided Text to Table Generation"
+  authors: Vivek Gupta  # TODO verify corresponding author
+  venue: ACL'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2505.23174
+  category: table-curation
+
+- title: "Unveiling Privacy Risks in LLM Agent Memory"
+  authors: Pengfei He  # TODO verify corresponding author
+  venue: ACL'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2502.13172
+  category: memory
