@@ -180,3 +180,10 @@
       paper: https://aclanthology.org/2022.acl-long.78.pdf
       code: https://github.com/microsoft/HiTab
       tldr: Question answering and natural-language generation over hierarchical (matrix) tables.
+    - name: Can LLM Already Serve as A Database Interface? A BIg Bench for Large-Scale Database Grounded Text-to-SQLs
+      label: Text2SQL  # TODO set task type
+      year: 2023
+      paper: https://arxiv.org/pdf/2305.03111
+      tldr: >-
+        This benchmark evaluates text-to-SQL models on 12,751 pairs across 95 large, real-world
+        databases (33.4 GB) spanning 37 domains, testing dirty data handling and SQL efficiency.
