@@ -1,6 +1,6 @@
 name: "📄 Add a paper"
 description: Add a paper to the reading list — the bot resolves, classifies, and commits it
-title: "[Paper] <title>"
+title: "[Paper] "
 labels: [add-paper]
 body:
   - type: markdown

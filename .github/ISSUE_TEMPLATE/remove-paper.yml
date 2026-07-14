@@ -1,6 +1,6 @@
 name: "🗑️ Remove an entry"
 description: Remove a paper, benchmark, or survey — the bot deletes it and updates the README
-title: "[Remove] <title>"
+title: "[Remove] "
 labels: [remove-paper]
 body:
   - type: markdown

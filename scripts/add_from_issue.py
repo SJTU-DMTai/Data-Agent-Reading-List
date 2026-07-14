@@ -63,11 +63,13 @@ def _get(fields, *names):
     return ""
 
 
-def set_output(status: str, summary: str):
+def set_output(status: str, summary: str, title: str = ""):
     out = os.environ.get("GITHUB_OUTPUT")
     if out:
         with open(out, "a") as f:
             f.write(f"status={status}\n")
+            if title:
+                f.write("title<<__EOF__\n" + title + "\n__EOF__\n")
             f.write("summary<<__EOF__\n" + summary + "\n__EOF__\n")
     print(f"[{status}]\n{summary}")
 
@@ -135,7 +137,7 @@ def main():
                  (note + "\n" if note else "") + f"venue: **{s['venue']}**"
                  + (f"  ·  corresponding: {s['corresponding']}" if s['corresponding'] else ""),
                  "```yaml", s["yaml"].strip(), "```"]
-        set_output("added", "\n".join(lines))
+        set_output("added", "\n".join(lines), title=s["title"])
         return 0
 
     # benchmarks live in benchmarks.yaml with their own group/tldr schema
@@ -160,7 +162,7 @@ def main():
                  "_Group and author come from the form (defaults to \"Data Agent "
                  "Benchmarks\" / last author). Tweak the tldr in `data/benchmarks.yaml` "
                  "if needed._"]
-        set_output("added", "\n".join(lines))
+        set_output("added", "\n".join(lines), title=b["name"])
         return 0
 
     # category: explicit label, or auto-classify
@@ -200,7 +202,7 @@ def main():
         "",
         "_Corresponding author was set to the last author — please double-check._",
     ]
-    set_output("added", "\n".join(lines))
+    set_output("added", "\n".join(lines), title=res["title"])
     return 0
 
 

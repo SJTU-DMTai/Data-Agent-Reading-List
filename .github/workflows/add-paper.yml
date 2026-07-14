@@ -66,6 +66,20 @@ jobs:
           [ -z "$BODY" ] && BODY="Something went wrong before the paper could be processed — check the workflow logs."
           gh issue comment ${{ github.event.issue.number }} --body "$BODY" --repo "$GITHUB_REPOSITORY"
 
+      - name: Rename issue to the resolved title
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TITLE: ${{ steps.add.outputs.title }}          # via env, not inline — titles contain quotes
+          STATUS: ${{ steps.add.outputs.status }}
+          PUSH: ${{ steps.push.outcome }}
+        run: |
+          # only rename once the entry actually landed, so the title never lies
+          if [ -n "$TITLE" ] && { [ "$PUSH" = "success" ] || [ "$STATUS" = "duplicate" ]; }; then
+            gh issue edit ${{ github.event.issue.number }} \
+              --title "[Paper] $TITLE" --repo "$GITHUB_REPOSITORY" || true
+          fi
+
       - name: Close issue (only if the change actually landed)
         if: always()
         env:
