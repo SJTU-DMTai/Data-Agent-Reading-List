@@ -1701,3 +1701,10 @@
   paper: https://arxiv.org/pdf/2602.15564
   code: https://github.com/Satissss/SquRL  # auto-detected from abstract, please verify
   category: nl2sql
+
+- title: "RoT: Enhancing Table Reasoning with Iterative Row-Wise Traversals"
+  authors: Wanxiang Che  # TODO verify corresponding author
+  venue: EMNLP'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2505.15110
+  category: table-reasoning
