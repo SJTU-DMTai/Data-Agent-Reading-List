@@ -1737,3 +1737,10 @@
   year: 2026
   paper: https://arxiv.org/pdf/2603.06503
   category: data-analysis
+
+- title: "From Rows to Reasoning: A Retrieval-Augmented Multimodal Framework for Spreadsheet Understanding"
+  authors: Kevin Paul  # TODO verify corresponding author
+  venue: arXiv'26.01  # TODO verify venue
+  year: 2026
+  paper: https://arxiv.org/pdf/2601.08741
+  category: table-reasoning
