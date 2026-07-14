@@ -1773,3 +1773,10 @@
   year: 2026
   paper: https://arxiv.org/pdf/2602.01969
   category: table-reasoning
+
+- title: "SheetMind: An End-to-End LLM-Powered Multi-Agent Framework for Spreadsheet Automation"
+  authors: Oliver Gao  # TODO verify corresponding author
+  venue: arXiv'25.06  # TODO verify venue
+  year: 2025
+  paper: https://arxiv.org/pdf/2506.12339
+  category: data-analysis
