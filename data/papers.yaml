@@ -1693,3 +1693,11 @@
   year: 2025
   paper: https://arxiv.org/pdf/2502.13172
   category: memory
+
+- title: "Beyond Static Pipelines: Learning Dynamic Workflows for Text-to-SQL"
+  authors: Wei Xu  # TODO verify corresponding author
+  venue: ICML'26
+  year: 2026
+  paper: https://arxiv.org/pdf/2602.15564
+  code: https://github.com/Satissss/SquRL  # auto-detected from abstract, please verify
+  category: nl2sql
