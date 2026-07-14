@@ -39,6 +39,7 @@ jobs:
         run: python scripts/add_from_issue.py
 
       - name: Commit + push
+        id: push
         if: steps.add.outputs.status == 'added'
         run: |
           git config user.name  "github-actions[bot]"
@@ -46,6 +47,11 @@ jobs:
           git add data/ README.md          # data/ so a Benchmark entry (benchmarks.yaml) is committed too
           git commit -m "Add paper from #${{ github.event.issue.number }}" \
             -m "Closes #${{ github.event.issue.number }}"
+          # retry the push a few times so a lost concurrency race doesn't drop the paper
+          for i in 1 2 3 4 5; do
+            git push && exit 0
+            git pull --rebase origin main
+          done
           git push
 
       - name: Comment result
@@ -53,13 +59,22 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          STATUS='${{ steps.add.outputs.status }}'
           BODY=$(cat <<'__EOF__'
           ${{ steps.add.outputs.summary }}
           __EOF__
           )
           [ -z "$BODY" ] && BODY="Something went wrong before the paper could be processed — check the workflow logs."
           gh issue comment ${{ github.event.issue.number }} --body "$BODY" --repo "$GITHUB_REPOSITORY"
-          if [ "$STATUS" = "added" ] || [ "$STATUS" = "duplicate" ]; then
+
+      - name: Close issue (only if the change actually landed)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          STATUS='${{ steps.add.outputs.status }}'
+          PUSH='${{ steps.push.outcome }}'   # success | failure | skipped
+          # `added` must have a successful push; `duplicate` has nothing to push.
+          # Never close on a failed push — that was silently dropping papers.
+          if [ "$STATUS" = "duplicate" ] || { [ "$STATUS" = "added" ] && [ "$PUSH" = "success" ]; }; then
             gh issue close ${{ github.event.issue.number }} --repo "$GITHUB_REPOSITORY" || true
           fi

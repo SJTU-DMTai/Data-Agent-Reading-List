@@ -32,6 +32,7 @@ jobs:
         run: python scripts/remove_from_issue.py
 
       - name: Commit + push
+        id: push
         if: steps.remove.outputs.status == 'removed'
         run: |
           git config user.name  "github-actions[bot]"
@@ -39,6 +40,11 @@ jobs:
           git add data/ README.md          # data/ so a benchmark/survey deletion is committed too
           git commit -m "Remove paper from #${{ github.event.issue.number }}" \
             -m "Closes #${{ github.event.issue.number }}"
+          # retry the push a few times so a lost concurrency race doesn't drop the change
+          for i in 1 2 3 4 5; do
+            git push && exit 0
+            git pull --rebase origin main
+          done
           git push
 
       - name: Comment result
@@ -46,13 +52,21 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          STATUS='${{ steps.remove.outputs.status }}'
           BODY=$(cat <<'__EOF__'
           ${{ steps.remove.outputs.summary }}
           __EOF__
           )
           [ -z "$BODY" ] && BODY="Something went wrong before the paper could be processed — check the workflow logs."
           gh issue comment ${{ github.event.issue.number }} --body "$BODY" --repo "$GITHUB_REPOSITORY"
-          if [ "$STATUS" = "removed" ] || [ "$STATUS" = "not_found" ]; then
+
+      - name: Close issue (only if the change actually landed)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          STATUS='${{ steps.remove.outputs.status }}'
+          PUSH='${{ steps.push.outcome }}'   # success | failure | skipped
+          # `removed` must have a successful push; `not_found` has nothing to push.
+          if [ "$STATUS" = "not_found" ] || { [ "$STATUS" = "removed" ] && [ "$PUSH" = "success" ]; }; then
             gh issue close ${{ github.event.issue.number }} --repo "$GITHUB_REPOSITORY" || true
           fi
