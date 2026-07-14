@@ -1730,3 +1730,10 @@
   paper: https://arxiv.org/pdf/2604.12282
   code: https://github.com/renhouxing/SpreadsheetAgent.git  # auto-detected from abstract, please verify
   category: table-reasoning
+
+- title: "Beyond Rows to Reasoning: Agentic Retrieval for Multimodal Spreadsheet Understanding and Editing"
+  authors: Kevin Paul  # TODO verify corresponding author
+  venue: arXiv'26.03  # TODO verify venue
+  year: 2026
+  paper: https://arxiv.org/pdf/2603.06503
+  category: data-analysis
