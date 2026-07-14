@@ -1650,7 +1650,7 @@
   year: 2025
   paper: https://arxiv.org/pdf/2506.08646
   code: https://github.com/SpursGoZmy/TableDreamer  # auto-detected from abstract, please verify
-  category: data-preparation
+  category: table-curation
 
 - title: "Abacus-SQL: A Text-to-SQL System Empowering Cross-Domain and Open-Domain Database Retrieval"
   authors: Wanxiang Che  # TODO verify corresponding author

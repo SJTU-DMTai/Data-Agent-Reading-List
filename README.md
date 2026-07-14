@@ -126,7 +126,6 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 | VLDB'25 | Data Imputation with Limited Data Redundancy Using Data Lakes `data-lake` | Yuyu Luo | [paper](https://www.vldb.org/pvldb/vol18/p3354-tang.pdf) |
 | VLDB'25 | Weak-to-Strong Prompts with Lightweight-to-Powerful LLMs for High-Accuracy, Low-Cost, and Explainable Data Transformation | Yuyu Luo, Ju Fan, and Nan Tang et al | [paper](https://www.vldb.org/pvldb/vol18/p2371-tang.pdf) |
 | VLDB'25 | DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing `unstructured-data` | Eugene Wu | [paper](https://arxiv.org/pdf/2410.12189) |
-| ACL'25 | TableDreamer: Progressive and Weakness-guided Data Synthesis from Scratch for Table Instruction Tuning | Weiping Wang | [paper](https://arxiv.org/pdf/2506.08646) [code](https://github.com/SpursGoZmy/TableDreamer) |
 | ACL'25 | TableLLM: Enabling Tabular Data Manipulation by LLMs in Real Office Usage Scenarios | Jie Tang | [paper](https://arxiv.org/pdf/2403.19318) [code](https://github.com/TableLLM/TableLLM) |
 | ICLR'25 | TabDiff: a Mixed-type Diffusion Model for Tabular Data Generation | Jure Leskovec | [paper](https://arxiv.org/pdf/2410.20626) [code](https://github.com/MinkaiXu/TabDiff) |
 | ICLR'25 | CTSyn: A Foundation Model for Cross Tabular Data Generation | Guang Cheng | [paper](https://arxiv.org/pdf/2406.04619) |
@@ -245,6 +244,7 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 
 | Venue | Paper | Corresp. Author | Links |
 |:---|:---|:---:|:---:|
+| ACL'25 | TableDreamer: Progressive and Weakness-guided Data Synthesis from Scratch for Table Instruction Tuning | Weiping Wang | [paper](https://arxiv.org/pdf/2506.08646) [code](https://github.com/SpursGoZmy/TableDreamer) |
 | ACL'25 | Map&Make: Schema Guided Text to Table Generation | Vivek Gupta | [paper](https://arxiv.org/pdf/2505.23174) |
 | arXiv'25.08 | LLM driven Text-to-Table Generation through Sub-Tasks Guidance and Iterative Refinement `text-to-table` | Arvind Agarwal | [paper](https://arxiv.org/pdf/2508.08653) |
 | EMNLP'24 | Text-Tuple-Table: Towards Information Integration in Text-to-Table Generation via Global Tuple Extraction `text-to-table` | Yangqiu Song | [paper](https://arxiv.org/pdf/2404.14215) [code](https://github.com/HKUST-KnowComp/LiveSum) |

@@ -147,15 +147,25 @@ PAPER_CATEGORIES = ["data-preparation", "nl2sql", "table-reasoning", "table-cura
 
 CLASSIFY_SYSTEM = """You assign a single category to a paper for an awesome-list on \
 LLM-based data agents. Pick the ONE best-fitting key from:
-- data-preparation: cleaning/transforming/imputing/integrating data
+- data-preparation: repairing / integrating data that ALREADY EXISTS to make it analysis-ready — \
+cleaning, imputation, deduplication, normalization, entity matching / resolution, data wrangling, \
+schema matching and data integration. You start from given data and fix or merge it; you do NOT create new tables.
 - nl2sql: text-to-SQL / natural language to SQL
 - table-reasoning: QA and reasoning over tables / spreadsheets / semi-structured data
-- table-curation: generating / synthesizing / augmenting tables and tabular data, schema & column expansion, dataset construction
+- table-curation: CREATING new tables or tabular data that did not exist before — synthetic table / \
+tabular-data generation, table synthesis, row/column augmentation that adds new content, schema & column \
+expansion, and dataset / benchmark construction. The core contribution is PRODUCING tables.
 - data-analysis: EDA, BI, insight discovery, semantic operators, report/visualization, time-series analytics
 - data-science: autonomous DS/ML/AutoML/Kaggle-style agents, model building
 - db-operations: LLM agents for DBA work (diagnosis, tuning, config, vector-DB ops)
 - memory: agent memory systems, memory OS, context engineering/folding, experience-driven self-evolution
 - foundations: general agent building blocks (planning, workflow, multi-agent, RAG, skills)
+
+Disambiguation — data-preparation vs table-curation: if the paper's core contribution is GENERATING, \
+SYNTHESIZING, or CONSTRUCTING tables / tabular datasets, choose table-curation, NOT data-preparation — \
+even though generation involves transforming data. Reserve data-preparation for repairing or integrating \
+pre-existing data. When a paper both cleans and generates, pick by its MAIN contribution.
+
 Reply with ONLY the key, nothing else."""
 
 
