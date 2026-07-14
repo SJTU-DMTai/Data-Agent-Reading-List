@@ -1708,3 +1708,10 @@
   year: 2025
   paper: https://arxiv.org/pdf/2505.15110
   category: table-reasoning
+
+- title: "ASTRA: Adaptive Semantic Tree Reasoning Architecture for Complex Table Question Answering"
+  authors: Wen Zhang  # TODO verify corresponding author
+  venue: ACL'26
+  year: 2026
+  paper: https://arxiv.org/pdf/2604.08999
+  category: table-reasoning
