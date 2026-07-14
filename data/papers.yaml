@@ -1744,3 +1744,11 @@
   year: 2026
   paper: https://arxiv.org/pdf/2601.08741
   category: table-reasoning
+
+- title: "SheetBrain: A Neuro-Symbolic Agent for Accurate Reasoning over Complex and Large Spreadsheets"
+  authors: Dongmei Zhang  # TODO verify corresponding author
+  venue: AAAI'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2510.19247
+  code: https://github.com/microsoft/SheetBrain  # auto-detected from abstract, please verify
+  category: table-reasoning
