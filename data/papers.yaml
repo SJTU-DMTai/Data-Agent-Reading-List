@@ -85,7 +85,7 @@
 
 - title: "TableMind: An Autonomous Programmatic Agent for Tool-Augmented Table Reasoning"
   authors: Qi Liu
-  venue: arXiv'25.09
+  venue: WSDM'26
   year: 2025
   paper: https://arxiv.org/pdf/2509.06278
   category: table-reasoning
@@ -100,7 +100,7 @@
 
 - title: "Weaver: Interweaving SQL and LLM for Table Reasoning"
   authors: Vivek Gupta
-  venue: arXiv'25.05
+  venue: EMNLP'25
   year: 2025
   paper: https://arxiv.org/pdf/2505.18961
   category: table-reasoning
@@ -250,7 +250,7 @@
 # ---------------------------------------------------------------- data-science
 - title: "Can We Predict Before Executing Machine Learning Agents?"
   authors: Ningyu Zhang
-  venue: arXiv'26.01
+  venue: ACL'26
   year: 2026
   paper: https://arxiv.org/pdf/2601.05930
   category: data-science
@@ -302,7 +302,7 @@
 
 - title: "DatawiseAgent: A Notebook-Centric LLM Agent Framework for Automated Data Science"
   authors: Yu Huang
-  venue: arXiv'25.03
+  venue: EMNLP'25
   year: 2025
   paper: https://arxiv.org/pdf/2503.07044
   category: data-science
@@ -402,7 +402,7 @@
 
 - title: "Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution"
   authors: Zouying Cao, Zhaoyang Liu, Bolin Ding, Hai Zhao
-  venue: arXiv'25.12
+  venue: ACL'26
   year: 2025
   paper: https://arxiv.org/pdf/2512.10696v1
   category: memory
@@ -410,7 +410,7 @@
 
 - title: "AgentFold: Long-Horizon Web Agents with Proactive Context Management"
   authors: Rui Ye, Siheng Chen
-  venue: arXiv'25.10
+  venue: ICLR'26
   year: 2025
   paper: https://arxiv.org/pdf/2510.24699
   category: memory
@@ -441,7 +441,7 @@
 
 - title: "Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks"
   authors: Jitao Sang
-  venue: arXiv'25.10
+  venue: ACL'25
   year: 2025
   paper: https://arxiv.org/abs/2510.12635
   category: memory
@@ -449,7 +449,7 @@
 
 - title: "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models"
   authors: Qizheng Zhang & Changran Hu
-  venue: arXiv'25.10
+  venue: ICLR'26
   year: 2025
   paper: https://www.arxiv.org/abs/2510.04618
   category: memory
@@ -481,7 +481,7 @@
 
 - title: "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
   authors: Siru Ouyang
-  venue: arXiv'25.09
+  venue: ICLR'26
   year: 2025
   paper: https://arxiv.org/abs/2509.25140
   category: memory
@@ -502,7 +502,7 @@
 
 - title: "Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models"
   authors: Zhouhan Lin
-  venue: arXiv'25.08
+  venue: NeurIPS'25
   year: 2025
   paper: https://arxiv.org/pdf/2508.09874
   category: memory
@@ -510,7 +510,7 @@
 
 - title: "Memory-R1: Enhancing Large Language Model Agents to Actively Manage and Utilize External Memory"
   authors: Yunpu Ma
-  venue: arXiv'25.08
+  venue: ACL'26
   year: 2025
   paper: https://arxiv.org/pdf/2508.19828
   category: memory
@@ -518,7 +518,7 @@
 
 - title: "Memp: Exploring Agent Procedural Memory"
   authors: Ningyu Zhang
-  venue: arXiv'25.08
+  venue: ACL'26
   year: 2025
   paper: https://arxiv.org/pdf/2508.06433
   category: memory
@@ -541,7 +541,7 @@
 
 - title: "H-MEM: Hierarchical Memory for High-Efficiency Long-Term Reasoning in LLM Agents"
   authors: Shaoning Zeng
-  venue: arXiv'25.07
+  venue: EACL'26
   year: 2025
   paper: https://arxiv.org/pdf/2507.22925v1
   category: memory
@@ -571,7 +571,7 @@
 
 - title: "Memory OS of AI Agent"
   authors: Ting Bai
-  venue: arXiv'25.06
+  venue: EMNLP'25
   year: 2025
   paper: https://arxiv.org/pdf/2506.06326
   category: memory
@@ -586,7 +586,7 @@
 
 - title: "How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior"
   authors: Zidi Xiong
-  venue: arXiv'25.05
+  venue: ACL'25
   year: 2025
   paper: https://arxiv.org/pdf/2505.16067
   category: memory
@@ -608,7 +608,7 @@
 
 - title: "A-MEM: Agentic Memory for LLM Agents"
   authors: Yongfeng Zhang
-  venue: arXiv'25.02
+  venue: NeurIPS'25
   year: 2025
   paper: https://arxiv.org/pdf/2502.12110
   category: memory
@@ -820,7 +820,7 @@
 
 - title: "EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management"
   authors: Hao Liu  # TODO verify corresponding author
-  venue: arXiv'26.06
+  venue: KDD'26
   year: 2026
   paper: https://arxiv.org/pdf/2606.03841
   code: https://github.com/usail-hkust/EvoDS  # auto-detected
@@ -837,7 +837,7 @@
 
 - title: "EMA: Approximate Nearest Neighbor Search with General Attribute Filtering and Dynamic Updates"
   authors: Chenhao Ma  # TODO verify corresponding author
-  venue: arXiv'26.05
+  venue: VLDB'26
   year: 2026
   paper: https://arxiv.org/pdf/2606.00734
   category: db-operations
@@ -1145,7 +1145,7 @@
 
 - title: "OPT-BENCH: Evaluating the Iterative Self-Optimization of LLM Agents in Large-Scale Search Spaces"
   authors: Kai Chen  # TODO verify corresponding author
-  venue: arXiv'26.05
+  venue: ACL'26
   year: 2026
   paper: https://arxiv.org/pdf/2605.08904
   category: data-science
@@ -1162,7 +1162,7 @@
 
 - title: "VikingMem: A Memory Base Management System for Stateful LLM-based Applications"
   authors: Yunjun Gao  # TODO verify corresponding author
-  venue: arXiv'26.05
+  venue: VLDB'26
   year: 2026
   paper: https://arxiv.org/pdf/2605.29640
   category: memory
@@ -1227,7 +1227,7 @@
 
 - title: "MemForest: An Efficient Agent Memory System with Hierarchical Temporal Indexing"
   authors: Hongbao Zhang  # TODO verify corresponding author
-  venue: arXiv'26.05
+  venue: VLDB'26
   year: 2026
   paper: https://arxiv.org/pdf/2605.23986
   category: memory
@@ -1285,7 +1285,7 @@
 
 - title: "Building Customer Support AI Agents at 100M-User Scale: An Evaluation-Driven Framework"
   authors: Rohan Ramanath  # TODO verify corresponding author
-  venue: arXiv'26.06
+  venue: KDD'26
   year: 2026
   paper: https://arxiv.org/pdf/2606.08867
   category: foundations
@@ -1334,7 +1334,7 @@
 
 - title: "ClawVM: Harness-Managed Virtual Memory for Stateful Tool-Using LLM Agents"
   authors: Laurent Bindschaedler  # TODO verify corresponding author
-  venue: arXiv'26.04
+  venue: EuroSys'26
   year: 2026
   paper: https://arxiv.org/pdf/2604.10352
   category: foundations

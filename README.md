@@ -215,12 +215,12 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 | NeurIPS'25 | Table as a Modality for Large Language Models | Junbo Zhao | [paper](https://neurips.cc/virtual/2025/poster/116332) |
 | NAACL'25 | H-STAR: LLM-driven Hybrid SQL-Text Adaptive Reasoning on Tables `nl2sql` | Chandan K. Reddy | [paper](https://arxiv.org/pdf/2407.05952) |
 | ACL'25 | Table-Critic: A Multi-Agent Framework for Collaborative Criticism and Refinement in Table Reasoning `multi-agent` | Peiying Yu, Jingjing Wang | [paper](https://arxiv.org/pdf/2502.11799) |
+| WSDM'26 | TableMind: An Autonomous Programmatic Agent for Tool-Augmented Table Reasoning | Qi Liu | [paper](https://arxiv.org/pdf/2509.06278) |
+| EMNLP'25 | Weaver: Interweaving SQL and LLM for Table Reasoning `nl2sql` | Vivek Gupta | [paper](https://arxiv.org/pdf/2505.18961) |
 | ACL'25 | LLM-Symbolic Integration for Robust Temporal Tabular Reasoning | Vivek Gupta | [paper](https://arxiv.org/pdf/2506.05746) |
 | ACL'25 | RePanda: Pandas-powered Tabular Verification and Reasoning | Soheil Feizi | [paper](https://arxiv.org/pdf/2503.11921) |
 | EMNLP'25 | RoT: Enhancing Table Reasoning with Iterative Row-Wise Traversals | Wanxiang Che | [paper](https://arxiv.org/pdf/2505.15110) |
-| arXiv'25.09 | TableMind: An Autonomous Programmatic Agent for Tool-Augmented Table Reasoning | Qi Liu | [paper](https://arxiv.org/pdf/2509.06278) |
 | arXiv'25.06 | MAPLE: Multi-Agent Adaptive Planning with Long-Term Memory for Table Reasoning `memory` `multi-agent` | Thuy-Trang Vu | [paper](https://arxiv.org/pdf/2506.05813) |
-| arXiv'25.05 | Weaver: Interweaving SQL and LLM for Table Reasoning `nl2sql` | Vivek Gupta | [paper](https://arxiv.org/pdf/2505.18961) |
 | arXiv'25.01 | TableMaster: A Recipe to Advance Table Understanding with Language Models | Hanbing Liu | [paper](https://arxiv.org/pdf/2501.19378) |
 | ICLR'24 | OpenTab: Advancing Large Language Models as Open-domain Table Reasoners | Jiani Zhang | [paper](https://arxiv.org/pdf/2402.14361) |
 | ICLR'24 | CABINET: Content Relevance based Noise Reduction for Table Question Answering | Balaji Krishnamurthy | [paper](https://arxiv.org/pdf/2402.01155) |
@@ -274,25 +274,25 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 
 | Venue | Paper | Corresp. Author | Links |
 |:---|:---|:---:|:---:|
+| ACL'26 | Can We Predict Before Executing Machine Learning Agents? | Ningyu Zhang | [paper](https://arxiv.org/pdf/2601.05930) |
+| KDD'26 | EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management `data-science` | Hao Liu | [paper](https://arxiv.org/pdf/2606.03841) [code](https://github.com/usail-hkust/EvoDS) |
 | KDD'26 | Rewarding the Scientific Process: Process-Level Reward Modeling for Agentic Data Analysis `data-science` | Huajun Chen | [paper](https://arxiv.org/pdf/2604.24198) [code](https://github.com/zjunlp/DataMind) |
+| ACL'26 | OPT-BENCH: Evaluating the Iterative Self-Optimization of LLM Agents in Large-Scale Search Spaces `data-science` | Kai Chen | [paper](https://arxiv.org/pdf/2605.08904) |
 | arXiv'26.07 | CausalDS: Benchmarking Causal Reasoning in Data-Science Agents `data-science` | Yuekai Sun | [paper](https://arxiv.org/pdf/2607.08093) |
 | arXiv'26.07 | AgenticDataBench: A Comprehensive Benchmark for Data Agents `data-science` | Huaiyu Ruan | [paper](https://arxiv.org/pdf/2607.01647) |
-| arXiv'26.06 | EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management `data-science` | Hao Liu | [paper](https://arxiv.org/pdf/2606.03841) [code](https://github.com/usail-hkust/EvoDS) |
 | arXiv'26.06 | MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery `data-science` | Lei Bai | [paper](https://arxiv.org/pdf/2606.06473) [code](https://github.com/InternScience/MLEvolve) |
 | arXiv'26.06 | VirtualMLE: A Virtual ML Engineer that Optimizes Sequential Recommenders `data-science` | Zhiheng Li | [paper](https://arxiv.org/pdf/2606.03221) |
 | arXiv'26.06 | Process-Reward Tactic Evolution for Long-Horizon Bioinformatics Workflows `data-science` | Gilchan Park | [paper](https://arxiv.org/pdf/2606.20839) |
 | arXiv'26.05 | DataMaster: Data-Centric Autonomous AI Research `data-science` | Siheng Chen | [paper](https://arxiv.org/pdf/2605.10906) |
 | arXiv'26.05 | Ambig-DS: A Benchmark for Task-Framing Ambiguity in Data-Science Agents `data-science` | Robert Kitchen | [paper](https://arxiv.org/pdf/2605.09698) |
-| arXiv'26.05 | OPT-BENCH: Evaluating the Iterative Self-Optimization of LLM Agents in Large-Scale Search Spaces `data-science` | Kai Chen | [paper](https://arxiv.org/pdf/2605.08904) |
 | arXiv'26.04 | ReSS: Learning Reasoning Models for Tabular Data Prediction via Symbolic Scaffold `data-science` | Tianbao Yang | [paper](https://arxiv.org/pdf/2604.13392) |
-| arXiv'26.01 | Can We Predict Before Executing Machine Learning Agents? | Ningyu Zhang | [paper](https://arxiv.org/pdf/2601.05930) |
 | ICML'25 | AutoML-Agent: A Multi-Agent LLM Framework for Full-Pipeline AutoML `multi-agent` `automl` | Sung Ju Hwang | [paper](https://arxiv.org/pdf/2410.02958) |
 | ACL'25 Findings | Data Interpreter: An LLM Agent For Data Science | Bang Liu & Chenglin Wu | [paper](https://arxiv.org/pdf/2402.18679) |
+| EMNLP'25 | DatawiseAgent: A Notebook-Centric LLM Agent Framework for Automated Data Science | Yu Huang | [paper](https://arxiv.org/pdf/2503.07044) |
 | arXiv'25.10 | LLM-based Multi-Agent Blackboard System for Information Discovery in Data Science `multi-agent` | Tomas Pfister | [paper](https://arxiv.org/pdf/2510.01285) |
 | arXiv'25.10 | DeepAnalyze: Agentic Large Language Models for Autonomous Data Science | Ju Fan | [paper](https://arxiv.org/pdf/2510.16872) |
 | arXiv'25.06 | AutoMind: Adaptive Knowledgeable Agent for Automated Data Science | Ningyu Zhang | [paper](https://arxiv.org/pdf/2506.10974) |
 | arXiv'25.05 | DSMentor: Enhancing Data Science Agents with Curriculum Learning and Online Knowledge Accumulation `memory` | Patrick Ng | [paper](https://arxiv.org/pdf/2505.14163) |
-| arXiv'25.03 | DatawiseAgent: A Notebook-Centric LLM Agent Framework for Automated Data Science | Yu Huang | [paper](https://arxiv.org/pdf/2503.07044) |
 | ICML'24 | DS-Agent: Automated Data Science by Empowering Large Language Models with Case-Based Reasoning `memory` | Hechang Chen | [paper](https://arxiv.org/abs/2402.17453) |
 | arXiv'24.10 | AutoKaggle: A Multi-Agent Framework for Autonomous Data Science Competition `multi-agent` | Wenhao Huang & Ge Zhang | [paper](https://arxiv.org/abs/2410.20424) |
 | arXiv'24.07 | LAMBDA: A Large Model Based Data Agent | Yancheng Yuan & Jian Huang | [paper](https://arxiv.org/abs/2407.17535) |
@@ -303,11 +303,11 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 
 | Venue | Paper | Corresp. Author | Links |
 |:---|:---|:---:|:---:|
+| VLDB'26 | EMA: Approximate Nearest Neighbor Search with General Attribute Filtering and Dynamic Updates `db-ops` | Chenhao Ma | [paper](https://arxiv.org/pdf/2606.00734) |
 | KDD'26 | Beyond Text-to-SQL: An Agentic LLM System for Governed Enterprise Analytics APIs `db-ops` | Shashi Bhushan TN | [paper](https://arxiv.org/pdf/2605.21027) |
 | arXiv'26.06 | Directory-Aware Query and Maintenance in Vector Databases `db-ops` | Yifan Zhu | [paper](https://arxiv.org/pdf/2606.16903) |
 | arXiv'26.06 | Data Agents Under Attack: Vulnerabilities in LLM-Driven Analytical Systems `db-ops` | Wei Dong | [paper](https://arxiv.org/pdf/2606.08661) |
 | arXiv'26.05 | 'Skill issues'': data-centric optimization of lakehouse agents `db-ops` | Jacopo Tagliabue | [paper](https://arxiv.org/pdf/2606.01185) |
-| arXiv'26.05 | EMA: Approximate Nearest Neighbor Search with General Attribute Filtering and Dynamic Updates `db-ops` | Chenhao Ma | [paper](https://arxiv.org/pdf/2606.00734) |
 | arXiv'26.04 | RUBICON: Agentic AI for Messy Enterprise Data `db-ops` | Michael Stonebraker | [paper](https://arxiv.org/pdf/2604.21413) |
 | SIGMOD'25 | Automatic Database Configuration Debugging using Retrieval-Augmented Language Models `rag` | Nan Tang, Ju Fan, et al | [paper](https://dl.acm.org/doi/10.1145/3709663) |
 | SIGMOD'25 | Andromeda: Debugging Database Performance Issues with Retrieval-Augmented Large Language Models `rag` | Nan Tang, Ju Fan, Xiaoyong Du, et al | [paper](https://dl.acm.org/doi/10.1145/3722212.3725080) |
@@ -321,6 +321,7 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 | Venue | Paper | Corresp. Author | Links |
 |:---|:---|:---:|:---:|
 | ICML'26 | AdaMEM: Test-Time Adaptive Memory for Language Agents `agent-memory` | Lu Wang | [paper](https://arxiv.org/pdf/2606.05684) [code](https://github.com/yunx-z/AdaMEM) |
+| VLDB'26 | VikingMem: A Memory Base Management System for Stateful LLM-based Applications `agent-memory` | Yunjun Gao | [paper](https://arxiv.org/pdf/2605.29640) |
 | ACL'26 | OCR-Memory: Optical Context Retrieval for Long-Horizon Agent Memory `agent-memory` | Edith Cheuk-Han Ngai | [paper](https://arxiv.org/pdf/2604.26622) |
 | ICML'26 | Selective Memory Retention for Long-Horizon LLM Agents `agent-memory` | Pranath Reddy | [paper](https://arxiv.org/pdf/2606.29178) |
 | ICML'26 | From Player to Master: Enhancing Test-Time Learning of LLM Agents via Reinforcement Learning over Memory `agent-memory` | Xu Sun | [paper](https://arxiv.org/pdf/2606.08656) |
@@ -328,48 +329,47 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 | ACL'26 | RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents `agent-memory` | James Cheng | [paper](https://arxiv.org/pdf/2605.16045) |
 | KDD'26 | Hierarchical Long-Term Semantic Memory for LinkedIn's Hiring Agent `agent-memory` | Xiaofeng Wang | [paper](https://arxiv.org/pdf/2604.26197) |
 | ACL'26 | HeLa-Mem: Hebbian Learning and Associative Memory for LLM Agents `agent-memory` | Menglin Yang | [paper](https://arxiv.org/pdf/2604.16839) [code](https://github.com/ReinerBRO/HeLa-Mem) |
+| VLDB'26 | MemForest: An Efficient Agent Memory System with Hierarchical Temporal Indexing `agent-memory` | Hongbao Zhang | [paper](https://arxiv.org/pdf/2605.23986) |
 | arXiv'26.06 | Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads `agent-memory` | Thierry Tambe | [paper](https://arxiv.org/pdf/2606.06448) |
 | arXiv'26.06 | Are We Ready For An Agent-Native Memory System? `agent-memory` | Fan Wu | [paper](https://arxiv.org/pdf/2606.24775) [code](https://github.com/OpenDataBox/awesome-agent-memory) |
-| arXiv'26.05 | VikingMem: A Memory Base Management System for Stateful LLM-based Applications `agent-memory` | Yunjun Gao | [paper](https://arxiv.org/pdf/2605.29640) |
-| arXiv'26.05 | MemForest: An Efficient Agent Memory System with Hierarchical Temporal Indexing `agent-memory` | Hongbao Zhang | [paper](https://arxiv.org/pdf/2605.23986) |
 | arXiv'26.05 | LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues `agent-memory` | Kai-Wei Chang | [paper](https://arxiv.org/pdf/2605.12493) |
 | arXiv'26.05 | MemGym: a Long-Horizon Memory Environment for LLM Agents `agent-memory` | Dimitris N. Metaxas | [paper](https://arxiv.org/pdf/2605.20833) |
 | arXiv'26.05 | EvoMemBench: Benchmarking Agent Memory from a Self-Evolving Perspective `agent-memory` | Jia Li | [paper](https://arxiv.org/pdf/2605.18421) [code](https://github.com/DSAIL-Memory/EvoMemBench) |
 | ICML'25 | Agent Workflow Memory `procedural-memory` | Graham Neubig | [paper](https://arxiv.org/pdf/2409.07429) |
 | ICLR'25 | SeCom: On Memory Construction and Retrieval for Personalized Conversational Agents | Qianhui Wu | [paper](https://openreview.net/pdf?id=xKDZAW0He39) |
 | COLM'25 | Inducing Programmatic Skills for Agentic Tasks `procedural-memory` | Zora Zhiruo Wang, Apurva Gandhi, Graham Neubig, Daniel Fried | [paper](https://arxiv.org/pdf/2504.06821) |
+| ACL'26 | Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution `procedural-memory` | Zouying Cao, Zhaoyang Liu, Bolin Ding, Hai Zhao | [paper](https://arxiv.org/pdf/2512.10696v1) |
+| ICLR'26 | AgentFold: Long-Horizon Web Agents with Proactive Context Management `context-engineering` | Rui Ye, Siheng Chen | [paper](https://arxiv.org/pdf/2510.24699) |
+| ACL'25 | Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks `context-engineering` | Jitao Sang | [paper](https://arxiv.org/abs/2510.12635) |
+| ICLR'26 | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models `context-engineering` | Qizheng Zhang & Changran Hu | [paper](https://www.arxiv.org/abs/2510.04618) |
+| ICLR'26 | ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory | Siru Ouyang | [paper](https://arxiv.org/abs/2509.25140) |
+| NeurIPS'25 | Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models `parametric-memory` | Zhouhan Lin | [paper](https://arxiv.org/pdf/2508.09874) |
+| ACL'26 | Memory-R1: Enhancing Large Language Model Agents to Actively Manage and Utilize External Memory `rl` | Yunpu Ma | [paper](https://arxiv.org/pdf/2508.19828) |
+| ACL'26 | Memp: Exploring Agent Procedural Memory `procedural-memory` | Ningyu Zhang | [paper](https://arxiv.org/pdf/2508.06433) |
+| EACL'26 | H-MEM: Hierarchical Memory for High-Efficiency Long-Term Reasoning in LLM Agents | Shaoning Zeng | [paper](https://arxiv.org/pdf/2507.22925v1) |
+| EMNLP'25 | Memory OS of AI Agent | Ting Bai | [paper](https://arxiv.org/pdf/2506.06326) |
+| ACL'25 | How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior `empirical-study` | Zidi Xiong | [paper](https://arxiv.org/pdf/2505.16067) |
+| NeurIPS'25 | A-MEM: Agentic Memory for LLM Agents | Yongfeng Zhang | [paper](https://arxiv.org/pdf/2502.12110) |
 | ACL'25 | Unveiling Privacy Risks in LLM Agent Memory | Pengfei He | [paper](https://arxiv.org/pdf/2502.13172) |
 | arXiv'25.12 | Beyond Sliding Windows: Learning to Manage Memory in Non-Markovian Environments | Tim Klinger | [paper](https://arxiv.org/pdf/2512.19154) |
 | arXiv'25.12 | MemR3: Memory Retrieval via Reflective Reasoning for LLM Agents | Song Le | [paper](https://arxiv.org/pdf/2512.20237) |
 | arXiv'25.12 | Learning Hierarchical Procedural Memory for LLM Agents through Bayesian Selection and Contrastive Refinement `procedural-memory` | Mahdi Jalili | [paper](https://arxiv.org/pdf/2512.18950) |
-| arXiv'25.12 | Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution `procedural-memory` | Zouying Cao, Zhaoyang Liu, Bolin Ding, Hai Zhao | [paper](https://arxiv.org/pdf/2512.10696v1) |
-| arXiv'25.10 | AgentFold: Long-Horizon Web Agents with Proactive Context Management `context-engineering` | Rui Ye, Siheng Chen | [paper](https://arxiv.org/pdf/2510.24699) |
 | arXiv'25.10 | Scaling Long-Horizon LLM Agent via Context-Folding `context-engineering` | Weiwei Sun | [paper](https://arxiv.org/pdf/2510.11967) |
 | arXiv'25.10 | LEGOMem: Modular Procedural Memory for Multi-agent LLM Systems for Workflow Automation `procedural-memory` `multi-agent` | Dongge Han | [paper](https://arxiv.org/pdf/2510.04851) |
 | arXiv'25.10 | TOOLMEM: Enhancing Multimodal Agents with Learnable Tool Capability Memory | Zora Zhiruo Wang | [paper](https://arxiv.org/pdf/2510.06664) |
-| arXiv'25.10 | Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks `context-engineering` | Jitao Sang | [paper](https://arxiv.org/abs/2510.12635) |
-| arXiv'25.10 | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models `context-engineering` | Qizheng Zhang & Changran Hu | [paper](https://www.arxiv.org/abs/2510.04618) |
 | arXiv'25.09 | Latent learning: episodic memory complements parametric learning by enabling flexible reuse of experiences `episodic-memory` | Andrew Kyle Lampinen | [paper](https://arxiv.org/pdf/2509.16189) |
 | arXiv'25.09 | H2R: Hierarchical Hindsight Reflection for Multi-Task LLM Agents `reflection` | Chengdong Xu | [paper](https://arxiv.org/pdf/2509.12810) |
 | arXiv'25.09 | Mem-α: Learning Memory Construction via Reinforcement Learning `rl` | Yu Wang | [paper](https://arxiv.org/pdf/2509.25911) |
-| arXiv'25.09 | ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory | Siru Ouyang | [paper](https://arxiv.org/abs/2509.25140) |
 | arXiv'25.09 | SGMem: Sentence Graph Memory for Long-Term Conversational Agents | Yaxiong Wu | [paper](https://arxiv.org/pdf/2509.21212v1) |
 | arXiv'25.09 | MemGen: Weaving Generative Latent Memory for Self-Evolving Agents | Shuicheng Yan | [paper](https://arxiv.org/pdf/2509.24704) |
-| arXiv'25.08 | Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models `parametric-memory` | Zhouhan Lin | [paper](https://arxiv.org/pdf/2508.09874) |
-| arXiv'25.08 | Memory-R1: Enhancing Large Language Model Agents to Actively Manage and Utilize External Memory `rl` | Yunpu Ma | [paper](https://arxiv.org/pdf/2508.19828) |
-| arXiv'25.08 | Memp: Exploring Agent Procedural Memory `procedural-memory` | Ningyu Zhang | [paper](https://arxiv.org/pdf/2508.06433) |
 | arXiv'25.08 | Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory `multimodal` | Wei Li | [paper](https://arxiv.org/pdf/2508.09736) |
 | arXiv'25.08 | Multiple Memory Systems for Enhancing the Long-term Memory of Agent | Bo Wang | [paper](https://arxiv.org/pdf/2508.15294) |
-| arXiv'25.07 | H-MEM: Hierarchical Memory for High-Efficiency Long-Term Reasoning in LLM Agents | Shaoning Zeng | [paper](https://arxiv.org/pdf/2507.22925v1) |
 | arXiv'25.07 | MemOS: A Memory OS for AI System | Siheng Chen, Wentao Zhang, Zhi-Qin John Xu, Feiyu Xiong | [paper](https://arxiv.org/pdf/2507.03724) |
 | arXiv'25.07 | MIRIX: Multi-Agent Memory System for LLM-Based Agents `multi-agent` | Xi Chen | [paper](https://arxiv.org/pdf/2507.07957) |
 | arXiv'25.07 | MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent `rl` | Hao Zhou | [paper](https://arxiv.org/pdf/2507.02259) |
-| arXiv'25.06 | Memory OS of AI Agent | Ting Bai | [paper](https://arxiv.org/pdf/2506.06326) |
 | arXiv'25.06 | G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems `multi-agent` | Shuicheng Yan | [paper](https://arxiv.org/pdf/2506.07398) |
-| arXiv'25.05 | How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior `empirical-study` | Zidi Xiong | [paper](https://arxiv.org/pdf/2505.16067) |
 | arXiv'25.04 | Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory | Deshraj Yadav | [paper](https://arxiv.org/pdf/2504.19413) |
 | arXiv'25.02 | R3Mem: Bridging Memory Retention and Retrieval via Reversible Compression | Yun Zhu | [paper](https://arxiv.org/pdf/2502.15957v1) |
-| arXiv'25.02 | A-MEM: Agentic Memory for LLM Agents | Yongfeng Zhang | [paper](https://arxiv.org/pdf/2502.12110) |
 | ICLR'24 | Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control `episodic-memory` | Bo An | [paper](https://arxiv.org/pdf/2306.07863) |
 | AAAI'24 | ExpeL: LLM Agents Are Experiential Learners `episodic-memory` | Gao Huang | [paper](https://arxiv.org/pdf/2308.10144) |
 | NeurIPS'23 | Augmenting Language Models with Long-Term Memory `parametric-memory` | Furu Wei | [paper](https://arxiv.org/pdf/2306.07174) |
@@ -383,13 +383,13 @@ reasoning over it, to full-lifecycle analysis and the agent capabilities underne
 | Venue | Paper | Corresp. Author | Links |
 |:---|:---|:---:|:---:|
 | VLDB'26 | Demonstrating TOFFEE: A Learned System for Synthesizing Data Agent Trajectories at Scale `agent-technique` | Gao Cong | [paper](https://arxiv.org/pdf/2607.06233) |
+| KDD'26 | Building Customer Support AI Agents at 100M-User Scale: An Evaluation-Driven Framework `agent-technique` | Rohan Ramanath | [paper](https://arxiv.org/pdf/2606.08867) |
 | SIGIR'26 | LLM-Oriented Information Retrieval: A Denoising-First Perspective `agent-technique` | Hui Xiong | [paper](https://arxiv.org/pdf/2605.00505) |
 | ICML'26 | GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving `agent-technique` | Zhou Su | [paper](https://arxiv.org/pdf/2605.22566) |
 | ICML'26 | SafeHarbor: Hierarchical Memory-Augmented Guardrail for LLM Agent Safety `agent-technique` | Hao Peng | [paper](https://arxiv.org/pdf/2605.05704) [code](https://github.com/ljj-cyber/SafeHarbor) |
-| arXiv'26.06 | Building Customer Support AI Agents at 100M-User Scale: An Evaluation-Driven Framework `agent-technique` | Rohan Ramanath | [paper](https://arxiv.org/pdf/2606.08867) |
+| EuroSys'26 | ClawVM: Harness-Managed Virtual Memory for Stateful Tool-Using LLM Agents `agent-technique` | Laurent Bindschaedler | [paper](https://arxiv.org/pdf/2604.10352) |
 | arXiv'26.06 | SEAGym: An Evaluation Environment for Self-Evolving LLM Agents `agent-technique` | Changshui Zhang | [paper](https://arxiv.org/pdf/2606.17546) |
 | arXiv'26.06 | OpenThoughts-Agent: Data Recipes for Agentic Models `agent-technique` | Ludwig Schmidt | [paper](https://arxiv.org/pdf/2606.24855) |
-| arXiv'26.04 | ClawVM: Harness-Managed Virtual Memory for Stateful Tool-Using LLM Agents `agent-technique` | Laurent Bindschaedler | [paper](https://arxiv.org/pdf/2604.10352) |
 | ICLR'25 | Agent-Oriented Planning in Multi-Agent Systems `planning` `multi-agent` | Yaliang Li | [paper](https://arxiv.org/pdf/2410.02189) |
 | ICLR'25 Oral | AFlow: Automating Agentic Workflow Generation `workflow` | Chenglin Wu | [paper](https://openreview.net/pdf?id=z5uVAKwmjf) |
 | ICLR'25 | Flow: Modularized Agentic Workflow Automation | Tongliang Liu | [paper](https://arxiv.org/pdf/2501.07834) [code](https://github.com/tmllab/2025_ICLR_FLOW) |
