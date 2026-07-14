@@ -1802,3 +1802,11 @@
   year: 2024
   paper: https://arxiv.org/pdf/2411.19504
   category: table-reasoning
+
+- title: "IRG: Modular Synthetic Relational Database Generation with Complex Relational Schemas"
+  authors: Y. C. Tay  # TODO verify corresponding author
+  venue: KDD'26
+  year: 2023
+  paper: https://arxiv.org/pdf/2312.15187
+  code: https://github.com/li-jiayu-ljy/irg  # auto-detected from abstract, please verify
+  category: data-preparation
