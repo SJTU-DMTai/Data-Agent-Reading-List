@@ -1722,3 +1722,11 @@
   year: 2026
   paper: https://arxiv.org/pdf/2603.09151
   category: table-reasoning
+
+- title: "Towards Robust Real-World Spreadsheet Understanding with Multi-Agent Multi-Format Reasoning"
+  authors: Hongsheng Li  # TODO verify corresponding author
+  venue: ACL'26
+  year: 2026
+  paper: https://arxiv.org/pdf/2604.12282
+  code: https://github.com/renhouxing/SpreadsheetAgent.git  # auto-detected from abstract, please verify
+  category: table-reasoning
