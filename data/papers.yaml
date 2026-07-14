@@ -1752,3 +1752,10 @@
   paper: https://arxiv.org/pdf/2510.19247
   code: https://github.com/microsoft/SheetBrain  # auto-detected from abstract, please verify
   category: table-reasoning
+
+- title: "SheetAgent: Towards A Generalist Agent for Spreadsheet Reasoning and Manipulation via Large Language Models"
+  authors: Fuzheng Zhang  # TODO verify corresponding author
+  venue: WWW'25
+  year: 2024
+  paper: https://arxiv.org/pdf/2403.03636
+  category: table-reasoning
