@@ -1766,3 +1766,10 @@
   year: 2026
   paper: https://arxiv.org/pdf/2605.22642
   category: data-analysis
+
+- title: "Orthogonal Hierarchical Decomposition for Structure-Aware Table Understanding with Large Language Models"
+  authors: Jing Fan  # TODO verify corresponding author
+  venue: ICML'26
+  year: 2026
+  paper: https://arxiv.org/pdf/2602.01969
+  category: table-reasoning
