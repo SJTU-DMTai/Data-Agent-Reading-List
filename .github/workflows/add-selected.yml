@@ -36,28 +36,48 @@ jobs:
         run: python scripts/add_selected.py
 
       - name: Commit + push
+        id: push
         if: steps.sel.outputs.status == 'added'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ README.md
           git commit -m "Add selected papers from #${{ github.event.issue.number }}"
+          # retry with rebase so a lost edit-papers race doesn't drop the batch
+          for i in 1 2 3 4 5; do
+            git push && exit 0
+            git pull --rebase origin main
+          done
           git push
 
-      - name: Update issue + remove label + comment
+      - name: Update issue + remove label + comment + close
         if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # push the ✅/⚠️/❌ markers back into the checklist so re-runs skip done rows
-          [ -f updated_body.md ] && gh issue edit ${{ github.event.issue.number }} \
-            --body-file updated_body.md --repo "$GITHUB_REPOSITORY" || true
-          # remove the label so the user can tick more and re-apply it later
-          gh issue edit ${{ github.event.issue.number }} \
-            --remove-label add-selected --repo "$GITHUB_REPOSITORY" || true
+          N=${{ github.event.issue.number }}
+          STATUS='${{ steps.sel.outputs.status }}'
+          PUSH='${{ steps.push.outcome }}'   # success | failure | skipped
+          # Landed == the add-batch is actually in the repo.
+          LANDED=false
+          [ "$STATUS" = "added" ] && [ "$PUSH" = "success" ] && LANDED=true
+          # Write the ✅/⚠️/❌ markers back so re-runs skip done rows — but NOT when the push
+          # failed, or we'd mark rows done that never landed (silent loss).
+          if { [ "$STATUS" != "added" ] || [ "$PUSH" = "success" ]; } && [ -f updated_body.md ]; then
+            gh issue edit "$N" --body-file updated_body.md --repo "$GITHUB_REPOSITORY" || true
+          fi
+          # always drop the label so it can be re-applied for another batch
+          gh issue edit "$N" --remove-label add-selected --repo "$GITHUB_REPOSITORY" || true
           BODY=$(cat <<'__EOF__'
           ${{ steps.sel.outputs.summary }}
           __EOF__
           )
           [ -z "$BODY" ] && BODY="Something went wrong before the selection could be processed — check the workflow logs."
-          gh issue comment ${{ github.event.issue.number }} --body "$BODY" --repo "$GITHUB_REPOSITORY"
+          # Auto-close once the batch has landed; note how to add more later.
+          if [ "$LANDED" = "true" ]; then
+            BODY="$BODY"$'\n\n''_Digest closed — the checked entries are in. Unchecked ones were skipped; **reopen this issue** and tick more if you want to add others later._'
+          fi
+          gh issue comment "$N" --body "$BODY" --repo "$GITHUB_REPOSITORY"
+          if [ "$LANDED" = "true" ]; then
+            gh issue close "$N" --repo "$GITHUB_REPOSITORY" || true
+          fi
