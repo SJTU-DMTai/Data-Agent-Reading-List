@@ -1780,3 +1780,25 @@
   year: 2025
   paper: https://arxiv.org/pdf/2506.12339
   category: data-analysis
+
+- title: "TabDiff: a Mixed-type Diffusion Model for Tabular Data Generation"
+  authors: Jure Leskovec  # TODO verify corresponding author
+  venue: ICLR'25
+  year: 2024
+  paper: https://arxiv.org/pdf/2410.20626
+  code: https://github.com/MinkaiXu/TabDiff  # auto-detected from abstract, please verify
+  category: data-preparation
+
+- title: "CTSyn: A Foundation Model for Cross Tabular Data Generation"
+  authors: Guang Cheng  # TODO verify corresponding author
+  venue: ICLR'25
+  year: 2024
+  paper: https://arxiv.org/pdf/2406.04619
+  category: data-preparation
+
+- title: "TQA-Bench: Evaluating LLMs for Multi-Table Question Answering"
+  authors: Chen Wang  # TODO verify corresponding author
+  venue: ICLR'25
+  year: 2024
+  paper: https://arxiv.org/pdf/2411.19504
+  category: table-reasoning
