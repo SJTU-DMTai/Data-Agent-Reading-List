@@ -1759,3 +1759,10 @@
   year: 2024
   paper: https://arxiv.org/pdf/2403.03636
   category: table-reasoning
+
+- title: "Spreadsheet-RL: Advancing Large Language Model Agents on Realistic Spreadsheet Tasks via Reinforcement Learning"
+  authors: Hanchao Yu  # TODO verify corresponding author
+  venue: arXiv'26.05  # TODO verify venue
+  year: 2026
+  paper: https://arxiv.org/pdf/2605.22642
+  category: data-analysis
