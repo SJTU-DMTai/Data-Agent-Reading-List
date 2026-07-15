@@ -1926,3 +1926,10 @@
   year: 2025
   paper: https://arxiv.org/pdf/2512.14622
   category: nl2sql
+
+- title: "LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents"
+  authors: Siheng Chen  # TODO verify corresponding author
+  venue: arXiv'26.05  # TODO verify venue
+  year: 2026
+  paper: https://arxiv.org/pdf/2605.05191
+  category: foundations
