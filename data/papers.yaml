@@ -1810,3 +1810,84 @@
   paper: https://arxiv.org/pdf/2312.15187
   code: https://github.com/li-jiayu-ljy/irg  # auto-detected from abstract, please verify
   category: data-preparation
+
+- title: "Importance of Synthesizing High-quality Data for Text-to-SQL Parsing"
+  authors: Bing Xiang  # TODO verify corresponding author
+  venue: ACL'23
+  year: 2022
+  paper: https://arxiv.org/pdf/2212.08785
+  category: nl2sql
+
+- title: "FINER-SQL: Boosting Small Language Models for Text-to-SQL"
+  authors: Quoc Viet Hung Nguyen  # TODO verify corresponding author
+  venue: arXiv'26.05  # TODO verify venue
+  year: 2026
+  paper: https://arxiv.org/pdf/2605.03465
+  code: https://github.com/thanhdath/finer-sql  # auto-detected from abstract, please verify
+  category: nl2sql
+
+- title: "Think2SQL: Reinforce LLM Reasoning Capabilities for Text2SQL"
+  authors: Paolo Papotti  # TODO verify corresponding author
+  venue: TMLR'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2504.15077
+  category: nl2sql
+
+- title: "DBCopilot: Natural Language Querying over Massive Databases via Schema Routing"
+  authors: Zhenyu Zeng  # TODO verify corresponding author
+  venue: EDBT'25
+  year: 2023
+  paper: https://arxiv.org/pdf/2312.03463
+  code: https://github.com/tshu-w/DBCopilot  # auto-detected from abstract, please verify
+  category: nl2sql
+
+- title: "You Only Read Once (YORO): Learning to Internalize Database Knowledge for Text-to-SQL"
+  authors: Patrick Ng  # TODO verify corresponding author
+  venue: NAACL'25
+  year: 2024
+  paper: https://arxiv.org/pdf/2409.12172
+  category: nl2sql
+
+- title: "MCTS-SQL: Light-Weight LLMs can Master the Text-to-SQL through Monte Carlo Tree Search"
+  authors: Zhao Jin  # TODO verify corresponding author
+  venue: AAAI'26
+  year: 2025
+  paper: https://arxiv.org/pdf/2501.16607
+  category: nl2sql
+
+- title: "SQL-o1: A Self-Reward Heuristic Dynamic Search Method for Text-to-SQL"
+  authors: Yifan Zhu  # TODO verify corresponding author
+  venue: arXiv'25.02  # TODO verify venue
+  year: 2025
+  paper: https://arxiv.org/pdf/2502.11741
+  code: https://github.com/ShuaiLyu0110/SQL-o1  # auto-detected from abstract, please verify
+  category: nl2sql
+
+- title: "FinSQL: Model-Agnostic LLMs-based Text-to-SQL Framework for Financial Analysis"
+  authors: Jinshu Lin  # TODO verify corresponding author
+  venue: SIGMOD'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2401.10506
+  category: nl2sql
+
+- title: "Metasql: A Generate-then-Rank Framework for Natural Language to SQL Translation"
+  authors: X. Sean Wang  # TODO verify corresponding author
+  venue: ICDE'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2402.17144
+  category: nl2sql
+
+- title: "STAR: SQL Guided Pre-Training for Context-dependent Text-to-SQL Parsing"
+  authors: Yongbin Li  # TODO verify corresponding author
+  venue: EMNLP'22
+  year: 2022
+  paper: https://arxiv.org/pdf/2210.11888
+  code: https://github.com/AlibabaResearch/DAMO-ConvAI  # auto-detected from abstract, please verify
+  category: nl2sql
+
+- title: "CQR-SQL: Conversational Question Reformulation Enhanced Context-Dependent Text-to-SQL Parsers"
+  authors: Yunbo Cao  # TODO verify corresponding author
+  venue: EMNLP'22
+  year: 2022
+  paper: https://arxiv.org/pdf/2205.07686
+  category: nl2sql

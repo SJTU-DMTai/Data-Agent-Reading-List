@@ -91,6 +91,29 @@
       paper: https://arxiv.org/pdf/2402.17168
       code: https://github.com/MetaCopilot/dseval
       tldr: Full data-science lifecycle evaluated via bootstrapped annotation over sequences of interdependent problems (Kaggle/LeetCode).
+    - name: Pervasive Annotation Errors Break Text-to-SQL Benchmarks and Leaderboards
+      label: Daniel Kang  # TODO verify corresponding author
+      year: 2026
+      paper: https://arxiv.org/pdf/2601.08778
+      code: https://github.com/uiuc-kang-lab/text_to_sql_benchmarks  # auto-detected from abstract, please verify
+      tldr: >-
+        This benchmark evaluates pervasive annotation errors in text-to-SQL datasets, finding over 50%
+        error rates in BIRD and Spider 2.0-Snow that significantly distort agent performance and
+        leaderboard rankings.
+    - name: ScienceBenchmark
+      label: Kurt Stockinger  # TODO verify corresponding author
+      year: 2023
+      paper: https://arxiv.org/pdf/2306.04743
+      tldr: >-
+        ScienceBenchmark evaluates natural language to SQL systems on complex, domain-specific
+        scientific databases with limited human-annotated training data augmented by synthetic data.
+    - name: AMBROSIA
+      label: Mirella Lapata  # TODO verify corresponding author
+      year: 2024
+      paper: https://arxiv.org/pdf/2406.19073
+      tldr: >-
+        AMBROSIA evaluates how well text-to-SQL parsers handle ambiguous questions, using a dataset of
+        queries with scope, attachment, and vagueness ambiguities over custom-generated databases.
 
 - name: Benchmarks for Tabular Data
   label_column: Task Type
