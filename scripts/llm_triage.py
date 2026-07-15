@@ -169,6 +169,41 @@ pre-existing data. When a paper both cleans and generates, pick by its MAIN cont
 Reply with ONLY the key, nothing else."""
 
 
+KIND_SYSTEM = """You decide what KIND of artifact a paper is, for an awesome-list on \
+LLM-based data agents. Reply with exactly ONE word — survey, benchmark, or paper:
+- survey: a survey, review, or position/vision paper that SURVEYS a field rather than \
+proposing one system. Titles often contain "Survey", "Review", "A Comprehensive Overview", \
+"Position", "Vision".
+- benchmark: the paper's PRIMARY contribution is a benchmark, dataset, evaluation suite, or \
+leaderboard for MEASURING models or agents — not a new method. Signals: the abstract centers \
+on "we introduce/propose a benchmark/dataset for evaluating ...", reports what it evaluates \
+and over what data. If the paper mainly proposes a METHOD/system/model and only incidentally \
+releases data or an eval set, answer 'paper' instead.
+- paper: anything else — a method, system, model, agent, or framework. THIS IS THE DEFAULT; \
+when unsure between paper and benchmark, choose paper.
+
+Reply with ONLY one word: survey, benchmark, or paper."""
+
+
+def classify_kind(record, cfg=None):
+    """Coarse artifact type for one enriched record: 'survey' | 'benchmark' | 'paper'.
+
+    Kept separate from classify() (which returns a paper subcategory) so callers that
+    write to papers.yaml stay unaffected; the add-paper form uses this to auto-route
+    benchmarks -> benchmarks.yaml and surveys -> surveys.yaml on the Auto path.
+    """
+    if cfg is None:
+        cfg = load_config()
+    user = (f"Title: {record['title']}\n\n"
+            f"Abstract: {record.get('abstract', '')[:1200]}")
+    out = _call([{"role": "system", "content": KIND_SYSTEM},
+                 {"role": "user", "content": user}], cfg).strip().lower()
+    for kind in ("survey", "benchmark"):  # tolerate extra words; 'paper' is the default
+        if kind in out:
+            return kind
+    return "paper"
+
+
 def classify(record, cfg=None):
     """Return the single best category key for one enriched paper record."""
     if cfg is None:

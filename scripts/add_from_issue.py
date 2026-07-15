@@ -97,6 +97,25 @@ def classify_category(aid: str):
     return classify(rec[0])
 
 
+def classify_artifact(aid: str):
+    """Auto-triage what KIND of thing this is, so the form can route it correctly.
+
+    Returns (kind, category): kind is 'paper' | 'benchmark' | 'survey'; category is the
+    paper subcategory when kind == 'paper' (empty otherwise). This is what lets an
+    Auto-classified benchmark land in benchmarks.yaml and a survey in surveys.yaml
+    instead of being forced into a paper section of papers.yaml.
+    """
+    from enrich import enrich
+    from llm_triage import classify, classify_kind
+    rec = enrich([aid], use_s2=False)
+    if not rec:
+        return "paper", "foundations"
+    kind = classify_kind(rec[0])
+    if kind == "paper":
+        return "paper", classify(rec[0])
+    return kind, ""
+
+
 def main():
     body = os.environ.get("ISSUE_BODY", "")
     if "--body-file" in sys.argv:
@@ -122,8 +141,31 @@ def main():
         set_output("error", note)
         return 1
 
-    # surveys live in surveys.yaml (flat title/venue/year/paper schema)
+    # Decide the artifact KIND up-front so the Auto path can route benchmarks and
+    # surveys to their own files instead of forcing everything into papers.yaml.
+    auto_routed = False
+    category = None
+    cat_note = ""
     if cat_label == "survey":
+        kind = "survey"
+    elif cat_label == "benchmark":
+        kind = "benchmark"
+    elif cat_label in CATEGORY_MAP and CATEGORY_MAP[cat_label]:
+        kind, category = "paper", CATEGORY_MAP[cat_label]
+        cat_note = f"category: `{category}` (from form)"
+    else:
+        try:
+            kind, category = classify_artifact(aid)
+        except SystemExit:
+            set_output("error", "auto-classify needs an LLM key (DEEPSEEK_API_KEY secret); "
+                                "please pick a category in the form and re-open.")
+            return 1
+        auto_routed = kind != "paper"
+        cat_note = (f"category: `{category}` (auto-classified)" if kind == "paper"
+                    else f"auto-detected as a **{kind}**")
+
+    # surveys live in surveys.yaml (flat title/venue/year/paper schema)
+    if kind == "survey":
         from add_survey import insert_survey
         try:
             s = insert_survey(aid, corresponding=author or None,
@@ -137,11 +179,14 @@ def main():
                  (note + "\n" if note else "") + f"venue: **{s['venue']}**"
                  + (f"  ·  corresponding: {s['corresponding']}" if s['corresponding'] else ""),
                  "```yaml", s["yaml"].strip(), "```"]
+        if auto_routed:
+            lines.append("_Auto-detected as a **survey** and added to `surveys.yaml`. "
+                         "If that's wrong, remove it and re-add with an explicit category._")
         set_output("added", "\n".join(lines), title=s["title"])
         return 0
 
     # benchmarks live in benchmarks.yaml with their own group/tldr schema
-    if cat_label == "benchmark":
+    if kind == "benchmark":
         from add_benchmark import insert_benchmark, DEFAULT_GROUP
         group = DEFAULT_GROUP
         if bench_group and not bench_group.lower().startswith("auto"):
@@ -162,21 +207,11 @@ def main():
                  "_Group and author come from the form (defaults to \"Data Agent "
                  "Benchmarks\" / last author). Tweak the tldr in `data/benchmarks.yaml` "
                  "if needed._"]
+        if auto_routed:
+            lines.append("_Auto-detected as a **benchmark** and routed to `benchmarks.yaml`. "
+                         "If that's wrong, remove it and re-add with an explicit category._")
         set_output("added", "\n".join(lines), title=b["name"])
         return 0
-
-    # category: explicit label, or auto-classify
-    if cat_label in CATEGORY_MAP and CATEGORY_MAP[cat_label]:
-        category = CATEGORY_MAP[cat_label]
-        cat_note = f"category: `{category}` (from form)"
-    else:
-        try:
-            category = classify_category(aid)
-            cat_note = f"category: `{category}` (auto-classified)"
-        except SystemExit:
-            set_output("error", "auto-classify needs an LLM key (DEEPSEEK_API_KEY secret); "
-                                "please pick a category in the form and re-open.")
-            return 1
 
     try:
         res = insert_paper(aid, category, venue=venue_override or None)
