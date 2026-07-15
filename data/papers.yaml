@@ -1862,3 +1862,10 @@
   year: 2026
   paper: https://arxiv.org/pdf/2605.05191
   category: foundations
+
+- title: "Progress-SQL: Improving Reinforcement Learning for Text-to-SQL via Progressive Rewards"
+  authors: Weining Qian  # TODO verify corresponding author
+  venue: ICML'26
+  year: 2026
+  paper: https://arxiv.org/pdf/2606.06825
+  category: nl2sql
