@@ -1891,3 +1891,24 @@
   year: 2022
   paper: https://arxiv.org/pdf/2205.07686
   category: nl2sql
+
+- title: "Shared Selective Persistent Memory for Agentic LLM Systems"
+  authors: Neelraj Patil  # TODO verify corresponding author
+  venue: arXiv'26.07  # TODO verify venue
+  year: 2026
+  paper: https://arxiv.org/pdf/2607.09493
+  category: memory
+
+- title: "When Agents Remember Too Much: Memory Poisoning Attacks on Large Language Model Agents"
+  authors: Satyajayant Misra  # TODO verify corresponding author
+  venue: arXiv'26.07  # TODO verify venue
+  year: 2026
+  paper: https://arxiv.org/pdf/2607.06595
+  category: memory
+
+- title: "Memory-Orchestrated Semantic System (MOSS): An Auditable Agentic Memory Architecture"
+  authors: Alex Baker  # TODO verify corresponding author
+  venue: arXiv'26.07  # TODO verify venue
+  year: 2026
+  paper: https://arxiv.org/pdf/2607.04391
+  category: memory
