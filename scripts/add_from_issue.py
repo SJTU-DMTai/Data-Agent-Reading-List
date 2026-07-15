@@ -80,10 +80,20 @@ def resolve_input(paper_ref: str):
     if m:
         return m.group(1), None
     # treat as a title
-    from add_by_title import resolve
+    from add_by_title import resolve, ACCEPT_THRESHOLD
     match = resolve(paper_ref)
     if not match:
         return None, f"could not resolve a paper from: {paper_ref!r}"
+    # Guard against a confident-looking but WRONG match: resolve() returns the best
+    # candidate regardless of quality, so a low similarity means we probably matched a
+    # *different* paper. Refuse it (the workflow won't close the issue) and ask for the
+    # arXiv link, rather than silently adding the wrong paper.
+    if match["score"] < ACCEPT_THRESHOLD:
+        return None, (f"couldn't confidently match the title {paper_ref!r} — the closest "
+                      f"arXiv paper was **{match['title']}** (arXiv:{match['id']}, similarity "
+                      f"{match['score']:.2f}, below the {ACCEPT_THRESHOLD} threshold), which is "
+                      f"likely a *different* paper. Please edit this issue and paste the arXiv "
+                      f"link or id so I add the right one.")
     return match["id"], f"resolved title -> arXiv:{match['id']} " \
                         f"({match['title']}, similarity {match['score']:.2f})"
 
