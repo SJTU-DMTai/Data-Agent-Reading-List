@@ -1912,3 +1912,10 @@
   year: 2026
   paper: https://arxiv.org/pdf/2607.04391
   category: memory
+
+- title: "TailorSQL: An NL2SQL System Tailored to Your Query Workload"
+  authors: Tim Kraska  # TODO verify corresponding author
+  venue: arXiv'25.05  # TODO verify venue
+  year: 2025
+  paper: https://arxiv.org/pdf/2505.23039
+  category: nl2sql
