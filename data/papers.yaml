@@ -1919,3 +1919,10 @@
   year: 2025
   paper: https://arxiv.org/pdf/2505.23039
   category: nl2sql
+
+- title: "Beyond Text-to-SQL: Autonomous Research-Driven Database Exploration with DAR"
+  authors: Veronika Solopova  # TODO verify corresponding author
+  venue: CIDR'26
+  year: 2025
+  paper: https://arxiv.org/pdf/2512.14622
+  category: nl2sql
