@@ -144,10 +144,20 @@ def render_benchmark_group(group: dict) -> list:
 
 
 def _paper_sort_key(p):
-    # arXiv venues carry a month (arXiv'26.02); conference papers sort first
-    # within their year, then arXiv entries newest-first.
-    m = re.search(r"'\d{2}\.(\d{2})", p.get("venue", ""))
-    return (-p.get("year", 0), -(int(m.group(1)) if m else 99))
+    # Sort by the year SHOWN in the venue label, so the order matches the visible
+    # venue column (the `year` field holds the preprint year, which often differs
+    # from the acceptance year — e.g. a 2025 preprint accepted at SIGMOD'26).
+    # Venue formats: "SIGMOD'26", "arXiv'26.07", "IEEE VIS'23", or no year at all.
+    # Within a venue-year, conference papers (no month) sort above arXiv preprints,
+    # then preprints newest-month-first; title breaks ties for a stable order.
+    v = p.get("venue", "")
+    m = re.search(r"'(\d{2})(?:\.(\d{2}))?", v)
+    if m:
+        year = 2000 + int(m.group(1))
+        month = int(m.group(2)) if m.group(2) else 99  # conf w/o month tops its year
+    else:
+        year, month = p.get("year", 0), 99
+    return (-year, -month, p.get("title", "").lower())
 
 
 def render_paper_rows(rows: list) -> list:

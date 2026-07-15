@@ -728,22 +728,6 @@
   category: nl2sql
   tags: [nl2sql]
 
-- title: "AgenticDataBench: A Comprehensive Benchmark for Data Agents"
-  authors: Huaiyu Ruan  # TODO verify corresponding author
-  venue: arXiv'26.07
-  year: 2026
-  paper: https://arxiv.org/pdf/2607.01647
-  category: data-science
-  tags: [data-science]
-
-- title: "StatABench: Dataset and Framework for Evaluating Statistical Analysis Capabilities of LLMs"
-  authors: Guanhua Chen  # TODO verify corresponding author
-  venue: arXiv'26.06
-  year: 2026
-  paper: https://arxiv.org/pdf/2606.22977
-  category: data-analysis
-  tags: [data-analysis]
-
 - title: "Directory-Aware Query and Maintenance in Vector Databases"
   authors: Yifan Zhu  # TODO verify corresponding author
   venue: arXiv'26.06
@@ -875,14 +859,6 @@
   category: nl2sql
   tags: [nl2sql]
 
-- title: "AvalancheBench: Evaluating Enterprise Data Agents Through Latent World Recovery"
-  authors: Anupam Datta  # TODO verify corresponding author
-  venue: arXiv'26.05
-  year: 2026
-  paper: https://arxiv.org/pdf/2605.24183
-  category: data-analysis
-  tags: [data-analysis]
-
 - title: "Residual Skill Optimization for Text-to-SQL Ensembles"
   authors: Babak Salimi  # TODO verify corresponding author
   venue: arXiv'26.05
@@ -912,14 +888,6 @@
   venue: arXiv'26.05
   year: 2026
   paper: https://arxiv.org/pdf/2605.10906
-  category: data-science
-  tags: [data-science]
-
-- title: "Ambig-DS: A Benchmark for Task-Framing Ambiguity in Data-Science Agents"
-  authors: Robert Kitchen  # TODO verify corresponding author
-  venue: arXiv'26.05
-  year: 2026
-  paper: https://arxiv.org/pdf/2605.09698
   category: data-science
   tags: [data-science]
 
@@ -963,14 +931,6 @@
   code: https://github.com/StringNLPLAB/FlexSQL  # auto-detected
   category: nl2sql
   tags: [nl2sql]
-
-- title: "DataClawBench: An Agent Benchmark for Exploratory Real-World Financial Data Analysis"
-  authors: Chuan Chen  # TODO verify corresponding author
-  venue: arXiv'26.05
-  year: 2026
-  paper: https://arxiv.org/pdf/2605.02503
-  category: data-analysis
-  tags: [data-analysis]
 
 - title: "FT-RAG: A Fine-grained Retrieval-Augmented Generation Framework for Complex Table Reasoning"
   authors: Ruichen Mao  # TODO verify corresponding author
@@ -1135,22 +1095,6 @@
   category: data-science
   tags: [data-science]
 
-- title: "TimeSage-MT: A Multi-Turn Benchmark for Evaluating Agentic Time Series Reasoning"
-  authors: Qingsong Wen  # TODO verify corresponding author
-  venue: arXiv'26.05
-  year: 2026
-  paper: https://arxiv.org/pdf/2606.01498
-  category: data-analysis
-  tags: [data-analysis]
-
-- title: "OPT-BENCH: Evaluating the Iterative Self-Optimization of LLM Agents in Large-Scale Search Spaces"
-  authors: Kai Chen  # TODO verify corresponding author
-  venue: ACL'26
-  year: 2026
-  paper: https://arxiv.org/pdf/2605.08904
-  category: data-science
-  tags: [data-science]
-
 - title: "AdaMEM: Test-Time Adaptive Memory for Language Agents"
   authors: Lu Wang  # TODO verify corresponding author
   venue: ICML'26
@@ -1247,14 +1191,6 @@
   year: 2026
   paper: https://arxiv.org/pdf/2606.24775
   code: https://github.com/OpenDataBox/awesome-agent-memory  # auto-detected
-  category: memory
-  tags: [agent-memory]
-
-- title: "LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues"
-  authors: Kai-Wei Chang  # TODO verify corresponding author
-  venue: arXiv'26.05
-  year: 2026
-  paper: https://arxiv.org/pdf/2605.12493
   category: memory
   tags: [agent-memory]
 
@@ -1795,13 +1731,6 @@
   year: 2024
   paper: https://arxiv.org/pdf/2406.04619
   category: data-preparation
-
-- title: "TQA-Bench: Evaluating LLMs for Multi-Table Question Answering"
-  authors: Chen Wang  # TODO verify corresponding author
-  venue: ICLR'25
-  year: 2024
-  paper: https://arxiv.org/pdf/2411.19504
-  category: table-reasoning
 
 - title: "IRG: Modular Synthetic Relational Database Generation with Complex Relational Schemas"
   authors: Y. C. Tay  # TODO verify corresponding author

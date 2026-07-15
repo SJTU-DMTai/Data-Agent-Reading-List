@@ -8,6 +8,46 @@
   label_column: Corresp. Author
   show_tldr: true
   items:
+    - name: AgenticDataBench
+      label: Huaiyu Ruan  # TODO verify corresp. author
+      year: 2026
+      paper: https://arxiv.org/pdf/2607.01647
+      tldr: A comprehensive benchmark spanning the end-to-end tasks a data agent must handle.
+    - name: StatABench
+      label: Guanhua Chen  # TODO verify corresp. author
+      year: 2026
+      paper: https://arxiv.org/pdf/2606.22977
+      tldr: Evaluates the statistical-analysis capabilities of LLMs via a dedicated dataset and framework.
+    - name: TimeSage-MT
+      label: Qingsong Wen  # TODO verify corresp. author
+      year: 2026
+      paper: https://arxiv.org/pdf/2606.01498
+      tldr: Multi-turn benchmark for agentic time-series reasoning across conversational analysis.
+    - name: AvalancheBench
+      label: Anupam Datta  # TODO verify corresp. author
+      year: 2026
+      paper: https://arxiv.org/pdf/2605.24183
+      tldr: Evaluates enterprise data agents through latent-world recovery — inferring the hidden state behind the data.
+    - name: LongMemEval-V2
+      label: Kai-Wei Chang  # TODO verify corresp. author
+      year: 2026
+      paper: https://arxiv.org/pdf/2605.12493
+      tldr: Evaluates long-term agent memory over sustained interactions, toward experienced-colleague behavior.
+    - name: Ambig-DS
+      label: Robert Kitchen  # TODO verify corresp. author
+      year: 2026
+      paper: https://arxiv.org/pdf/2605.09698
+      tldr: Probes how data-science agents handle task-framing ambiguity in under-specified problems.
+    - name: OPT-BENCH
+      label: Kai Chen  # TODO verify corresp. author
+      year: 2026
+      paper: https://arxiv.org/pdf/2605.08904
+      tldr: Evaluates iterative self-optimization of LLM agents over large-scale search spaces (ACL'26).
+    - name: DataClawBench
+      label: Chuan Chen  # TODO verify corresp. author
+      year: 2026
+      paper: https://arxiv.org/pdf/2605.02503
+      tldr: Agentic exploratory analysis over real-world financial data.
     - name: DSGym
       label: James Zou
       year: 2026
