@@ -1869,3 +1869,10 @@
   year: 2026
   paper: https://arxiv.org/pdf/2606.06825
   category: nl2sql
+
+- title: "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"
+  authors: Bo Bai  # TODO verify corresponding author
+  venue: ACL'26
+  year: 2026
+  paper: https://arxiv.org/pdf/2601.10011
+  category: nl2sql
