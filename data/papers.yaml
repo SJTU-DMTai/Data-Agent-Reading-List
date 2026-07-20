@@ -1912,3 +1912,10 @@
   year: 2026
   paper: https://arxiv.org/pdf/2602.04785
   category: table-curation
+
+- title: "SAGE: Sparse Adaptive Guidance for Dependency-Aware Tabular Data Generation"
+  authors: Gjergji Kasneci  # TODO verify corresponding author
+  venue: ACL'26
+  year: 2026
+  paper: https://arxiv.org/pdf/2604.24368
+  category: table-curation
