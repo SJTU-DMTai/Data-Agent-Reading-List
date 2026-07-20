@@ -1905,3 +1905,10 @@
   year: 2025
   paper: https://arxiv.org/pdf/2507.19334
   category: table-curation
+
+- title: "Team, Then Trim: An Assembly-Line LLM Framework for High-Quality Tabular Data Generation"
+  authors: Shuai Huang  # TODO verify corresponding author
+  venue: arXiv'26.02  # TODO verify venue
+  year: 2026
+  paper: https://arxiv.org/pdf/2602.04785
+  category: table-curation
