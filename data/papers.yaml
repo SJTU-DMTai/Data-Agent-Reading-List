@@ -1876,3 +1876,17 @@
   year: 2026
   paper: https://arxiv.org/pdf/2601.10011
   category: nl2sql
+
+- title: "QwenPaw-Data: Bridging Facts, Methodology, and Execution for Autonomous Enterprise Data Analytics"
+  authors: Jingren Zhou  # TODO verify corresponding author
+  venue: arXiv'26.07  # TODO verify venue
+  year: 2026
+  paper: https://arxiv.org/pdf/2607.11019
+  category: data-analysis
+
+- title: "CIPHER: A Decoupled Exploration-Selection Framework for Test-Time Scaling of Data Science Agents"
+  authors: Sharadind Peddiraju  # TODO verify corresponding author
+  venue: arXiv'26.07  # TODO verify venue
+  year: 2026
+  paper: https://arxiv.org/pdf/2607.14386
+  category: data-science
