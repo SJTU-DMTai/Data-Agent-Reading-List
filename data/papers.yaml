@@ -1890,3 +1890,11 @@
   year: 2026
   paper: https://arxiv.org/pdf/2607.14386
   category: data-science
+
+- title: "Exploring the Heterogeneity of Tabular Data: A Diversity-aware Data Generator via LLMs"
+  authors: Hongzhi Wang  # TODO verify corresponding author
+  venue: ICDE'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2512.21915
+  code: https://github.com/windblow32/DATE  # auto-detected from abstract, please verify
+  category: table-curation
