@@ -1898,3 +1898,10 @@
   paper: https://arxiv.org/pdf/2512.21915
   code: https://github.com/windblow32/DATE  # auto-detected from abstract, please verify
   category: table-curation
+
+- title: "Doubling Your Data in Minutes: Ultra-fast Tabular Data Generation via LLM-Induced Dependency Graphs"
+  authors: Gjergji Kasneci  # TODO verify corresponding author
+  venue: EMNLP'25
+  year: 2025
+  paper: https://arxiv.org/pdf/2507.19334
+  category: table-curation
