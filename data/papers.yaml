@@ -1919,3 +1919,11 @@
   year: 2026
   paper: https://arxiv.org/pdf/2604.24368
   category: table-curation
+
+- title: "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning"
+  authors: Omar Khattab  # TODO verify corresponding author
+  venue: ICLR'26
+  year: 2025
+  paper: https://arxiv.org/pdf/2507.19457
+  code: https://github.com/gepa-ai/gepa  # auto-detected from abstract, please verify
+  category: foundations
