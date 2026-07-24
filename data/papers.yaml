@@ -1927,3 +1927,10 @@
   paper: https://arxiv.org/pdf/2507.19457
   code: https://github.com/gepa-ai/gepa  # auto-detected from abstract, please verify
   category: foundations
+
+- title: "EvoPrompt: Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers"
+  authors: Yujiu Yang  # TODO verify corresponding author
+  venue: ICLR'23
+  year: 2023
+  paper: https://arxiv.org/pdf/2309.08532
+  category: foundations
