@@ -1934,3 +1934,10 @@
   year: 2023
   paper: https://arxiv.org/pdf/2309.08532
   category: foundations
+
+- title: "Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs"
+  authors: Omar Khattab  # TODO verify corresponding author
+  venue: EMNLP'24
+  year: 2024
+  paper: https://arxiv.org/pdf/2406.11695
+  category: foundations
